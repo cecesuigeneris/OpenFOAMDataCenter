@@ -1,0 +1,56 @@
+#!/bin/sh
+cd ${0%/*} || exit 1    # run from this directory
+
+# Source tutorial run functions
+. $WM_PROJECT_DIR/bin/tools/RunFunctions
+
+application=`getApplication`
+
+
+refineMeshByCellSet()
+{
+   while [ $# -ge 1 ]
+   do
+      if [ ! -e log.refineMesh.$1 ]
+      then
+          echo "creating cell set for primary zone - $1"
+          cp system/topoSetDict.n system/topoSetDict    
+          topoSet > log.topoSet.$1 2>&1
+
+          echo "refining primary zone - $1"
+          refineMesh -dict system/refineMeshDict -overwrite > log.refineMesh.$1 2>&1
+      fi
+      shift
+   done
+}
+
+runApplication blockMesh
+cp -r 0.org 0
+refineMeshByCellSet 1 2   # call it n number to refine xn times  
+
+cp system/topoSetDict.setporous system/topoSetDict
+runApplication topoSet
+runApplication decomposePar
+runApplication mpirun -np 7 buoyantBoussinesqSimpleFoam -parallel
+runApplication reconstructPar -latestTime
+
+
+#runApplication blockMesh
+#runApplication surfaceFeatureExtract
+#runApplication snappyHexMesh -overwrite
+
+#runApplication topoSet
+#cp -r 0.org 0
+#runApplication createBaffles -overwrite 
+
+#runApplication buoyantBoussinesqSimpleFoam 
+
+#runApplication gnuplot mpirun -np 7 $application -parallel
+
+
+#cp 0/T.org 0/T
+#runApplication snappyHexMesh -overwrite
+#runApplication topoSet
+#runApplication $application
+
+# ----------------------------------------------------------------- end-of-file

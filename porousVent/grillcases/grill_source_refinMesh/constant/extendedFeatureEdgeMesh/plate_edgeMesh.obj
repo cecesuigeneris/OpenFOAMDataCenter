@@ -1,0 +1,32 @@
+# Wavefront OBJ file written 2015-07-30T06:06:45
+o plate_edgeMesh
+
+# points : 8
+# lines  : 13
+
+# <points count="8">
+v 1.1 0.5 0
+v 1.1 1 0
+v 1.1 1 1
+v 1 0.5 1
+v 1 0.5 0
+v 1 1 0
+v 1 1 1
+v 1.1 0.5 1
+# </points>
+
+# <edges count="13">
+l 2 3
+l 1 2
+l 8 1
+l 3 8
+l 7 3
+l 2 6
+l 5 1
+l 8 5
+l 6 7
+l 5 6
+l 4 5
+l 7 4
+l 4 8
+# </edges>

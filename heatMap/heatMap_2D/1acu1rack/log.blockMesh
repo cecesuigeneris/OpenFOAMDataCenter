@@ -1,0 +1,70 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.3.1                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : 2.3.1-bcfaaa7b8660
+Exec   : blockMesh -dict system/blockMeshDict
+Date   : Sep 24 2015
+Time   : 07:26:08
+Host   : "cissy.4energy.solutions"
+PID    : 62699
+Case   : /media/cissy/cfd/OpenFOAM/root-2.3.1/run/tutorials/heatTransfer/buoyantBoussinesqSimpleFoam/benchmark_smartset/scalarTransportFoamTest/2D/1acu1rack
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Creating block mesh from
+    "/media/cissy/cfd/OpenFOAM/root-2.3.1/run/tutorials/heatTransfer/buoyantBoussinesqSimpleFoam/benchmark_smartset/scalarTransportFoamTest/2D/1acu1rack/system/blockMeshDict"
+Creating curved edges
+Creating topology blocks
+Creating topology patches
+
+Creating block mesh topology
+
+Check topology
+
+	Basic statistics
+		Number of internal faces : 0
+		Number of boundary faces : 6
+		Number of defined boundary faces : 6
+		Number of undefined boundary faces : 0
+	Checking patch -> block consistency
+
+Creating block offsets
+Creating merge list .
+
+Creating polyMesh from blockMesh
+Creating patches
+Creating cells
+Creating points with scale 1
+    Block 0 cell size :
+        i : 0.1 .. 0.1
+        j : 0.1 .. 0.1
+        k : 0.1 .. 0.1
+
+
+Writing polyMesh
+----------------
+Mesh Information
+----------------
+  boundingBox: (31.4 8.6 0) (35.8 13.6 3.8)
+  nPoints: 89505
+  nCells: 83600
+  nFaces: 256572
+  nInternalFaces: 245028
+----------------
+Patches
+----------------
+  patch 0 (start: 245028 size: 2200) name: floor
+  patch 1 (start: 247228 size: 2200) name: ceiling
+  patch 2 (start: 249428 size: 7144) name: fixedWalls
+
+End
+

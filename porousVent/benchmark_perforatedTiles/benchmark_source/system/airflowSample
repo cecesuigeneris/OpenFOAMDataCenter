@@ -1,0 +1,746 @@
+//
+// Create a plane for sampling
+//
+// (For vent sampling move the plane down to the floor level)
+//
+
+/*flowAfterSet
+{
+    type swakExpression;
+    valueType faceSet;
+    setName porous_block_face;
+    expression "phi*flip()";
+    accumulations (
+        sum
+    );
+    	verbose true;
+	outputControlMode   timeStep;
+	outputInterval  1;
+}*/
+
+weightedVolAverageflowThruZone
+{
+    type swakExpression;
+    valueType cellZone;
+    zoneName 
+	
+		floorvent2A1BA98D742BDB1FC147B2CA43F835C0;
+
+    expression "sum(mag(U)*vol())/sum(vol())"; //this yields to min/max/average volume weighted velocity for porous zone, phi*flip() -- will only work for faceZone because phi is calculated based on a face
+    accumulations (
+        average
+    );
+    	verbose true;
+	outputControlMode   outputTime; //timeStep
+	outputInterval  1;
+}
+
+weightedVolAverageflowThruZone02
+{
+    type swakExpression;
+    valueType cellZone;
+    zoneName 
+	
+
+		floorventB8FDC6307B84613EDE9F3D1266FBF2A7;
+
+    expression "sum(mag(U)*vol())/sum(vol())"; //this yields to min/max/average volume weighted velocity for porous zone, phi*flip() -- will only work for faceZone because phi is calculated based on a face
+    accumulations (
+        average
+    );
+    	verbose true;
+	outputControlMode   outputTime; //timeStep
+	outputInterval  1;
+}
+weightedVolAverageflowThruZone03
+{
+    type swakExpression;
+    valueType cellZone;
+    zoneName 
+
+		floorvent7F94527B35F3B71B1E712CEE6AA4B6D4;
+		
+    expression "sum(mag(U)*vol())/sum(vol())"; //this yields to min/max/average volume weighted velocity for porous zone, phi*flip() -- will only work for faceZone because phi is calculated based on a face
+    accumulations (
+        average
+    );
+    	verbose true;
+	outputControlMode   outputTime; //timeStep
+	outputInterval  1;
+}
+weightedVolAverageflowThruZone04
+{
+    type swakExpression;
+    valueType cellZone;
+    zoneName 	
+		floorventAAC985E7E23E4F7AC0AA5AE9FB1F7A54;
+    expression "sum(mag(U)*vol())/sum(vol())"; //this yields to min/max/average volume weighted velocity for porous zone, phi*flip() -- will only work for faceZone because phi is calculated based on a face
+    accumulations (
+        average
+    );
+    	verbose true;
+	outputControlMode   outputTime; //timeStep
+	outputInterval  1;
+}
+weightedVolAverageflowThruZone05
+{
+    type swakExpression;
+    valueType cellZone;
+    zoneName floorventEA7630CBB9BBFDC6622C7CB948804950;
+
+    expression "sum(mag(U)*vol())/sum(vol())"; //this yields to min/max/average volume weighted velocity for porous zone, phi*flip() -- will only work for faceZone because phi is calculated based on a face
+    accumulations (
+        average
+    );
+    	verbose true;
+	outputControlMode   outputTime; //timeStep
+	outputInterval  1;
+}
+weightedVolAverageflowThruZone06
+{
+    type swakExpression;
+    valueType cellZone;
+    zoneName floorvent3D414218072AA23BD952F9DD06BF64D0;
+		
+    expression "sum(mag(U)*vol())/sum(vol())"; //this yields to min/max/average volume weighted velocity for porous zone, phi*flip() -- will only work for faceZone because phi is calculated based on a face
+    accumulations (
+        average
+    );
+    	verbose true;
+	outputControlMode   outputTime; //timeStep
+	outputInterval  1;
+}
+weightedVolAverageflowThruZone07
+{
+    type swakExpression;
+    valueType cellZone;
+    zoneName floorventFDCCECD400EAA1B4B398E7CC9310D0A5;
+
+    expression "sum(mag(U)*vol())/sum(vol())"; //this yields to min/max/average volume weighted velocity for porous zone, phi*flip() -- will only work for faceZone because phi is calculated based on a face
+    accumulations (
+        average
+    );
+    	verbose true;
+	outputControlMode   outputTime; //timeStep
+	outputInterval  1;
+}
+weightedVolAverageflowThruZone08
+{
+    type swakExpression;
+    valueType cellZone;
+    zoneName  floorventE53508F51655D8FD70DA555E8170559C;
+    expression "sum(mag(U)*vol())/sum(vol())"; //this yields to min/max/average volume weighted velocity for porous zone, phi*flip() -- will only work for faceZone because phi is calculated based on a face
+    accumulations (
+        average
+    );
+    	verbose true;
+	outputControlMode   outputTime; //timeStep
+	outputInterval  1;
+}
+
+
+plane
+{
+        type createSampledSurface;
+        outputControl timeStep;
+        outputInterval 1;
+        surfaceName autoplane; //ACU SUPPLY
+        surface {
+            type plane;
+            basePoint       (24.2 10.4 0.6); //0.6
+            normalVector    (0 0 1);
+            interpolate true;
+        }
+        writeSurfaceOnConstruction true;
+        autoWriteSurface true;
+        surfaceFormat vtk;
+        outputControl outputTime;
+}
+
+
+
+plane_0.75
+{
+        type createSampledSurface;
+        outputControl timeStep;
+        outputInterval 1;
+        surfaceName autoplane_0.75;//VENT ABOVE
+        surface {
+            type plane;
+            basePoint       (24.2 10.4 0.75); //0.79
+            normalVector    (0 0 1);
+            interpolate true;
+        }
+        writeSurfaceOnConstruction true;
+        autoWriteSurface true;
+        surfaceFormat vtk;
+        outputControl outputTime;
+}
+
+plane_2.8
+{
+        type createSampledSurface;
+        outputControl timeStep;
+        outputInterval 1;
+        surfaceName autoplane_2.8; //ACU RETURN
+        surface {
+            type plane;
+            basePoint       (24.2 10.4 2.8);//2.8
+            normalVector    (0 0 1);
+            interpolate true;
+        }
+        writeSurfaceOnConstruction true;
+        autoWriteSurface true;
+        surfaceFormat vtk;
+        outputControl outputTime;
+}
+
+//
+// Interpolate over the desired area and sum phi
+//
+// (For vent sampling change the constraints to examine smaller square sections)
+//
+
+
+interpolatedPlanePlane_positive01{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName autoplane_0.75;
+        verbose true;
+
+        // Expression:
+        //
+        // Checks in the region of
+        //      1.8 < x < 3
+        //      0.6 < y < 3.58
+        //
+        // Sums phi for the area if the z component of U is positive (going up through the plane)
+        //
+
+        expression "(pos().x<29.4)&&(pos().x>28.8) && (pos().y<13.8) &&(pos().y>13.2) && (U.z>0)? (U & normal())*area():0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+
+
+interpolatedPlanePlane_positive02{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName autoplane_0.75;
+        verbose true;
+
+        // Expression:
+        //
+        // Checks in the region of
+        //      1.8 < x < 3
+        //      0.6 < y < 3.58
+        //
+        // Sums phi for the area if the z component of U is positive (going up through the plane)
+        //
+
+        expression "(pos().x<30)&&(pos().x>29.4) && (pos().y<14.4) &&(pos().y>13.8) && (U.z>0)?(U & normal())*area():0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+
+interpolatedPlanePlane_positive03{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName autoplane_0.75;
+        verbose true;
+
+        // Expression:
+        //
+        // Checks in the region of
+        //      1.8 < x < 3
+        //      0.6 < y < 3.58
+        //
+        // Sums phi for the area if the z component of U is positive (going up through the plane)
+        //
+
+        expression "(pos().x<29.4)&&(pos().x>28.8) && (pos().y<15) &&(pos().y>14.4) && (U.z>0)?(U & normal())*area():0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+
+interpolatedPlanePlane_positive04{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName autoplane_0.75;
+        verbose true;
+
+        // Expression:
+        //
+        // Checks in the region of
+        //      1.8 < x < 3
+        //      0.6 < y < 3.58
+        //
+        // Sums phi for the area if the z component of U is positive (going up through the plane)
+        //
+
+        expression "(pos().x<30)&&(pos().x>29.4) && (pos().y<15.6) &&(pos().y>15) && (U.z>0)?(U & normal())*area():0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+
+interpolatedPlanePlane_positive05{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName autoplane_0.75;
+        verbose true;
+
+        // Expression:
+        //
+        // Checks in the region of
+        //      1.8 < x < 3
+        //      0.6 < y < 3.58
+        //
+        // Sums phi for the area if the z component of U is positive (going up through the plane)
+        //
+
+        expression "(pos().x<34.2)&&(pos().x>33.6) && (pos().y<13.8) &&(pos().y>13.2) && (U.z>0)?(U & normal())*area():0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+
+interpolatedPlanePlane_positive06{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName autoplane_0.75;
+        verbose true;
+
+        // Expression:
+        //
+        // Checks in the region of
+        //      1.8 < x < 3
+        //      0.6 < y < 3.58
+        //
+        // Sums phi for the area if the z component of U is positive (going up through the plane)
+        //
+
+        expression "(pos().x<34.8)&&(pos().x>34.2) && (pos().y<14.4) &&(pos().y>13.8) && (U.z>0)?(U & normal())*area():0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+
+interpolatedPlanePlane_positive07{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName autoplane_0.75;
+        verbose true;
+
+        // Expression:
+        //
+        // Checks in the region of
+        //      1.8 < x < 3
+        //      0.6 < y < 3.58
+        //
+        // Sums phi for the area if the z component of U is positive (going up through the plane)
+        //
+
+        expression "(pos().x<34.2)&&(pos().x>33.6) && (pos().y<15) &&(pos().y>14.4) && (U.z>0)?(U & normal())*area():0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+
+interpolatedPlanePlane_positive08{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName autoplane_0.75;
+        verbose true;
+
+        // Expression:
+        //
+        // Checks in the region of
+        //      1.8 < x < 3
+        //      0.6 < y < 3.58
+        //
+        // Sums phi for the area if the z component of U is positive (going up through the plane)
+        //
+
+        expression "(pos().x<34.8)&&(pos().x>34.2) && (pos().y<15.6) &&(pos().y>15) && (U.z>0)?(U & normal())*area():0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+
+
+
+
+interpolatedPlanePlane_negative01{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName autoplane_0.75;
+        verbose true;
+
+        // Expression:
+        //
+        // Checks in the region of
+        //      1.8 < x < 3
+        //      0.6 < y < 3.58
+        //
+        // Sums phi for the area if the z component of U is positive (going up through the plane)
+        //
+
+        expression "(pos().x<29.4)&&(pos().x>28.8) && (pos().y<13.8) &&(pos().y>13.2) && (U.z<0)?(U & normal())*area():0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+
+interpolatedPlanePlane_negative02{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName autoplane_0.75;
+        verbose true;
+
+        // Expression:
+        //
+        // Checks in the region of
+        //      1.8 < x < 3
+        //      0.6 < y < 3.58
+        //
+        // Sums phi for the area if the z component of U is positive (going up through the plane)
+        //
+
+        expression "(pos().x<30)&&(pos().x>29.4) && (pos().y<14.4) &&(pos().y>13.8) && (U.z<0)?(U & normal())*area():0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+
+interpolatedPlanePlane_negative03{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName autoplane_0.75;
+        verbose true;
+
+        // Expression:
+        //
+        // Checks in the region of
+        //      1.8 < x < 3
+        //      0.6 < y < 3.58
+        //
+        // Sums phi for the area if the z component of U is positive (going up through the plane)
+        //
+
+        expression "(pos().x<29.4)&&(pos().x>28.8) && (pos().y<15) &&(pos().y>14.4) && (U.z<0)?(U & normal())*area():0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+
+interpolatedPlanePlane_negative04{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName autoplane_0.75;
+        verbose true;
+
+        // Expression:
+        //
+        // Checks in the region of
+        //      1.8 < x < 3
+        //      0.6 < y < 3.58
+        //
+        // Sums phi for the area if the z component of U is positive (going up through the plane)
+        //
+
+        expression "(pos().x<30)&&(pos().x>29.4) && (pos().y<15.6) &&(pos().y>15) && (U.z<0)?(U & normal())*area():0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+
+interpolatedPlanePlane_negative05{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName autoplane_0.75;
+        verbose true;
+
+        // Expression:
+        //
+        // Checks in the region of
+        //      1.8 < x < 3
+        //      0.6 < y < 3.58
+        //
+        // Sums phi for the area if the z component of U is positive (going up through the plane)
+        //
+
+        expression "(pos().x<34.2)&&(pos().x>33.6) && (pos().y<13.8) &&(pos().y>13.2) && (U.z<0)?(U & normal())*area():0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+
+interpolatedPlanePlane_negative06{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName autoplane_0.75;
+        verbose true;
+
+        // Expression:
+        //
+        // Checks in the region of
+        //      1.8 < x < 3
+        //      0.6 < y < 3.58
+        //
+        // Sums phi for the area if the z component of U is positive (going up through the plane)
+        //
+
+        expression "(pos().x<34.8)&&(pos().x>34.2) && (pos().y<14.4) &&(pos().y>13.8) && (U.z<0)?(U & normal())*area():0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+
+interpolatedPlanePlane_negative07{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName autoplane_0.75;
+        verbose true;
+
+        // Expression:
+        //
+        // Checks in the region of
+        //      1.8 < x < 3
+        //      0.6 < y < 3.58
+        //
+        // Sums phi for the area if the z component of U is positive (going up through the plane)
+        //
+
+        expression "(pos().x<34.2)&&(pos().x>33.6) && (pos().y<15) &&(pos().y>14.4) && (U.z<0)?(U & normal())*area():0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+
+interpolatedPlanePlane_negative08{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName autoplane_0.75;
+        verbose true;
+
+        // Expression:
+        //
+        // Checks in the region of
+        //      1.8 < x < 3
+        //      0.6 < y < 3.58
+        //
+        // Sums phi for the area if the z component of U is positive (going up through the plane)
+        //
+
+        expression "(pos().x<34.8)&&(pos().x>34.2) && (pos().y<15.6) &&(pos().y>15) && (U.z<0)?(U & normal())*area():0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+
+
+
+
+//ahu supply should be giving 1.3 m3/s
+
+interpolatedPlanePlane_ahu01{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName autoplane_0.75;
+        verbose true;
+
+        // Expression:
+        //
+        // Checks in the region of
+        //      1.8 < x < 3
+        //      0.6 < y < 3.58
+        //
+        // Sums phi for the area if the z component of U is positive (going up through the plane)
+        //
+
+        expression "(pos().x<25.8)&&(pos().x>25) && (pos().y<15.4) &&(pos().y>13.4) && (U.z<0)?(U & normal())*area():0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+
+interpolatedPlanePlane_ahu02{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName autoplane_0.75;
+        verbose true;
+
+        // Expression:
+        //
+        // Checks in the region of
+        //      1.8 < x < 3
+        //      0.6 < y < 3.58
+        //
+        // Sums phi for the area if the z component of U is positive (going up through the plane)
+        //
+
+        expression "(pos().x<35.2)&&(pos().x>33.2) && (pos().y<12) &&(pos().y>11.2) && (U.z<0)?(U & normal())*area():0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+
+interpolatedPlanePlane_ahu03{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName autoplane_0.75;
+        verbose true;
+
+        // Expression:
+        //
+        // Checks in the region of
+        //      1.8 < x < 3
+        //      0.6 < y < 3.58
+        //
+        // Sums phi for the area if the z component of U is positive (going up through the plane)
+        //
+
+        expression "(pos().x<30.4)&&(pos().x>28.4) && (pos().y<12) &&(pos().y>11.2) && (U.z<0)?(U & normal())*area():0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+
+
+
+
+
+interpolatedPlanePlane_ahu01_return{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName autoplane_2.8;
+        verbose true;
+
+        // Expression:
+        //
+        // Checks in the region of
+        //      1.8 < x < 3
+        //      0.6 < y < 3.58
+        //
+        // Sums phi for the area if the z component of U is positive (going up through the plane)
+        //
+
+        expression "(pos().x<25.8)&&(pos().x>25) && (pos().y<15.4) &&(pos().y>13.4) && (U.z<0)?(U & normal())*area():0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+
+interpolatedPlanePlane_ahu02_return{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName autoplane_2.8;
+        verbose true;
+
+        // Expression:
+        //
+        // Checks in the region of
+        //      1.8 < x < 3
+        //      0.6 < y < 3.58
+        //
+        // Sums phi for the area if the z component of U is positive (going up through the plane)
+        //
+
+        expression "(pos().x<35.2)&&(pos().x>33.2) && (pos().y<12) &&(pos().y>11.2) && (U.z<0)?(U & normal())*area():0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+
+interpolatedPlanePlane_ahu03_return{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName autoplane_2.8;
+        verbose true;
+
+        // Expression:
+        //
+        // Checks in the region of
+        //      1.8 < x < 3
+        //      0.6 < y < 3.58
+        //
+        // Sums phi for the area if the z component of U is positive (going up through the plane)
+        //
+
+        expression "(pos().x<30.4)&&(pos().x>28.4) && (pos().y<12) &&(pos().y>11.2) && (U.z<0)?(U & normal())*area():0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+
+

@@ -1,0 +1,73 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.3.1                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      topoSetDict.cutfloorslab;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+actions
+(
+        {
+      name    c0;
+      type    cellSet;
+      action  new;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (31.40 8.60 0.6)(35.80 13.60 0.8); //whole floor slab of the room
+      }
+    }
+
+        {
+      name    c0;
+      type    cellSet;
+      action  delete;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (33.00 12.20 0.6)(33.60 12.80 0.8); // floorvents exact size (33.00 12.20 0.6)(33.60 12.80 0.8)
+      }
+    }
+
+       /* {
+      name    c0;
+      type    cellSet;
+      action  delete;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (33.00 11.40 0.6)(33.60 12.20 0.8); // rack holes
+      }
+    }*/
+
+
+        {
+      name    c0;
+      type    cellSet;
+      action  delete;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (32.60 9.40 0.6)(34.60 10.20 0.8); // acu holes
+      }
+    }
+
+        {
+      name    c0;
+      type    cellSet;
+      action  invert;
+    }
+
+);
+
+// ************************************************************************* //

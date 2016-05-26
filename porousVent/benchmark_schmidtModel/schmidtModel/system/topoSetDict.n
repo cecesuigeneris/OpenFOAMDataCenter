@@ -1,0 +1,621 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.2.1                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      topoSetDict.n;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+
+actions
+(
+    	        {
+      name    floorvent;
+      type    cellSet;
+      action  new;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (51.00 25.80 0.60)(51.60 26.40 0.80);
+      }
+    }
+                        {
+      name    floorvent;
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (51.60 25.80 0.60)(52.20 26.40 0.80);
+      }
+    }
+                        {
+      name    floorvent;
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (52.20 25.80 0.60)(52.80 26.40 0.80);
+      }
+    }
+                        {
+      name    floorvent;
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (52.80 25.80 0.60)(53.40 26.40 0.80);
+      }
+    }
+                        {
+      name    floorvent;
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (53.40 25.80 0.60)(54.00 26.40 0.80);
+      }
+    }
+                        {
+      name    floorvent;
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (54.00 25.80 0.60)(54.60 26.40 0.80);
+      }
+    }
+                        {
+      name    floorvent;
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (55.20 25.80 0.60)(55.80 26.40 0.80);
+      }
+    }
+                        {
+      name    floorvent;
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (54.60 25.80 0.60)(55.20 26.40 0.80);
+      }
+    }
+                        {
+      name    floorvent;
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (55.80 25.80 0.60)(56.40 26.40 0.80);
+      }
+    }
+                        {
+      name    floorvent;
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (56.40 25.80 0.60)(57.00 26.40 0.80);
+      }
+    }
+                        {
+      name    floorvent;
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (57.00 25.80 0.60)(57.60 26.40 0.80);
+      }
+    }
+                        {
+      name    floorvent;
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (57.60 25.80 0.60)(58.20 26.40 0.80);
+      }
+    }
+                        {
+      name    floorvent;
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (58.20 25.80 0.60)(58.80 26.40 0.80);
+      }
+    }
+                        {
+      name    floorvent;
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (50.40 25.80 0.60)(51.00 26.40 0.80);
+      }
+    }
+                        {
+      name    floorvent;
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (58.80 25.80 0.60)(59.40 26.40 0.80);
+      }
+    }
+                        {
+      name    floorvent;
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (58.80 26.40 0.60)(59.40 27.00 0.80);
+      }
+    }
+                        {
+      name    floorvent;
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (50.40 26.40 0.60)(51.00 27.00 0.80);
+      }
+    }
+                        {
+      name    floorvent;
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (51.00 26.40 0.60)(51.60 27.00 0.80);
+      }
+    }
+                        {
+      name    floorvent;
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (51.60 26.40 0.60)(52.20 27.00 0.80);
+      }
+    }
+                        {
+      name    floorvent;
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (52.20 26.40 0.60)(52.80 27.00 0.80);
+      }
+    }
+                        {
+      name    floorvent;
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (52.80 26.40 0.60)(53.40 27.00 0.80);
+      }
+    }
+                        {
+      name    floorvent;
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (53.40 26.40 0.60)(54.00 27.00 0.80);
+      }
+    }
+                        {
+      name    floorvent;
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (54.00 26.40 0.60)(54.60 27.00 0.80);
+      }
+    }
+                        {
+      name    floorvent;
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (54.60 26.40 0.60)(55.20 27.00 0.80);
+      }
+    }
+                        {
+      name    floorvent;
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (55.20 26.40 0.60)(55.80 27.00 0.80);
+      }
+    }
+                        {
+      name    floorvent;
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (55.80 26.40 0.60)(56.40 27.00 0.80);
+      }
+    }
+                        {
+      name    floorvent;
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (56.40 26.40 0.60)(57.00 27.00 0.80);
+      }
+    }
+                        {
+      name    floorvent;
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (57.00 26.40 0.60)(57.60 27.00 0.80);
+      }
+    }
+                        {
+      name    floorvent;
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (57.60 26.40 0.60)(58.20 27.00 0.80);
+      }
+    }
+                        {
+      name    floorvent;
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (58.20 26.40 0.60)(58.80 27.00 0.80);
+      }
+    }
+                        {
+      name    floorvent;
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (58.80 27.60 0.60)(59.40 28.20 0.80);
+      }
+    }
+                        {
+      name    floorvent;
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (50.40 27.60 0.60)(51.00 28.20 0.80);
+      }
+    }
+                        {
+      name    floorvent;
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (51.00 27.60 0.60)(51.60 28.20 0.80);
+      }
+    }
+                        {
+      name    floorvent;
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (51.60 27.60 0.60)(52.20 28.20 0.80);
+      }
+    }
+                        {
+      name    floorvent;
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (52.20 27.60 0.60)(52.80 28.20 0.80);
+      }
+    }
+                        {
+      name    floorvent;
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (52.80 27.60 0.60)(53.40 28.20 0.80);
+      }
+    }
+                        {
+      name    floorvent;
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (53.40 27.60 0.60)(54.00 28.20 0.80);
+      }
+    }
+                        {
+      name    floorvent;
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (54.00 27.60 0.60)(54.60 28.20 0.80);
+      }
+    }
+                        {
+      name    floorvent;
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (54.60 27.60 0.60)(55.20 28.20 0.80);
+      }
+    }
+                        {
+      name    floorvent;
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (55.20 27.60 0.60)(55.80 28.20 0.80);
+      }
+    }
+                        {
+      name    floorvent;
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (55.80 27.60 0.60)(56.40 28.20 0.80);
+      }
+    }
+                        {
+      name    floorvent;
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (56.40 27.60 0.60)(57.00 28.20 0.80);
+      }
+    }
+                        {
+      name    floorvent;
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (57.00 27.60 0.60)(57.60 28.20 0.80);
+      }
+    }
+                        {
+      name    floorvent;
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (57.60 27.60 0.60)(58.20 28.20 0.80);
+      }
+    }
+                        {
+      name    floorvent;
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (58.20 27.60 0.60)(58.80 28.20 0.80);
+      }
+    }
+                        {
+      name    floorvent;
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (50.40 27.00 0.60)(51.00 27.60 0.80);
+      }
+    }
+                        {
+      name    floorvent;
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (51.00 27.00 0.60)(51.60 27.60 0.80);
+      }
+    }
+                        {
+      name    floorvent;
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (51.60 27.00 0.60)(52.20 27.60 0.80);
+      }
+    }
+                        {
+      name    floorvent;
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (52.20 27.00 0.60)(52.80 27.60 0.80);
+      }
+    }
+                        {
+      name    floorvent;
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (52.80 27.00 0.60)(53.40 27.60 0.80);
+      }
+    }
+                        {
+      name    floorvent;
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (53.40 27.00 0.60)(54.00 27.60 0.80);
+      }
+    }
+                        {
+      name    floorvent;
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (54.00 27.00 0.60)(54.60 27.60 0.80);
+      }
+    }
+                        {
+      name    floorvent;
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (54.60 27.00 0.60)(55.20 27.60 0.80);
+      }
+    }
+                        {
+      name    floorvent;
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (55.20 27.00 0.60)(55.80 27.60 0.80);
+      }
+    }
+                        {
+      name    floorvent;
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (55.80 27.00 0.60)(56.40 27.60 0.80);
+      }
+    }
+                        {
+      name    floorvent;
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (56.40 27.00 0.60)(57.00 27.60 0.80);
+      }
+    }
+                        {
+      name    floorvent;
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (57.00 27.00 0.60)(57.60 27.60 0.80);
+      }
+    }
+                        {
+      name    floorvent;
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (57.60 27.00 0.60)(58.20 27.60 0.80);
+      }
+    }
+                        {
+      name    floorvent;
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (58.20 27.00 0.60)(58.80 27.60 0.80);
+      }
+    }
+                        {
+      name    floorvent;
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (58.80 27.00 0.60)(59.40 27.60 0.80);
+      }
+    }
+    
+);

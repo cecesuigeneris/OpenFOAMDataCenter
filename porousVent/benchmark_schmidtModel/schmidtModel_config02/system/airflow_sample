@@ -1,0 +1,2700 @@
+// Capture rack's & AHU's mass flow rate through inlet/outlet patch
+rack_massflow
+   {
+       type patchMassFlow;
+       functionObjectLibs
+         (
+           "libsimpleFunctionObjects.so"
+         );
+       verbose true;
+       patches (
+	         );
+       outputControlMode 	outputTime;
+       outputInterval 1;
+    }
+
+
+AHU_massflow
+   {
+       type patchMassFlow;
+       functionObjectLibs
+         (
+           "libsimpleFunctionObjects.so"
+         );
+       verbose true;
+       patches (
+         	                    acu8EFB35119AA4591115D9D1BF6014FA4C_inlet //add here all the name of the AHU return patch name
+		    acu8EFB35119AA4591115D9D1BF6014FA4C_outlet
+                                    acu65E0157C3F4FD3DBFB846500AB325745_inlet //add here all the name of the AHU return patch name
+		    acu65E0157C3F4FD3DBFB846500AB325745_outlet
+                         );
+       outputControlMode 	outputTime;
+       outputInterval 1;
+    }
+
+
+// Capture weighted volume average flow velocity through floorvent 
+weightedVolAverageflowThruZone_floorventF11148AE11166F735A1DC51F461CFE43
+    {
+    	type swakExpression;
+    	valueType cellZone;
+   	zoneName 
+	
+		floorventF11148AE11166F735A1DC51F461CFE43;
+
+    	expression "sum(mag(U)*vol())/sum(vol())"; 
+    	accumulations (
+        	average
+    	);
+    	verbose true;
+	outputControlMode   	outputTime; 
+	outputInterval  1;
+    }
+weightedVolAverageflowThruZone_floorventC73EAFF2FCCC980FB5FED0F9130F83F0
+    {
+    	type swakExpression;
+    	valueType cellZone;
+   	zoneName 
+	
+		floorventC73EAFF2FCCC980FB5FED0F9130F83F0;
+
+    	expression "sum(mag(U)*vol())/sum(vol())"; 
+    	accumulations (
+        	average
+    	);
+    	verbose true;
+	outputControlMode   	outputTime; 
+	outputInterval  1;
+    }
+weightedVolAverageflowThruZone_floorvent0CCDAD6BC97F7E47E3F1FA4B4CEFAD8E
+    {
+    	type swakExpression;
+    	valueType cellZone;
+   	zoneName 
+	
+		floorvent0CCDAD6BC97F7E47E3F1FA4B4CEFAD8E;
+
+    	expression "sum(mag(U)*vol())/sum(vol())"; 
+    	accumulations (
+        	average
+    	);
+    	verbose true;
+	outputControlMode   	outputTime; 
+	outputInterval  1;
+    }
+weightedVolAverageflowThruZone_floorvent4C476D91CF4A6BF03A27C47431D76A6E
+    {
+    	type swakExpression;
+    	valueType cellZone;
+   	zoneName 
+	
+		floorvent4C476D91CF4A6BF03A27C47431D76A6E;
+
+    	expression "sum(mag(U)*vol())/sum(vol())"; 
+    	accumulations (
+        	average
+    	);
+    	verbose true;
+	outputControlMode   	outputTime; 
+	outputInterval  1;
+    }
+weightedVolAverageflowThruZone_floorvent74D44F41F412E189A203AD562B868744
+    {
+    	type swakExpression;
+    	valueType cellZone;
+   	zoneName 
+	
+		floorvent74D44F41F412E189A203AD562B868744;
+
+    	expression "sum(mag(U)*vol())/sum(vol())"; 
+    	accumulations (
+        	average
+    	);
+    	verbose true;
+	outputControlMode   	outputTime; 
+	outputInterval  1;
+    }
+weightedVolAverageflowThruZone_floorvent5E38EFD97F291B9A1B28A2C8A9686778
+    {
+    	type swakExpression;
+    	valueType cellZone;
+   	zoneName 
+	
+		floorvent5E38EFD97F291B9A1B28A2C8A9686778;
+
+    	expression "sum(mag(U)*vol())/sum(vol())"; 
+    	accumulations (
+        	average
+    	);
+    	verbose true;
+	outputControlMode   	outputTime; 
+	outputInterval  1;
+    }
+weightedVolAverageflowThruZone_floorventB2FD53A540247E7B0C7F3B5E39D4E16D
+    {
+    	type swakExpression;
+    	valueType cellZone;
+   	zoneName 
+	
+		floorventB2FD53A540247E7B0C7F3B5E39D4E16D;
+
+    	expression "sum(mag(U)*vol())/sum(vol())"; 
+    	accumulations (
+        	average
+    	);
+    	verbose true;
+	outputControlMode   	outputTime; 
+	outputInterval  1;
+    }
+weightedVolAverageflowThruZone_floorventC6A3FC7C9BED134C3D8E4C538E9930BD
+    {
+    	type swakExpression;
+    	valueType cellZone;
+   	zoneName 
+	
+		floorventC6A3FC7C9BED134C3D8E4C538E9930BD;
+
+    	expression "sum(mag(U)*vol())/sum(vol())"; 
+    	accumulations (
+        	average
+    	);
+    	verbose true;
+	outputControlMode   	outputTime; 
+	outputInterval  1;
+    }
+weightedVolAverageflowThruZone_floorvent8D629A3CD4ADDAC4D2BAA41B1F93F050
+    {
+    	type swakExpression;
+    	valueType cellZone;
+   	zoneName 
+	
+		floorvent8D629A3CD4ADDAC4D2BAA41B1F93F050;
+
+    	expression "sum(mag(U)*vol())/sum(vol())"; 
+    	accumulations (
+        	average
+    	);
+    	verbose true;
+	outputControlMode   	outputTime; 
+	outputInterval  1;
+    }
+weightedVolAverageflowThruZone_floorventE44FB80E28D36F4DEC51CF6CE96BC70A
+    {
+    	type swakExpression;
+    	valueType cellZone;
+   	zoneName 
+	
+		floorventE44FB80E28D36F4DEC51CF6CE96BC70A;
+
+    	expression "sum(mag(U)*vol())/sum(vol())"; 
+    	accumulations (
+        	average
+    	);
+    	verbose true;
+	outputControlMode   	outputTime; 
+	outputInterval  1;
+    }
+weightedVolAverageflowThruZone_floorvent520A1BCA435EAE0950669FB533E4CFE8
+    {
+    	type swakExpression;
+    	valueType cellZone;
+   	zoneName 
+	
+		floorvent520A1BCA435EAE0950669FB533E4CFE8;
+
+    	expression "sum(mag(U)*vol())/sum(vol())"; 
+    	accumulations (
+        	average
+    	);
+    	verbose true;
+	outputControlMode   	outputTime; 
+	outputInterval  1;
+    }
+weightedVolAverageflowThruZone_floorvent220A5D0832CDFBAEC6BD5873AA177837
+    {
+    	type swakExpression;
+    	valueType cellZone;
+   	zoneName 
+	
+		floorvent220A5D0832CDFBAEC6BD5873AA177837;
+
+    	expression "sum(mag(U)*vol())/sum(vol())"; 
+    	accumulations (
+        	average
+    	);
+    	verbose true;
+	outputControlMode   	outputTime; 
+	outputInterval  1;
+    }
+weightedVolAverageflowThruZone_floorvent26BD73EC6210A2C4A332F8432BAFE37F
+    {
+    	type swakExpression;
+    	valueType cellZone;
+   	zoneName 
+	
+		floorvent26BD73EC6210A2C4A332F8432BAFE37F;
+
+    	expression "sum(mag(U)*vol())/sum(vol())"; 
+    	accumulations (
+        	average
+    	);
+    	verbose true;
+	outputControlMode   	outputTime; 
+	outputInterval  1;
+    }
+weightedVolAverageflowThruZone_floorvent7F8560547F2D0DD698F1A15CA79B92FE
+    {
+    	type swakExpression;
+    	valueType cellZone;
+   	zoneName 
+	
+		floorvent7F8560547F2D0DD698F1A15CA79B92FE;
+
+    	expression "sum(mag(U)*vol())/sum(vol())"; 
+    	accumulations (
+        	average
+    	);
+    	verbose true;
+	outputControlMode   	outputTime; 
+	outputInterval  1;
+    }
+weightedVolAverageflowThruZone_floorvent19012EC1E3CF89CEC930B889F837E466
+    {
+    	type swakExpression;
+    	valueType cellZone;
+   	zoneName 
+	
+		floorvent19012EC1E3CF89CEC930B889F837E466;
+
+    	expression "sum(mag(U)*vol())/sum(vol())"; 
+    	accumulations (
+        	average
+    	);
+    	verbose true;
+	outputControlMode   	outputTime; 
+	outputInterval  1;
+    }
+weightedVolAverageflowThruZone_floorvent4D1E8FC6004BC9C86404493BB4DE7F89
+    {
+    	type swakExpression;
+    	valueType cellZone;
+   	zoneName 
+	
+		floorvent4D1E8FC6004BC9C86404493BB4DE7F89;
+
+    	expression "sum(mag(U)*vol())/sum(vol())"; 
+    	accumulations (
+        	average
+    	);
+    	verbose true;
+	outputControlMode   	outputTime; 
+	outputInterval  1;
+    }
+weightedVolAverageflowThruZone_floorventAF7315E7C387F408413A260F86642170
+    {
+    	type swakExpression;
+    	valueType cellZone;
+   	zoneName 
+	
+		floorventAF7315E7C387F408413A260F86642170;
+
+    	expression "sum(mag(U)*vol())/sum(vol())"; 
+    	accumulations (
+        	average
+    	);
+    	verbose true;
+	outputControlMode   	outputTime; 
+	outputInterval  1;
+    }
+weightedVolAverageflowThruZone_floorvent6F8DAC07F3B291CF83FD0CD358FA9AF3
+    {
+    	type swakExpression;
+    	valueType cellZone;
+   	zoneName 
+	
+		floorvent6F8DAC07F3B291CF83FD0CD358FA9AF3;
+
+    	expression "sum(mag(U)*vol())/sum(vol())"; 
+    	accumulations (
+        	average
+    	);
+    	verbose true;
+	outputControlMode   	outputTime; 
+	outputInterval  1;
+    }
+weightedVolAverageflowThruZone_floorvent90D18559CA15B7B5A55EF4EE7FC234BE
+    {
+    	type swakExpression;
+    	valueType cellZone;
+   	zoneName 
+	
+		floorvent90D18559CA15B7B5A55EF4EE7FC234BE;
+
+    	expression "sum(mag(U)*vol())/sum(vol())"; 
+    	accumulations (
+        	average
+    	);
+    	verbose true;
+	outputControlMode   	outputTime; 
+	outputInterval  1;
+    }
+weightedVolAverageflowThruZone_floorvent3205FD82879EBFA2C8EBCBB269C2B566
+    {
+    	type swakExpression;
+    	valueType cellZone;
+   	zoneName 
+	
+		floorvent3205FD82879EBFA2C8EBCBB269C2B566;
+
+    	expression "sum(mag(U)*vol())/sum(vol())"; 
+    	accumulations (
+        	average
+    	);
+    	verbose true;
+	outputControlMode   	outputTime; 
+	outputInterval  1;
+    }
+weightedVolAverageflowThruZone_floorventA6482C27D081E993C8860DD6AD1FE120
+    {
+    	type swakExpression;
+    	valueType cellZone;
+   	zoneName 
+	
+		floorventA6482C27D081E993C8860DD6AD1FE120;
+
+    	expression "sum(mag(U)*vol())/sum(vol())"; 
+    	accumulations (
+        	average
+    	);
+    	verbose true;
+	outputControlMode   	outputTime; 
+	outputInterval  1;
+    }
+weightedVolAverageflowThruZone_floorvent6FF4E7482FBC2A69FC40EF2A85717E5A
+    {
+    	type swakExpression;
+    	valueType cellZone;
+   	zoneName 
+	
+		floorvent6FF4E7482FBC2A69FC40EF2A85717E5A;
+
+    	expression "sum(mag(U)*vol())/sum(vol())"; 
+    	accumulations (
+        	average
+    	);
+    	verbose true;
+	outputControlMode   	outputTime; 
+	outputInterval  1;
+    }
+weightedVolAverageflowThruZone_floorvent0C59D02C7E4D8C5B53D983DBA12B26C0
+    {
+    	type swakExpression;
+    	valueType cellZone;
+   	zoneName 
+	
+		floorvent0C59D02C7E4D8C5B53D983DBA12B26C0;
+
+    	expression "sum(mag(U)*vol())/sum(vol())"; 
+    	accumulations (
+        	average
+    	);
+    	verbose true;
+	outputControlMode   	outputTime; 
+	outputInterval  1;
+    }
+weightedVolAverageflowThruZone_floorventED56BE921007017042890D4317187FF6
+    {
+    	type swakExpression;
+    	valueType cellZone;
+   	zoneName 
+	
+		floorventED56BE921007017042890D4317187FF6;
+
+    	expression "sum(mag(U)*vol())/sum(vol())"; 
+    	accumulations (
+        	average
+    	);
+    	verbose true;
+	outputControlMode   	outputTime; 
+	outputInterval  1;
+    }
+weightedVolAverageflowThruZone_floorventC8BFB9C90198726DF9465F8E2798AD9A
+    {
+    	type swakExpression;
+    	valueType cellZone;
+   	zoneName 
+	
+		floorventC8BFB9C90198726DF9465F8E2798AD9A;
+
+    	expression "sum(mag(U)*vol())/sum(vol())"; 
+    	accumulations (
+        	average
+    	);
+    	verbose true;
+	outputControlMode   	outputTime; 
+	outputInterval  1;
+    }
+weightedVolAverageflowThruZone_floorvent6BC138BE73498EFAEB23C25FBF820B55
+    {
+    	type swakExpression;
+    	valueType cellZone;
+   	zoneName 
+	
+		floorvent6BC138BE73498EFAEB23C25FBF820B55;
+
+    	expression "sum(mag(U)*vol())/sum(vol())"; 
+    	accumulations (
+        	average
+    	);
+    	verbose true;
+	outputControlMode   	outputTime; 
+	outputInterval  1;
+    }
+weightedVolAverageflowThruZone_floorvent5168A3874467BB3FC1E3950DCEEDE0D7
+    {
+    	type swakExpression;
+    	valueType cellZone;
+   	zoneName 
+	
+		floorvent5168A3874467BB3FC1E3950DCEEDE0D7;
+
+    	expression "sum(mag(U)*vol())/sum(vol())"; 
+    	accumulations (
+        	average
+    	);
+    	verbose true;
+	outputControlMode   	outputTime; 
+	outputInterval  1;
+    }
+weightedVolAverageflowThruZone_floorventD46CDF15D3765E13D857D943E84E6149
+    {
+    	type swakExpression;
+    	valueType cellZone;
+   	zoneName 
+	
+		floorventD46CDF15D3765E13D857D943E84E6149;
+
+    	expression "sum(mag(U)*vol())/sum(vol())"; 
+    	accumulations (
+        	average
+    	);
+    	verbose true;
+	outputControlMode   	outputTime; 
+	outputInterval  1;
+    }
+weightedVolAverageflowThruZone_floorvent5A8C3E21D11732F9368492BE10A3E069
+    {
+    	type swakExpression;
+    	valueType cellZone;
+   	zoneName 
+	
+		floorvent5A8C3E21D11732F9368492BE10A3E069;
+
+    	expression "sum(mag(U)*vol())/sum(vol())"; 
+    	accumulations (
+        	average
+    	);
+    	verbose true;
+	outputControlMode   	outputTime; 
+	outputInterval  1;
+    }
+weightedVolAverageflowThruZone_floorvent5576185CB70BAF6D61315951A18B844C
+    {
+    	type swakExpression;
+    	valueType cellZone;
+   	zoneName 
+	
+		floorvent5576185CB70BAF6D61315951A18B844C;
+
+    	expression "sum(mag(U)*vol())/sum(vol())"; 
+    	accumulations (
+        	average
+    	);
+    	verbose true;
+	outputControlMode   	outputTime; 
+	outputInterval  1;
+    }
+weightedVolAverageflowThruZone_floorvent349027BE161AA61BC7AE8E76B1A30D3B
+    {
+    	type swakExpression;
+    	valueType cellZone;
+   	zoneName 
+	
+		floorvent349027BE161AA61BC7AE8E76B1A30D3B;
+
+    	expression "sum(mag(U)*vol())/sum(vol())"; 
+    	accumulations (
+        	average
+    	);
+    	verbose true;
+	outputControlMode   	outputTime; 
+	outputInterval  1;
+    }
+weightedVolAverageflowThruZone_floorventF298F1341F155B6218A9E7C2A824573A
+    {
+    	type swakExpression;
+    	valueType cellZone;
+   	zoneName 
+	
+		floorventF298F1341F155B6218A9E7C2A824573A;
+
+    	expression "sum(mag(U)*vol())/sum(vol())"; 
+    	accumulations (
+        	average
+    	);
+    	verbose true;
+	outputControlMode   	outputTime; 
+	outputInterval  1;
+    }
+weightedVolAverageflowThruZone_floorvent8339155AECC6E6F3EF8DBC1F9139303F
+    {
+    	type swakExpression;
+    	valueType cellZone;
+   	zoneName 
+	
+		floorvent8339155AECC6E6F3EF8DBC1F9139303F;
+
+    	expression "sum(mag(U)*vol())/sum(vol())"; 
+    	accumulations (
+        	average
+    	);
+    	verbose true;
+	outputControlMode   	outputTime; 
+	outputInterval  1;
+    }
+weightedVolAverageflowThruZone_floorvent44BEC3EA3D759C2C33D04E5781A35B97
+    {
+    	type swakExpression;
+    	valueType cellZone;
+   	zoneName 
+	
+		floorvent44BEC3EA3D759C2C33D04E5781A35B97;
+
+    	expression "sum(mag(U)*vol())/sum(vol())"; 
+    	accumulations (
+        	average
+    	);
+    	verbose true;
+	outputControlMode   	outputTime; 
+	outputInterval  1;
+    }
+weightedVolAverageflowThruZone_floorvent823E03C5A07B97E381B0036950CC8098
+    {
+    	type swakExpression;
+    	valueType cellZone;
+   	zoneName 
+	
+		floorvent823E03C5A07B97E381B0036950CC8098;
+
+    	expression "sum(mag(U)*vol())/sum(vol())"; 
+    	accumulations (
+        	average
+    	);
+    	verbose true;
+	outputControlMode   	outputTime; 
+	outputInterval  1;
+    }
+weightedVolAverageflowThruZone_floorvent20E47AC6EE2033860917400FA2F2419B
+    {
+    	type swakExpression;
+    	valueType cellZone;
+   	zoneName 
+	
+		floorvent20E47AC6EE2033860917400FA2F2419B;
+
+    	expression "sum(mag(U)*vol())/sum(vol())"; 
+    	accumulations (
+        	average
+    	);
+    	verbose true;
+	outputControlMode   	outputTime; 
+	outputInterval  1;
+    }
+weightedVolAverageflowThruZone_floorvent8E54223AB8149A02EB805B5E372E62E7
+    {
+    	type swakExpression;
+    	valueType cellZone;
+   	zoneName 
+	
+		floorvent8E54223AB8149A02EB805B5E372E62E7;
+
+    	expression "sum(mag(U)*vol())/sum(vol())"; 
+    	accumulations (
+        	average
+    	);
+    	verbose true;
+	outputControlMode   	outputTime; 
+	outputInterval  1;
+    }
+weightedVolAverageflowThruZone_floorventE94FE9BA8A1BF9E7B140EE4010439056
+    {
+    	type swakExpression;
+    	valueType cellZone;
+   	zoneName 
+	
+		floorventE94FE9BA8A1BF9E7B140EE4010439056;
+
+    	expression "sum(mag(U)*vol())/sum(vol())"; 
+    	accumulations (
+        	average
+    	);
+    	verbose true;
+	outputControlMode   	outputTime; 
+	outputInterval  1;
+    }
+weightedVolAverageflowThruZone_floorvent22066351DC2A315E26F60F499216CDA8
+    {
+    	type swakExpression;
+    	valueType cellZone;
+   	zoneName 
+	
+		floorvent22066351DC2A315E26F60F499216CDA8;
+
+    	expression "sum(mag(U)*vol())/sum(vol())"; 
+    	accumulations (
+        	average
+    	);
+    	verbose true;
+	outputControlMode   	outputTime; 
+	outputInterval  1;
+    }
+weightedVolAverageflowThruZone_floorventA67A291C7FD536D5F0B1E12391416DDE
+    {
+    	type swakExpression;
+    	valueType cellZone;
+   	zoneName 
+	
+		floorventA67A291C7FD536D5F0B1E12391416DDE;
+
+    	expression "sum(mag(U)*vol())/sum(vol())"; 
+    	accumulations (
+        	average
+    	);
+    	verbose true;
+	outputControlMode   	outputTime; 
+	outputInterval  1;
+    }
+weightedVolAverageflowThruZone_floorvent1CA57BAAA6EDA9DB0C06FD4F75402730
+    {
+    	type swakExpression;
+    	valueType cellZone;
+   	zoneName 
+	
+		floorvent1CA57BAAA6EDA9DB0C06FD4F75402730;
+
+    	expression "sum(mag(U)*vol())/sum(vol())"; 
+    	accumulations (
+        	average
+    	);
+    	verbose true;
+	outputControlMode   	outputTime; 
+	outputInterval  1;
+    }
+weightedVolAverageflowThruZone_floorvent693F89963F68D48A20BDF9AF2C33349B
+    {
+    	type swakExpression;
+    	valueType cellZone;
+   	zoneName 
+	
+		floorvent693F89963F68D48A20BDF9AF2C33349B;
+
+    	expression "sum(mag(U)*vol())/sum(vol())"; 
+    	accumulations (
+        	average
+    	);
+    	verbose true;
+	outputControlMode   	outputTime; 
+	outputInterval  1;
+    }
+weightedVolAverageflowThruZone_floorvent20067C165E43F4ED25C4159A6E90E7D1
+    {
+    	type swakExpression;
+    	valueType cellZone;
+   	zoneName 
+	
+		floorvent20067C165E43F4ED25C4159A6E90E7D1;
+
+    	expression "sum(mag(U)*vol())/sum(vol())"; 
+    	accumulations (
+        	average
+    	);
+    	verbose true;
+	outputControlMode   	outputTime; 
+	outputInterval  1;
+    }
+weightedVolAverageflowThruZone_floorvent62FAF2EA77C6DDE8EAA3A1167C01BABF
+    {
+    	type swakExpression;
+    	valueType cellZone;
+   	zoneName 
+	
+		floorvent62FAF2EA77C6DDE8EAA3A1167C01BABF;
+
+    	expression "sum(mag(U)*vol())/sum(vol())"; 
+    	accumulations (
+        	average
+    	);
+    	verbose true;
+	outputControlMode   	outputTime; 
+	outputInterval  1;
+    }
+weightedVolAverageflowThruZone_floorventEF329451229CAFD61B79145E7BF3BA04
+    {
+    	type swakExpression;
+    	valueType cellZone;
+   	zoneName 
+	
+		floorventEF329451229CAFD61B79145E7BF3BA04;
+
+    	expression "sum(mag(U)*vol())/sum(vol())"; 
+    	accumulations (
+        	average
+    	);
+    	verbose true;
+	outputControlMode   	outputTime; 
+	outputInterval  1;
+    }
+weightedVolAverageflowThruZone_floorventBACAB80043633929D828E0E9959541E6
+    {
+    	type swakExpression;
+    	valueType cellZone;
+   	zoneName 
+	
+		floorventBACAB80043633929D828E0E9959541E6;
+
+    	expression "sum(mag(U)*vol())/sum(vol())"; 
+    	accumulations (
+        	average
+    	);
+    	verbose true;
+	outputControlMode   	outputTime; 
+	outputInterval  1;
+    }
+weightedVolAverageflowThruZone_floorvent4315C6A2B810AD851FC9CE1BFA58DA83
+    {
+    	type swakExpression;
+    	valueType cellZone;
+   	zoneName 
+	
+		floorvent4315C6A2B810AD851FC9CE1BFA58DA83;
+
+    	expression "sum(mag(U)*vol())/sum(vol())"; 
+    	accumulations (
+        	average
+    	);
+    	verbose true;
+	outputControlMode   	outputTime; 
+	outputInterval  1;
+    }
+weightedVolAverageflowThruZone_floorventC91C19EA55E02D611D4EF800980FB4AC
+    {
+    	type swakExpression;
+    	valueType cellZone;
+   	zoneName 
+	
+		floorventC91C19EA55E02D611D4EF800980FB4AC;
+
+    	expression "sum(mag(U)*vol())/sum(vol())"; 
+    	accumulations (
+        	average
+    	);
+    	verbose true;
+	outputControlMode   	outputTime; 
+	outputInterval  1;
+    }
+weightedVolAverageflowThruZone_floorvent71B17D54F15FD34CD50FE093EBC7F74A
+    {
+    	type swakExpression;
+    	valueType cellZone;
+   	zoneName 
+	
+		floorvent71B17D54F15FD34CD50FE093EBC7F74A;
+
+    	expression "sum(mag(U)*vol())/sum(vol())"; 
+    	accumulations (
+        	average
+    	);
+    	verbose true;
+	outputControlMode   	outputTime; 
+	outputInterval  1;
+    }
+weightedVolAverageflowThruZone_floorvent46A027D1553C12BC8C3B68815402C19C
+    {
+    	type swakExpression;
+    	valueType cellZone;
+   	zoneName 
+	
+		floorvent46A027D1553C12BC8C3B68815402C19C;
+
+    	expression "sum(mag(U)*vol())/sum(vol())"; 
+    	accumulations (
+        	average
+    	);
+    	verbose true;
+	outputControlMode   	outputTime; 
+	outputInterval  1;
+    }
+weightedVolAverageflowThruZone_floorvent42D51C084DD32A608AA9D6465C397171
+    {
+    	type swakExpression;
+    	valueType cellZone;
+   	zoneName 
+	
+		floorvent42D51C084DD32A608AA9D6465C397171;
+
+    	expression "sum(mag(U)*vol())/sum(vol())"; 
+    	accumulations (
+        	average
+    	);
+    	verbose true;
+	outputControlMode   	outputTime; 
+	outputInterval  1;
+    }
+weightedVolAverageflowThruZone_floorvent6BDE4E00A1ADDBCB1FB413D06C194E31
+    {
+    	type swakExpression;
+    	valueType cellZone;
+   	zoneName 
+	
+		floorvent6BDE4E00A1ADDBCB1FB413D06C194E31;
+
+    	expression "sum(mag(U)*vol())/sum(vol())"; 
+    	accumulations (
+        	average
+    	);
+    	verbose true;
+	outputControlMode   	outputTime; 
+	outputInterval  1;
+    }
+weightedVolAverageflowThruZone_floorvent739589A28F68348D4A0A9AC1594C513B
+    {
+    	type swakExpression;
+    	valueType cellZone;
+   	zoneName 
+	
+		floorvent739589A28F68348D4A0A9AC1594C513B;
+
+    	expression "sum(mag(U)*vol())/sum(vol())"; 
+    	accumulations (
+        	average
+    	);
+    	verbose true;
+	outputControlMode   	outputTime; 
+	outputInterval  1;
+    }
+weightedVolAverageflowThruZone_floorvent805DB8A03810A9ABB8E68581D64C0162
+    {
+    	type swakExpression;
+    	valueType cellZone;
+   	zoneName 
+	
+		floorvent805DB8A03810A9ABB8E68581D64C0162;
+
+    	expression "sum(mag(U)*vol())/sum(vol())"; 
+    	accumulations (
+        	average
+    	);
+    	verbose true;
+	outputControlMode   	outputTime; 
+	outputInterval  1;
+    }
+weightedVolAverageflowThruZone_floorvent770168A3A8C70C4BF8A911FFB9FB90CD
+    {
+    	type swakExpression;
+    	valueType cellZone;
+   	zoneName 
+	
+		floorvent770168A3A8C70C4BF8A911FFB9FB90CD;
+
+    	expression "sum(mag(U)*vol())/sum(vol())"; 
+    	accumulations (
+        	average
+    	);
+    	verbose true;
+	outputControlMode   	outputTime; 
+	outputInterval  1;
+    }
+weightedVolAverageflowThruZone_floorventC4F9CDB8EB40CE185F083E235F2FD14A
+    {
+    	type swakExpression;
+    	valueType cellZone;
+   	zoneName 
+	
+		floorventC4F9CDB8EB40CE185F083E235F2FD14A;
+
+    	expression "sum(mag(U)*vol())/sum(vol())"; 
+    	accumulations (
+        	average
+    	);
+    	verbose true;
+	outputControlMode   	outputTime; 
+	outputInterval  1;
+    }
+weightedVolAverageflowThruZone_floorvent78880056CA1DC68D1630DF40739A0597
+    {
+    	type swakExpression;
+    	valueType cellZone;
+   	zoneName 
+	
+		floorvent78880056CA1DC68D1630DF40739A0597;
+
+    	expression "sum(mag(U)*vol())/sum(vol())"; 
+    	accumulations (
+        	average
+    	);
+    	verbose true;
+	outputControlMode   	outputTime; 
+	outputInterval  1;
+    }
+weightedVolAverageflowThruZone_floorvent315DE28DF42AA45FDDFE045C449BDDCD
+    {
+    	type swakExpression;
+    	valueType cellZone;
+   	zoneName 
+	
+		floorvent315DE28DF42AA45FDDFE045C449BDDCD;
+
+    	expression "sum(mag(U)*vol())/sum(vol())"; 
+    	accumulations (
+        	average
+    	);
+    	verbose true;
+	outputControlMode   	outputTime; 
+	outputInterval  1;
+    }
+weightedVolAverageflowThruZone_floorventA7F69500343515C4009504038B735E84
+    {
+    	type swakExpression;
+    	valueType cellZone;
+   	zoneName 
+	
+		floorventA7F69500343515C4009504038B735E84;
+
+    	expression "sum(mag(U)*vol())/sum(vol())"; 
+    	accumulations (
+        	average
+    	);
+    	verbose true;
+	outputControlMode   	outputTime; 
+	outputInterval  1;
+    }
+weightedVolAverageflowThruZone_floorventC4495491324E08C883C70BECCBA9BBE5
+    {
+    	type swakExpression;
+    	valueType cellZone;
+   	zoneName 
+	
+		floorventC4495491324E08C883C70BECCBA9BBE5;
+
+    	expression "sum(mag(U)*vol())/sum(vol())"; 
+    	accumulations (
+        	average
+    	);
+    	verbose true;
+	outputControlMode   	outputTime; 
+	outputInterval  1;
+    }
+
+
+// capture flow velocity vector through floorvent cut surface
+
+floorvent_plane
+{
+        type createSampledSurface;
+        outputInterval 1;
+        surfaceName z_0.7; //Top of the floorvent surface
+        surface {
+            type plane;
+            basePoint       (42.20 23.60 0.65); 
+            normalVector    (0 0 1);
+            interpolate true;
+        }
+        writeSurfaceOnConstruction true;
+        autoWriteSurface true;
+        surfaceFormat vtk;
+        outputControl outputTime;
+}
+
+// Interpolate over the desired area and sum phi
+
+floorventF11148AE11166F735A1DC51F461CFE43_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<51.6)&&(pos().x>51.0) && (pos().y<26.400000000000002) &&(pos().y>25.8) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorventC73EAFF2FCCC980FB5FED0F9130F83F0_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<52.2)&&(pos().x>51.6) && (pos().y<26.400000000000002) &&(pos().y>25.8) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent0CCDAD6BC97F7E47E3F1FA4B4CEFAD8E_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<52.800000000000004)&&(pos().x>52.2) && (pos().y<26.400000000000002) &&(pos().y>25.8) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent4C476D91CF4A6BF03A27C47431D76A6E_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<53.400000000000006)&&(pos().x>52.800000000000004) && (pos().y<26.400000000000002) &&(pos().y>25.8) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent74D44F41F412E189A203AD562B868744_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<54.0)&&(pos().x>53.400000000000006) && (pos().y<26.400000000000002) &&(pos().y>25.8) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent5E38EFD97F291B9A1B28A2C8A9686778_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<54.6)&&(pos().x>54.0) && (pos().y<26.400000000000002) &&(pos().y>25.8) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorventB2FD53A540247E7B0C7F3B5E39D4E16D_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<55.800000000000004)&&(pos().x>55.2) && (pos().y<26.400000000000002) &&(pos().y>25.8) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorventC6A3FC7C9BED134C3D8E4C538E9930BD_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<55.2)&&(pos().x>54.6) && (pos().y<26.400000000000002) &&(pos().y>25.8) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent8D629A3CD4ADDAC4D2BAA41B1F93F050_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<56.400000000000006)&&(pos().x>55.800000000000004) && (pos().y<26.400000000000002) &&(pos().y>25.8) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorventE44FB80E28D36F4DEC51CF6CE96BC70A_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<57.0)&&(pos().x>56.400000000000006) && (pos().y<26.400000000000002) &&(pos().y>25.8) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent520A1BCA435EAE0950669FB533E4CFE8_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<57.6)&&(pos().x>57.0) && (pos().y<26.400000000000002) &&(pos().y>25.8) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent220A5D0832CDFBAEC6BD5873AA177837_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<58.2)&&(pos().x>57.6) && (pos().y<26.400000000000002) &&(pos().y>25.8) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent26BD73EC6210A2C4A332F8432BAFE37F_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<58.800000000000004)&&(pos().x>58.2) && (pos().y<26.400000000000002) &&(pos().y>25.8) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent7F8560547F2D0DD698F1A15CA79B92FE_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<51.0)&&(pos().x>50.400000000000006) && (pos().y<26.400000000000002) &&(pos().y>25.8) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent19012EC1E3CF89CEC930B889F837E466_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<59.400000000000006)&&(pos().x>58.800000000000004) && (pos().y<26.400000000000002) &&(pos().y>25.8) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent4D1E8FC6004BC9C86404493BB4DE7F89_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<59.400000000000006)&&(pos().x>58.800000000000004) && (pos().y<27.0) &&(pos().y>26.400000000000002) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorventAF7315E7C387F408413A260F86642170_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<51.0)&&(pos().x>50.400000000000006) && (pos().y<27.0) &&(pos().y>26.400000000000002) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent6F8DAC07F3B291CF83FD0CD358FA9AF3_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<51.6)&&(pos().x>51.0) && (pos().y<27.0) &&(pos().y>26.400000000000002) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent90D18559CA15B7B5A55EF4EE7FC234BE_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<52.2)&&(pos().x>51.6) && (pos().y<27.0) &&(pos().y>26.400000000000002) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent3205FD82879EBFA2C8EBCBB269C2B566_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<52.800000000000004)&&(pos().x>52.2) && (pos().y<27.0) &&(pos().y>26.400000000000002) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorventA6482C27D081E993C8860DD6AD1FE120_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<53.400000000000006)&&(pos().x>52.800000000000004) && (pos().y<27.0) &&(pos().y>26.400000000000002) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent6FF4E7482FBC2A69FC40EF2A85717E5A_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<54.0)&&(pos().x>53.400000000000006) && (pos().y<27.0) &&(pos().y>26.400000000000002) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent0C59D02C7E4D8C5B53D983DBA12B26C0_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<54.6)&&(pos().x>54.0) && (pos().y<27.0) &&(pos().y>26.400000000000002) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorventED56BE921007017042890D4317187FF6_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<55.2)&&(pos().x>54.6) && (pos().y<27.0) &&(pos().y>26.400000000000002) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorventC8BFB9C90198726DF9465F8E2798AD9A_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<55.800000000000004)&&(pos().x>55.2) && (pos().y<27.0) &&(pos().y>26.400000000000002) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent6BC138BE73498EFAEB23C25FBF820B55_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<56.400000000000006)&&(pos().x>55.800000000000004) && (pos().y<27.0) &&(pos().y>26.400000000000002) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent5168A3874467BB3FC1E3950DCEEDE0D7_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<57.0)&&(pos().x>56.400000000000006) && (pos().y<27.0) &&(pos().y>26.400000000000002) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorventD46CDF15D3765E13D857D943E84E6149_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<57.6)&&(pos().x>57.0) && (pos().y<27.0) &&(pos().y>26.400000000000002) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent5A8C3E21D11732F9368492BE10A3E069_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<58.2)&&(pos().x>57.6) && (pos().y<27.0) &&(pos().y>26.400000000000002) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent5576185CB70BAF6D61315951A18B844C_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<58.800000000000004)&&(pos().x>58.2) && (pos().y<27.0) &&(pos().y>26.400000000000002) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent349027BE161AA61BC7AE8E76B1A30D3B_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<59.400000000000006)&&(pos().x>58.800000000000004) && (pos().y<28.200000000000003) &&(pos().y>27.6) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorventF298F1341F155B6218A9E7C2A824573A_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<51.0)&&(pos().x>50.400000000000006) && (pos().y<28.200000000000003) &&(pos().y>27.6) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent8339155AECC6E6F3EF8DBC1F9139303F_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<51.6)&&(pos().x>51.0) && (pos().y<28.200000000000003) &&(pos().y>27.6) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent44BEC3EA3D759C2C33D04E5781A35B97_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<52.2)&&(pos().x>51.6) && (pos().y<28.200000000000003) &&(pos().y>27.6) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent823E03C5A07B97E381B0036950CC8098_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<52.800000000000004)&&(pos().x>52.2) && (pos().y<28.200000000000003) &&(pos().y>27.6) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent20E47AC6EE2033860917400FA2F2419B_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<53.400000000000006)&&(pos().x>52.800000000000004) && (pos().y<28.200000000000003) &&(pos().y>27.6) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent8E54223AB8149A02EB805B5E372E62E7_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<54.0)&&(pos().x>53.400000000000006) && (pos().y<28.200000000000003) &&(pos().y>27.6) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorventE94FE9BA8A1BF9E7B140EE4010439056_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<54.6)&&(pos().x>54.0) && (pos().y<28.200000000000003) &&(pos().y>27.6) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent22066351DC2A315E26F60F499216CDA8_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<55.2)&&(pos().x>54.6) && (pos().y<28.200000000000003) &&(pos().y>27.6) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorventA67A291C7FD536D5F0B1E12391416DDE_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<55.800000000000004)&&(pos().x>55.2) && (pos().y<28.200000000000003) &&(pos().y>27.6) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent1CA57BAAA6EDA9DB0C06FD4F75402730_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<56.400000000000006)&&(pos().x>55.800000000000004) && (pos().y<28.200000000000003) &&(pos().y>27.6) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent693F89963F68D48A20BDF9AF2C33349B_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<57.0)&&(pos().x>56.400000000000006) && (pos().y<28.200000000000003) &&(pos().y>27.6) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent20067C165E43F4ED25C4159A6E90E7D1_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<57.6)&&(pos().x>57.0) && (pos().y<28.200000000000003) &&(pos().y>27.6) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent62FAF2EA77C6DDE8EAA3A1167C01BABF_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<58.2)&&(pos().x>57.6) && (pos().y<28.200000000000003) &&(pos().y>27.6) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorventEF329451229CAFD61B79145E7BF3BA04_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<58.800000000000004)&&(pos().x>58.2) && (pos().y<28.200000000000003) &&(pos().y>27.6) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorventBACAB80043633929D828E0E9959541E6_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<51.0)&&(pos().x>50.400000000000006) && (pos().y<27.6) &&(pos().y>27.0) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent4315C6A2B810AD851FC9CE1BFA58DA83_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<51.6)&&(pos().x>51.0) && (pos().y<27.6) &&(pos().y>27.0) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorventC91C19EA55E02D611D4EF800980FB4AC_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<52.2)&&(pos().x>51.6) && (pos().y<27.6) &&(pos().y>27.0) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent71B17D54F15FD34CD50FE093EBC7F74A_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<52.800000000000004)&&(pos().x>52.2) && (pos().y<27.6) &&(pos().y>27.0) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent46A027D1553C12BC8C3B68815402C19C_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<53.400000000000006)&&(pos().x>52.800000000000004) && (pos().y<27.6) &&(pos().y>27.0) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent42D51C084DD32A608AA9D6465C397171_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<54.0)&&(pos().x>53.400000000000006) && (pos().y<27.6) &&(pos().y>27.0) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent6BDE4E00A1ADDBCB1FB413D06C194E31_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<54.6)&&(pos().x>54.0) && (pos().y<27.6) &&(pos().y>27.0) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent739589A28F68348D4A0A9AC1594C513B_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<55.2)&&(pos().x>54.6) && (pos().y<27.6) &&(pos().y>27.0) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent805DB8A03810A9ABB8E68581D64C0162_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<55.800000000000004)&&(pos().x>55.2) && (pos().y<27.6) &&(pos().y>27.0) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent770168A3A8C70C4BF8A911FFB9FB90CD_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<56.400000000000006)&&(pos().x>55.800000000000004) && (pos().y<27.6) &&(pos().y>27.0) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorventC4F9CDB8EB40CE185F083E235F2FD14A_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<57.0)&&(pos().x>56.400000000000006) && (pos().y<27.6) &&(pos().y>27.0) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent78880056CA1DC68D1630DF40739A0597_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<57.6)&&(pos().x>57.0) && (pos().y<27.6) &&(pos().y>27.0) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent315DE28DF42AA45FDDFE045C449BDDCD_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<58.2)&&(pos().x>57.6) && (pos().y<27.6) &&(pos().y>27.0) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorventA7F69500343515C4009504038B735E84_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<58.800000000000004)&&(pos().x>58.2) && (pos().y<27.6) &&(pos().y>27.0) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorventC4495491324E08C883C70BECCBA9BBE5_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<59.400000000000006)&&(pos().x>58.800000000000004) && (pos().y<27.6) &&(pos().y>27.0) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+
+floorventF11148AE11166F735A1DC51F461CFE43_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<51.6)&&(pos().x>51.0) && (pos().y<26.400000000000002) &&(pos().y>25.8) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorventC73EAFF2FCCC980FB5FED0F9130F83F0_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<52.2)&&(pos().x>51.6) && (pos().y<26.400000000000002) &&(pos().y>25.8) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent0CCDAD6BC97F7E47E3F1FA4B4CEFAD8E_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<52.800000000000004)&&(pos().x>52.2) && (pos().y<26.400000000000002) &&(pos().y>25.8) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent4C476D91CF4A6BF03A27C47431D76A6E_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<53.400000000000006)&&(pos().x>52.800000000000004) && (pos().y<26.400000000000002) &&(pos().y>25.8) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent74D44F41F412E189A203AD562B868744_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<54.0)&&(pos().x>53.400000000000006) && (pos().y<26.400000000000002) &&(pos().y>25.8) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent5E38EFD97F291B9A1B28A2C8A9686778_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<54.6)&&(pos().x>54.0) && (pos().y<26.400000000000002) &&(pos().y>25.8) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorventB2FD53A540247E7B0C7F3B5E39D4E16D_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<55.800000000000004)&&(pos().x>55.2) && (pos().y<26.400000000000002) &&(pos().y>25.8) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorventC6A3FC7C9BED134C3D8E4C538E9930BD_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<55.2)&&(pos().x>54.6) && (pos().y<26.400000000000002) &&(pos().y>25.8) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent8D629A3CD4ADDAC4D2BAA41B1F93F050_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<56.400000000000006)&&(pos().x>55.800000000000004) && (pos().y<26.400000000000002) &&(pos().y>25.8) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorventE44FB80E28D36F4DEC51CF6CE96BC70A_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<57.0)&&(pos().x>56.400000000000006) && (pos().y<26.400000000000002) &&(pos().y>25.8) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent520A1BCA435EAE0950669FB533E4CFE8_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<57.6)&&(pos().x>57.0) && (pos().y<26.400000000000002) &&(pos().y>25.8) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent220A5D0832CDFBAEC6BD5873AA177837_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<58.2)&&(pos().x>57.6) && (pos().y<26.400000000000002) &&(pos().y>25.8) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent26BD73EC6210A2C4A332F8432BAFE37F_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<58.800000000000004)&&(pos().x>58.2) && (pos().y<26.400000000000002) &&(pos().y>25.8) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent7F8560547F2D0DD698F1A15CA79B92FE_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<51.0)&&(pos().x>50.400000000000006) && (pos().y<26.400000000000002) &&(pos().y>25.8) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent19012EC1E3CF89CEC930B889F837E466_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<59.400000000000006)&&(pos().x>58.800000000000004) && (pos().y<26.400000000000002) &&(pos().y>25.8) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent4D1E8FC6004BC9C86404493BB4DE7F89_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<59.400000000000006)&&(pos().x>58.800000000000004) && (pos().y<27.0) &&(pos().y>26.400000000000002) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorventAF7315E7C387F408413A260F86642170_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<51.0)&&(pos().x>50.400000000000006) && (pos().y<27.0) &&(pos().y>26.400000000000002) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent6F8DAC07F3B291CF83FD0CD358FA9AF3_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<51.6)&&(pos().x>51.0) && (pos().y<27.0) &&(pos().y>26.400000000000002) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent90D18559CA15B7B5A55EF4EE7FC234BE_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<52.2)&&(pos().x>51.6) && (pos().y<27.0) &&(pos().y>26.400000000000002) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent3205FD82879EBFA2C8EBCBB269C2B566_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<52.800000000000004)&&(pos().x>52.2) && (pos().y<27.0) &&(pos().y>26.400000000000002) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorventA6482C27D081E993C8860DD6AD1FE120_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<53.400000000000006)&&(pos().x>52.800000000000004) && (pos().y<27.0) &&(pos().y>26.400000000000002) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent6FF4E7482FBC2A69FC40EF2A85717E5A_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<54.0)&&(pos().x>53.400000000000006) && (pos().y<27.0) &&(pos().y>26.400000000000002) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent0C59D02C7E4D8C5B53D983DBA12B26C0_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<54.6)&&(pos().x>54.0) && (pos().y<27.0) &&(pos().y>26.400000000000002) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorventED56BE921007017042890D4317187FF6_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<55.2)&&(pos().x>54.6) && (pos().y<27.0) &&(pos().y>26.400000000000002) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorventC8BFB9C90198726DF9465F8E2798AD9A_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<55.800000000000004)&&(pos().x>55.2) && (pos().y<27.0) &&(pos().y>26.400000000000002) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent6BC138BE73498EFAEB23C25FBF820B55_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<56.400000000000006)&&(pos().x>55.800000000000004) && (pos().y<27.0) &&(pos().y>26.400000000000002) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent5168A3874467BB3FC1E3950DCEEDE0D7_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<57.0)&&(pos().x>56.400000000000006) && (pos().y<27.0) &&(pos().y>26.400000000000002) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorventD46CDF15D3765E13D857D943E84E6149_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<57.6)&&(pos().x>57.0) && (pos().y<27.0) &&(pos().y>26.400000000000002) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent5A8C3E21D11732F9368492BE10A3E069_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<58.2)&&(pos().x>57.6) && (pos().y<27.0) &&(pos().y>26.400000000000002) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent5576185CB70BAF6D61315951A18B844C_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<58.800000000000004)&&(pos().x>58.2) && (pos().y<27.0) &&(pos().y>26.400000000000002) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent349027BE161AA61BC7AE8E76B1A30D3B_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<59.400000000000006)&&(pos().x>58.800000000000004) && (pos().y<28.200000000000003) &&(pos().y>27.6) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorventF298F1341F155B6218A9E7C2A824573A_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<51.0)&&(pos().x>50.400000000000006) && (pos().y<28.200000000000003) &&(pos().y>27.6) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent8339155AECC6E6F3EF8DBC1F9139303F_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<51.6)&&(pos().x>51.0) && (pos().y<28.200000000000003) &&(pos().y>27.6) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent44BEC3EA3D759C2C33D04E5781A35B97_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<52.2)&&(pos().x>51.6) && (pos().y<28.200000000000003) &&(pos().y>27.6) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent823E03C5A07B97E381B0036950CC8098_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<52.800000000000004)&&(pos().x>52.2) && (pos().y<28.200000000000003) &&(pos().y>27.6) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent20E47AC6EE2033860917400FA2F2419B_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<53.400000000000006)&&(pos().x>52.800000000000004) && (pos().y<28.200000000000003) &&(pos().y>27.6) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent8E54223AB8149A02EB805B5E372E62E7_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<54.0)&&(pos().x>53.400000000000006) && (pos().y<28.200000000000003) &&(pos().y>27.6) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorventE94FE9BA8A1BF9E7B140EE4010439056_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<54.6)&&(pos().x>54.0) && (pos().y<28.200000000000003) &&(pos().y>27.6) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent22066351DC2A315E26F60F499216CDA8_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<55.2)&&(pos().x>54.6) && (pos().y<28.200000000000003) &&(pos().y>27.6) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorventA67A291C7FD536D5F0B1E12391416DDE_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<55.800000000000004)&&(pos().x>55.2) && (pos().y<28.200000000000003) &&(pos().y>27.6) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent1CA57BAAA6EDA9DB0C06FD4F75402730_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<56.400000000000006)&&(pos().x>55.800000000000004) && (pos().y<28.200000000000003) &&(pos().y>27.6) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent693F89963F68D48A20BDF9AF2C33349B_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<57.0)&&(pos().x>56.400000000000006) && (pos().y<28.200000000000003) &&(pos().y>27.6) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent20067C165E43F4ED25C4159A6E90E7D1_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<57.6)&&(pos().x>57.0) && (pos().y<28.200000000000003) &&(pos().y>27.6) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent62FAF2EA77C6DDE8EAA3A1167C01BABF_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<58.2)&&(pos().x>57.6) && (pos().y<28.200000000000003) &&(pos().y>27.6) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorventEF329451229CAFD61B79145E7BF3BA04_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<58.800000000000004)&&(pos().x>58.2) && (pos().y<28.200000000000003) &&(pos().y>27.6) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorventBACAB80043633929D828E0E9959541E6_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<51.0)&&(pos().x>50.400000000000006) && (pos().y<27.6) &&(pos().y>27.0) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent4315C6A2B810AD851FC9CE1BFA58DA83_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<51.6)&&(pos().x>51.0) && (pos().y<27.6) &&(pos().y>27.0) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorventC91C19EA55E02D611D4EF800980FB4AC_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<52.2)&&(pos().x>51.6) && (pos().y<27.6) &&(pos().y>27.0) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent71B17D54F15FD34CD50FE093EBC7F74A_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<52.800000000000004)&&(pos().x>52.2) && (pos().y<27.6) &&(pos().y>27.0) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent46A027D1553C12BC8C3B68815402C19C_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<53.400000000000006)&&(pos().x>52.800000000000004) && (pos().y<27.6) &&(pos().y>27.0) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent42D51C084DD32A608AA9D6465C397171_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<54.0)&&(pos().x>53.400000000000006) && (pos().y<27.6) &&(pos().y>27.0) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent6BDE4E00A1ADDBCB1FB413D06C194E31_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<54.6)&&(pos().x>54.0) && (pos().y<27.6) &&(pos().y>27.0) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent739589A28F68348D4A0A9AC1594C513B_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<55.2)&&(pos().x>54.6) && (pos().y<27.6) &&(pos().y>27.0) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent805DB8A03810A9ABB8E68581D64C0162_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<55.800000000000004)&&(pos().x>55.2) && (pos().y<27.6) &&(pos().y>27.0) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent770168A3A8C70C4BF8A911FFB9FB90CD_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<56.400000000000006)&&(pos().x>55.800000000000004) && (pos().y<27.6) &&(pos().y>27.0) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorventC4F9CDB8EB40CE185F083E235F2FD14A_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<57.0)&&(pos().x>56.400000000000006) && (pos().y<27.6) &&(pos().y>27.0) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent78880056CA1DC68D1630DF40739A0597_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<57.6)&&(pos().x>57.0) && (pos().y<27.6) &&(pos().y>27.0) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorvent315DE28DF42AA45FDDFE045C449BDDCD_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<58.2)&&(pos().x>57.6) && (pos().y<27.6) &&(pos().y>27.0) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorventA7F69500343515C4009504038B735E84_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<58.800000000000004)&&(pos().x>58.2) && (pos().y<27.6) &&(pos().y>27.0) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+floorventC4495491324E08C883C70BECCBA9BBE5_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName z_0.7;
+        verbose true;
+
+        expression "(pos().x<59.400000000000006)&&(pos().x>58.800000000000004) && (pos().y<27.6) &&(pos().y>27.0) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}

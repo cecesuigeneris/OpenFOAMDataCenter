@@ -1,0 +1,199 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.2.1                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      createBafflesDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+internalFacesOnly true;
+
+baffles
+{
+
+    baffleFaces
+    {
+        //- Use predefined faceZone to select faces and orientation.
+        type        faceZone;
+        zoneName    baffleFaces;
+
+        patchPairs
+        {
+	    type	wall;
+	    name	internalBaffles;
+
+            patchFields
+            {
+                epsilon
+                {
+                    type            epsilonWallFunction;
+                    value           uniform 0.01;
+                }
+                k
+                {
+                    type            kqRWallFunction;
+                    value           uniform 0.1;
+                }
+                nut
+                {
+                    type            nutkWallFunction;
+                    value           uniform 0;
+                }
+                p
+                {
+                    type            calculated;
+                    value           uniform 0;
+                }
+                p_rgh
+                {
+                    type            fixedFluxPressure;
+                    rho             rhok;
+                    gradient        uniform 0;
+                }
+                alphat
+                {
+                    type            alphatJayatillekeWallFunction;
+                    Prt             0.85;
+                    value           uniform 0;
+                }
+                U
+                {
+                    type            fixedValue;
+                    value           uniform (0 0 0);
+                }
+                T
+                {
+                    type            zeroGradient;
+                }
+            }
+         }
+    }
+
+
+    containment_cold
+    {
+        //- Use predefined faceZone to select faces and orientation.
+        type        faceZone;
+        zoneName    coldAisle;
+
+        patchPairs
+        {
+	    type	wall;
+	    name	internalBaffles;
+
+            patchFields
+            {
+                epsilon
+                {
+                    type            epsilonWallFunction;
+                    value           uniform 0.01;
+                }
+                k
+                {
+                    type            kqRWallFunction;
+                    value           uniform 0.1;
+                }
+                nut
+                {
+                    type            nutkWallFunction;
+                    value           uniform 0;
+                }
+                p
+                {
+                    type            calculated;
+                    value           uniform 0;
+                }
+                p_rgh
+                {
+                    type            fixedFluxPressure;
+                    rho             rhok;
+                    gradient        uniform 0;
+                }
+                alphat
+                {
+                    type            alphatJayatillekeWallFunction;
+                    Prt             0.85;
+                    value           uniform 0;
+                }
+                U
+                {
+                    type            fixedValue;
+                    value           uniform (0 0 0);
+                }
+                T
+                {
+                    type            zeroGradient;
+                }
+        
+            }
+         }
+    }
+
+    containment_hot
+    {
+        //- Use predefined faceZone to select faces and orientation.
+        type        faceZone;
+        zoneName    hotAisle;
+
+        patchPairs
+        {
+	    type	wall;
+	    name	internalBaffles;
+
+            patchFields
+            {
+                epsilon
+                {
+                    type            epsilonWallFunction;
+                    value           uniform 0.01;
+                }
+                k
+                {
+                    type            kqRWallFunction;
+                    value           uniform 0.1;
+                }
+                nut
+                {
+                    type            nutkWallFunction;
+                    value           uniform 0;
+                }
+                p
+                {
+                    type            calculated;
+                    value           uniform 0;
+                }
+                p_rgh
+                {
+                    type            fixedFluxPressure;
+                    rho             rhok;
+                    gradient        uniform 0;
+                }
+                alphat
+                {
+                    type            alphatJayatillekeWallFunction;
+                    Prt             0.85;
+                    value           uniform 0;
+                }
+                U
+                {
+                    type            fixedValue;
+                    value           uniform (0 0 0);
+                }
+                T
+                {
+                    type            zeroGradient;
+                }
+
+            }
+         }
+    }
+
+}

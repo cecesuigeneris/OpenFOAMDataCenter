@@ -1,0 +1,187 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.2.1                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      createBafflesDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+internalFacesOnly true;
+
+baffles
+{
+
+    baffleFaces
+    {
+        //- Use predefined faceZone to select faces and orientation.
+        type        faceZone;
+        zoneName    baffleFaces;
+
+        patchPairs
+        {
+	    type	wall;
+	    name	internalBaffles;
+
+            patchFields
+            {
+                epsilon
+                {
+                    type            epsilonWallFunction;
+                    value           uniform 0.01;
+                }
+                k
+                {
+                    type            kqRWallFunction;
+                    value           uniform 0.1;
+                }
+                nut
+                {
+                    type            nutkWallFunction;
+                    value           uniform 0;
+                }
+                p
+                {
+                    type            calculated;
+                    value           uniform 0;
+                }
+                p_rgh
+                {
+                    type            fixedFluxPressure;
+                    rho             rhok;
+                    gradient        uniform 0;
+                }
+                alphat
+                {
+                    type            alphatJayatillekeWallFunction;
+                    Prt             0.85;
+                    value           uniform 0;
+                }
+                U
+                {
+                    type            fixedValue;
+                    value           uniform (0 0 0);
+                }
+                T
+                {
+                    type            zeroGradient;
+                }
+
+
+            }
+         }
+    }
+
+    acuexhaustpatch
+    {
+	//type	    searchableSurface;
+	//surface     triSurfaceMesh;
+	//name        acuexhaustarea.stl;
+	type	    faceZone;
+	zoneName    exhaust;
+
+	patches
+        {
+            master
+            {
+                //- Master side patch
+
+                name            porous_half0;
+                type            cyclic;
+                neighbourPatch  porous_half1;
+
+		//- Optional override of added patchfields. If not specified
+                //  any added patchfields are of type calculated.
+                patchFields
+                {
+                    p_rgh
+                    {
+                        type            porousBafflePressure; 
+                        patchType       cyclic;
+                        D               6.3e4; //1000 
+                        I               40; //170 cannot run
+                        length          0.2; 
+                        jump            uniform 0;
+                        value           uniform 0;
+                    }
+                }
+            }
+	    slave
+            {
+                //- Slave side patch
+
+                name            porous_half1;
+                type            cyclic;
+                neighbourPatch  porous_half0;
+
+                patchFields
+                {
+                    ${...master.patchFields}
+                }
+            }
+        }
+    }
+
+
+
+
+/*
+        patchPairs
+        {
+	    type	patch;
+
+            patchFields
+            {
+                alphat
+                {
+           	 	type            calculated;
+            		value           uniform 0;
+                }
+                epsilon
+                {
+               		type            fixedValue;
+               		value           uniform 1.89e-5;
+                }
+                k
+                {
+            		type            fixedValue;
+            		value           uniform 0.00184;
+                }
+                nut
+                {
+            		type            calculated;
+            		value           uniform 0;
+                }
+                p
+                {
+                    	type            calculated;
+                    	value           uniform 0;
+                }
+                p_rgh
+                {
+                	type            zeroGradient;
+                }
+                U
+                {
+            		type            flowRateInletVelocity;
+            		volumetricFlowRate  1.2; 
+                }
+                T
+                {
+            		type            fixedValue;
+            		value           uniform 288.15;
+                }
+                
+            }
+         }
+    }*/
+
+
+}

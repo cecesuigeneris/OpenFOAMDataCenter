@@ -1,0 +1,359 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.2.1                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      topoSetDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+actions
+(
+    {
+        name inside;
+        type cellSet;
+        action new;
+        source surfaceToCell;
+        sourceInfo
+        {
+            file "constant/triSurface/room_boundary.stl";
+            outsidePoints ((24.2 10.41 0.2));
+            includeCut false;
+            includeInside true;
+            includeOutside false;
+            nearDistance -1;
+            curvature -100;
+        }
+    }
+
+
+    {
+      name    baffleFaces;
+      type    faceSet;
+      action  new;
+      source  boxToFace;
+      sourceInfo
+      {
+          box (24.2 10.4 0.79)(38.2 17.8 0.81); // floor
+      }
+    }
+
+    /*{
+      name    baffleFaces;
+      type    faceSet;
+      action  add;
+      source  boxToFace;
+      sourceInfo
+      {
+          box (24.2 10.4 3.39)(38.2 17.8 3.41); // ceiling
+      }
+    }*/
+
+        {
+      name    baffleFaces;
+      type    faceSet;
+      action  delete;
+      source  boxToFace;
+      sourceInfo
+      {
+          box (28.9 13.2 0.79)(29.5 13.8 0.81);
+      }
+    }
+
+
+        {
+      name    baffleFaces;
+      type    faceSet;
+      action  delete;
+      source  boxToFace;
+      sourceInfo
+      {
+          box (29.5 13.8 0.79)(30.1 14.4 0.81);
+      }
+    }
+
+
+        {
+      name    baffleFaces;
+      type    faceSet;
+      action  delete;
+      source  boxToFace;
+      sourceInfo
+      {
+          box (28.9 14.4 0.79)(29.5 15.0 0.81);
+      }
+    }
+
+
+        {
+      name    baffleFaces;
+      type    faceSet;
+      action  delete;
+      source  boxToFace;
+      sourceInfo
+      {
+          box (29.5 15.0 0.79)(30.1 15.6 0.81);
+      }
+    }
+
+        {
+      name    baffleFaces;
+      type    faceSet;
+      action  delete;
+      source  boxToFace;
+      sourceInfo
+      {
+          box (33.7 13.2 0.79)(34.3 13.8 0.81);
+      }
+    }
+
+        {
+      name    baffleFaces;
+      type    faceSet;
+      action  delete;
+      source  boxToFace;
+      sourceInfo
+      {
+          box (34.3 13.8 0.79)(34.9 14.4 0.81);
+      }
+    }
+
+
+     
+        {
+      name    baffleFaces;
+      type    faceSet;
+      action  delete;
+      source  boxToFace;
+      sourceInfo
+      {
+          box (33.7 14.4 0.79)(34.3 15.0 0.81);
+      }
+    }
+
+        {
+      name    baffleFaces;
+      type    faceSet;
+      action  delete;
+      source  boxToFace;
+      sourceInfo
+      {
+          box (34.3 15.0 0.79)(34.9 15.6 0.81);
+      }
+    }
+
+        {
+      name    baffleFaces;
+      type    faceSet;
+      action  delete;
+      source  boxToFace;
+      sourceInfo
+      {
+          box (28.4 11.2 0.79)(30.4 12.0 0.81);//acu position
+      }
+    }
+
+  
+        {
+      name    baffleFaces;
+      type    faceSet;
+      action  delete;
+      source  boxToFace;
+      sourceInfo
+      {
+          box (33.2 11.2 0.79)(35.2 12.0 0.81);//acu position
+      }
+    }
+
+        {
+      name    baffleFaces;
+      type    faceSet;
+      action  delete;
+      source  boxToFace;
+      sourceInfo
+      {
+          box (25.0 13.4 0.79)(25.8 15.4 0.81);//acu position
+      }
+    }
+
+       {
+      name    baffleFaces;
+      type    faceSet;
+      action  delete;
+      source  boxToFace;
+      sourceInfo
+      {
+          box (28.9 14.4 0.79)(29.5 15 0.81);
+      }
+    }
+       {
+      name    baffleFaces;
+      type    faceSet;
+      action  delete;
+      source  boxToFace;
+      sourceInfo
+      {
+          box (29.5 15 0.79)(30.1 15.6 0.81);
+      }
+    }
+       {
+      name    baffleFaces;
+      type    faceSet;
+      action  delete;
+      source  boxToFace;
+      sourceInfo
+      {
+          box (33.7 13.2 0.79)(34.3 13.8 0.81);
+      }
+    }
+       {
+      name    baffleFaces;
+      type    faceSet;
+      action  delete;
+      source  boxToFace;
+      sourceInfo
+      {
+          box (34.3 13.8 0.79)(34.9 14.4 0.81);
+      }
+    }
+       {
+      name    baffleFaces;
+      type    faceSet;
+      action  delete;
+      source  boxToFace;
+      sourceInfo
+      {
+          box (33.7 14.4 0.79)(34.3 15 0.81);
+      }
+    }
+     {
+      name    baffleFaces;
+      type    faceSet;
+      action  delete;
+      source  boxToFace;
+      sourceInfo
+      {
+          box (34.3 15 0.79)(34.9 15.6 0.81);
+      }
+    }
+
+       /* {
+      name    baffleFaces;
+      type    faceSet;
+      action  delete;
+      source  boxToFace;
+      sourceInfo
+      {
+          box (28.4 11.2 3.39)(30.4 12 3.41); // ACU hole 
+      }
+    }
+
+        {
+      name    baffleFaces;
+      type    faceSet;
+      action  delete;
+      source  boxToFace;
+      sourceInfo
+      {
+          box (25 13.4 3.39)(25.8 15.4 3.41); // ACU hole 
+      }
+    }
+
+        {
+      name    baffleFaces;
+      type    faceSet;
+      action  delete;
+      source  boxToFace;
+      sourceInfo
+      {
+          box (33.2 11.2 3.39)(35.2 12 3.41); // ACU hole 
+      }
+    }
+
+
+
+        {
+      name    baffleFaces;
+      type    faceSet;
+      action  delete;
+      source  boxToFace;
+      sourceInfo
+      {
+          box (27.4 13.2 3.39)(28 15.6 3.41); // hot aisle hole
+      }
+    }
+
+        {
+      name    baffleFaces;
+      type    faceSet;
+      action  delete;
+      source  boxToFace;
+      sourceInfo
+      {
+          box (31 13.2 3.39)(31.6 15.6 3.41); // hot aisle hole
+      }
+    }
+
+        {
+      name    baffleFaces;
+      type    faceSet;
+      action  delete;
+      source  boxToFace;
+      sourceInfo
+      {
+          box (32.2 13.2 3.39)(32.8 15.6 3.41); // hot aisle hole
+      }
+    }
+
+        {
+      name    baffleFaces;
+      type    faceSet;
+      action  delete;
+      source  boxToFace;
+      sourceInfo
+      {
+          box (35.8 13.2 3.39)(36.4 15.6 3.41); // hot aisle hole
+      }
+    }*/
+
+
+{
+    name baffleFaces;
+    type faceZoneSet;
+    action new;
+    source setToFaceZone;
+    sourceInfo
+    {
+        faceSet baffleFaces;
+    }
+}
+
+    /*{
+        name porousPlate;
+        type faceSet;
+        action new;
+        source patchToFace;
+        sourceInfo
+        {
+            name "perforatedPlate";
+        }
+    }
+{
+    name porousPlate_zone;
+    type faceZoneSet;
+    action new;
+    source setToFaceZone;
+    sourceInfo
+    {
+        faceSet porousPlate;
+    }
+}*/
+
+);

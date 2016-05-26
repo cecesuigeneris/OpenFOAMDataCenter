@@ -1,0 +1,35 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.2.1                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      topoSetDict.roomboundary;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+actions
+(
+    {
+        name inside;
+        type cellSet;
+        action new;
+        source surfaceToCell;
+        sourceInfo
+        {
+            file "constant/triSurface/room_boundary.stl";
+            outsidePoints ((42.20 23.60 0.00));
+            includeCut false;
+            includeInside true;
+            includeOutside false;
+            nearDistance -1;
+            curvature -100;
+        }
+    }
+);

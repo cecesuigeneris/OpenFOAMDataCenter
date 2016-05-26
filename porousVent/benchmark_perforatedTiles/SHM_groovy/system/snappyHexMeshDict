@@ -1,0 +1,1216 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.2.1                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      snappyHexMeshDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+// Which of the steps to run
+castellatedMesh true;
+snap            false;
+addLayers       false;
+
+
+// Geometry. Definition of all surfaces. All surfaces are of class
+// searchableSurface.
+// Surfaces are used
+// - to specify refinement for any mesh cell intersecting it
+// - to specify refinement for any mesh cell inside/outside/near
+// - to 'snap' the mesh boundary to the surface
+geometry
+{
+    objects.stl
+    {
+        type	triSurfaceMesh;
+        name	objects;
+        regions
+        {
+                                                                                    rack1B4CBD4A994E6797F70F5EF1F5863DB2_inlet
+                        {
+                            name rack1B4CBD4A994E6797F70F5EF1F5863DB2_inlet;
+                        }
+
+                        rack1B4CBD4A994E6797F70F5EF1F5863DB2_outlet
+                        {
+                            name rack1B4CBD4A994E6797F70F5EF1F5863DB2_outlet;
+                        }
+
+                        rack1B4CBD4A994E6797F70F5EF1F5863DB2_fixedWall
+                        {
+                            name rack1B4CBD4A994E6797F70F5EF1F5863DB2_fixedWall;
+                        }
+                                                                                                                rackFA1BFEC6E1E22133740F019445868403_inlet
+                        {
+                            name rackFA1BFEC6E1E22133740F019445868403_inlet;
+                        }
+
+                        rackFA1BFEC6E1E22133740F019445868403_outlet
+                        {
+                            name rackFA1BFEC6E1E22133740F019445868403_outlet;
+                        }
+
+                        rackFA1BFEC6E1E22133740F019445868403_fixedWall
+                        {
+                            name rackFA1BFEC6E1E22133740F019445868403_fixedWall;
+                        }
+                                                                                                                rack927D2E6888FD177A981C0A7DD98F9854_inlet
+                        {
+                            name rack927D2E6888FD177A981C0A7DD98F9854_inlet;
+                        }
+
+                        rack927D2E6888FD177A981C0A7DD98F9854_outlet
+                        {
+                            name rack927D2E6888FD177A981C0A7DD98F9854_outlet;
+                        }
+
+                        rack927D2E6888FD177A981C0A7DD98F9854_fixedWall
+                        {
+                            name rack927D2E6888FD177A981C0A7DD98F9854_fixedWall;
+                        }
+                                                                                                                rackC65181F2388B717A2DFA3CA4F31EBB92_inlet
+                        {
+                            name rackC65181F2388B717A2DFA3CA4F31EBB92_inlet;
+                        }
+
+                        rackC65181F2388B717A2DFA3CA4F31EBB92_outlet
+                        {
+                            name rackC65181F2388B717A2DFA3CA4F31EBB92_outlet;
+                        }
+
+                        rackC65181F2388B717A2DFA3CA4F31EBB92_fixedWall
+                        {
+                            name rackC65181F2388B717A2DFA3CA4F31EBB92_fixedWall;
+                        }
+                                                                                                                rack4A95D65ACB30A998A736CBDCEE88E685_inlet
+                        {
+                            name rack4A95D65ACB30A998A736CBDCEE88E685_inlet;
+                        }
+
+                        rack4A95D65ACB30A998A736CBDCEE88E685_outlet
+                        {
+                            name rack4A95D65ACB30A998A736CBDCEE88E685_outlet;
+                        }
+
+                        rack4A95D65ACB30A998A736CBDCEE88E685_fixedWall
+                        {
+                            name rack4A95D65ACB30A998A736CBDCEE88E685_fixedWall;
+                        }
+                                                                                                                rack854D7BA836DCDC8D61AD830338297BA9_inlet
+                        {
+                            name rack854D7BA836DCDC8D61AD830338297BA9_inlet;
+                        }
+
+                        rack854D7BA836DCDC8D61AD830338297BA9_outlet
+                        {
+                            name rack854D7BA836DCDC8D61AD830338297BA9_outlet;
+                        }
+
+                        rack854D7BA836DCDC8D61AD830338297BA9_fixedWall
+                        {
+                            name rack854D7BA836DCDC8D61AD830338297BA9_fixedWall;
+                        }
+                                                                                                                rack0E1B92A4DE590895AB323DD8D1E9F921_inlet
+                        {
+                            name rack0E1B92A4DE590895AB323DD8D1E9F921_inlet;
+                        }
+
+                        rack0E1B92A4DE590895AB323DD8D1E9F921_outlet
+                        {
+                            name rack0E1B92A4DE590895AB323DD8D1E9F921_outlet;
+                        }
+
+                        rack0E1B92A4DE590895AB323DD8D1E9F921_fixedWall
+                        {
+                            name rack0E1B92A4DE590895AB323DD8D1E9F921_fixedWall;
+                        }
+                                                                                                                rackEA7E369EEC67CD4825F99F786002F8BB_inlet
+                        {
+                            name rackEA7E369EEC67CD4825F99F786002F8BB_inlet;
+                        }
+
+                        rackEA7E369EEC67CD4825F99F786002F8BB_outlet
+                        {
+                            name rackEA7E369EEC67CD4825F99F786002F8BB_outlet;
+                        }
+
+                        rackEA7E369EEC67CD4825F99F786002F8BB_fixedWall
+                        {
+                            name rackEA7E369EEC67CD4825F99F786002F8BB_fixedWall;
+                        }
+                                                                                                                rackE1B88BE09859F2B90B67530927011F46_inlet
+                        {
+                            name rackE1B88BE09859F2B90B67530927011F46_inlet;
+                        }
+
+                        rackE1B88BE09859F2B90B67530927011F46_outlet
+                        {
+                            name rackE1B88BE09859F2B90B67530927011F46_outlet;
+                        }
+
+                        rackE1B88BE09859F2B90B67530927011F46_fixedWall
+                        {
+                            name rackE1B88BE09859F2B90B67530927011F46_fixedWall;
+                        }
+                                                                                                                rack6F2FB4401216FB0BE5B3E9FA249DE9D5_inlet
+                        {
+                            name rack6F2FB4401216FB0BE5B3E9FA249DE9D5_inlet;
+                        }
+
+                        rack6F2FB4401216FB0BE5B3E9FA249DE9D5_outlet
+                        {
+                            name rack6F2FB4401216FB0BE5B3E9FA249DE9D5_outlet;
+                        }
+
+                        rack6F2FB4401216FB0BE5B3E9FA249DE9D5_fixedWall
+                        {
+                            name rack6F2FB4401216FB0BE5B3E9FA249DE9D5_fixedWall;
+                        }
+                                                                                                                rackCB8BB049ED5D9C7579939A35E238AE7C_inlet
+                        {
+                            name rackCB8BB049ED5D9C7579939A35E238AE7C_inlet;
+                        }
+
+                        rackCB8BB049ED5D9C7579939A35E238AE7C_outlet
+                        {
+                            name rackCB8BB049ED5D9C7579939A35E238AE7C_outlet;
+                        }
+
+                        rackCB8BB049ED5D9C7579939A35E238AE7C_fixedWall
+                        {
+                            name rackCB8BB049ED5D9C7579939A35E238AE7C_fixedWall;
+                        }
+                                                                                                                rack7CE29452499711B0CDDF74AF35D57FA0_inlet
+                        {
+                            name rack7CE29452499711B0CDDF74AF35D57FA0_inlet;
+                        }
+
+                        rack7CE29452499711B0CDDF74AF35D57FA0_outlet
+                        {
+                            name rack7CE29452499711B0CDDF74AF35D57FA0_outlet;
+                        }
+
+                        rack7CE29452499711B0CDDF74AF35D57FA0_fixedWall
+                        {
+                            name rack7CE29452499711B0CDDF74AF35D57FA0_fixedWall;
+                        }
+                                                                                                                rackCFEA7F02580F13637EC4158DF376E6A1_inlet
+                        {
+                            name rackCFEA7F02580F13637EC4158DF376E6A1_inlet;
+                        }
+
+                        rackCFEA7F02580F13637EC4158DF376E6A1_outlet
+                        {
+                            name rackCFEA7F02580F13637EC4158DF376E6A1_outlet;
+                        }
+
+                        rackCFEA7F02580F13637EC4158DF376E6A1_fixedWall
+                        {
+                            name rackCFEA7F02580F13637EC4158DF376E6A1_fixedWall;
+                        }
+                                                                                                                rackEDC8F6013BD80A7E069B3B7DBF87465F_inlet
+                        {
+                            name rackEDC8F6013BD80A7E069B3B7DBF87465F_inlet;
+                        }
+
+                        rackEDC8F6013BD80A7E069B3B7DBF87465F_outlet
+                        {
+                            name rackEDC8F6013BD80A7E069B3B7DBF87465F_outlet;
+                        }
+
+                        rackEDC8F6013BD80A7E069B3B7DBF87465F_fixedWall
+                        {
+                            name rackEDC8F6013BD80A7E069B3B7DBF87465F_fixedWall;
+                        }
+                                                                                                                rack36DD04A52BFE5C6B041452059D458836_inlet
+                        {
+                            name rack36DD04A52BFE5C6B041452059D458836_inlet;
+                        }
+
+                        rack36DD04A52BFE5C6B041452059D458836_outlet
+                        {
+                            name rack36DD04A52BFE5C6B041452059D458836_outlet;
+                        }
+
+                        rack36DD04A52BFE5C6B041452059D458836_fixedWall
+                        {
+                            name rack36DD04A52BFE5C6B041452059D458836_fixedWall;
+                        }
+                                                                                                                rackD902EEF5E6F996BB25E50FDE8FD1F62B_inlet
+                        {
+                            name rackD902EEF5E6F996BB25E50FDE8FD1F62B_inlet;
+                        }
+
+                        rackD902EEF5E6F996BB25E50FDE8FD1F62B_outlet
+                        {
+                            name rackD902EEF5E6F996BB25E50FDE8FD1F62B_outlet;
+                        }
+
+                        rackD902EEF5E6F996BB25E50FDE8FD1F62B_fixedWall
+                        {
+                            name rackD902EEF5E6F996BB25E50FDE8FD1F62B_fixedWall;
+                        }
+                                    
+                                    acuF9CB05DA6465C302727AC2126F3ADC50_inlet
+                    {
+                        name acuF9CB05DA6465C302727AC2126F3ADC50_inlet;
+                    }
+
+                    acuF9CB05DA6465C302727AC2126F3ADC50_outlet
+                    {
+                        name acuF9CB05DA6465C302727AC2126F3ADC50_outlet;
+                    }
+
+                    acuF9CB05DA6465C302727AC2126F3ADC50_fixedWall
+                    {
+                        name acuF9CB05DA6465C302727AC2126F3ADC50_fixedWall;
+                    }
+                                    acu1385ECEC5AC66642155584A8F60EB282_inlet
+                    {
+                        name acu1385ECEC5AC66642155584A8F60EB282_inlet;
+                    }
+
+                    acu1385ECEC5AC66642155584A8F60EB282_outlet
+                    {
+                        name acu1385ECEC5AC66642155584A8F60EB282_outlet;
+                    }
+
+                    acu1385ECEC5AC66642155584A8F60EB282_fixedWall
+                    {
+                        name acu1385ECEC5AC66642155584A8F60EB282_fixedWall;
+                    }
+                                    acu58D3207FC902F3CCC0F4E3EA1FA1DBE2_inlet
+                    {
+                        name acu58D3207FC902F3CCC0F4E3EA1FA1DBE2_inlet;
+                    }
+
+                    acu58D3207FC902F3CCC0F4E3EA1FA1DBE2_outlet
+                    {
+                        name acu58D3207FC902F3CCC0F4E3EA1FA1DBE2_outlet;
+                    }
+
+                    acu58D3207FC902F3CCC0F4E3EA1FA1DBE2_fixedWall
+                    {
+                        name acu58D3207FC902F3CCC0F4E3EA1FA1DBE2_fixedWall;
+                    }
+                        }
+    }
+
+    interior_walls.stl
+    {
+        type	triSurfaceMesh;
+        name	interior_walls;
+        regions
+        {
+            interior_walls {
+                name	fixedWalls;
+            }
+        }
+    }
+
+    perforatedPlate.stl
+    {
+        type	triSurfaceMesh;
+        name	perforatedPlate;
+    }
+
+    /*coldAisle.stl
+    {
+        type	triSurfaceMesh;
+        name	coldAisle;
+    }
+    hotAisle.stl
+    {
+        type	triSurfaceMesh;
+        name	hotAisle;
+    }*/
+
+    /*plateZone1
+    {
+	type 	searchableBox;
+	min	(28.9 13.2 0.7);
+	max	(31.0 05.6 0.9);
+     }
+
+    plateZone2
+    {
+	type 	searchableBox;
+	min	(33.7 13.2 0.7);
+	max	(34.9 15.6 0.9);
+     }*/
+
+};
+
+
+
+// Settings for the castellatedMesh generation.
+castellatedMeshControls
+{
+    maxLocalCells 100000;
+    maxGlobalCells 2000000;
+    minRefinementCells 10;
+    maxLoadUnbalance 0.10;
+    nCellsBetweenLevels 3;
+
+    // Explicit feature edge refinement
+    // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    // Specifies a level for any cell intersected by its edges.
+    // This is a featureEdgeMesh, read from constant/triSurface for now.
+    features
+    (
+        {
+            file "objects.eMesh";
+            level 0;
+        }
+	{
+            file "room_boundary.eMesh";
+            level 0;
+	}
+
+    );
+
+
+
+    // Surface based refinement
+    // ~~~~~~~~~~~~~~~~~~~~~~~~
+
+    // Specifies two levels for every surface. The first is the minimum level,
+    // every cell intersecting a surface gets refined up to the minimum level.
+    // The second level is the maximum level. Cells that 'see' multiple
+    // intersections where the intersections make an
+    // angle > resolveFeatureAngle get refined up to the maximum level.
+
+    refinementSurfaces
+    {
+        objects
+        {
+            level (0 0);
+            regions
+            {
+            
+                
+                    //Rack 1B4CBD4A994E6797F70F5EF1F5863DB2
+                    rack1B4CBD4A994E6797F70F5EF1F5863DB2_inlet
+                    {
+                        level (0 0);
+                        patchInfo
+                        {
+                            type patch;
+                            inGroups (rack1B4CBD4A994E6797F70F5EF1F5863DB2);
+                        }
+                    }
+
+                    rack1B4CBD4A994E6797F70F5EF1F5863DB2_outlet
+                    {
+                        level (0 0);
+                        patchInfo
+                        {
+                            type patch;
+                            inGroups (rack1B4CBD4A994E6797F70F5EF1F5863DB2);
+                        }
+                    }
+
+                    rack1B4CBD4A994E6797F70F5EF1F5863DB2_fixedWall
+                    {
+                        level (0 0);
+                        patchInfo
+                        {
+                            type wall;
+                            inGroups (rack1B4CBD4A994E6797F70F5EF1F5863DB2);
+                        }
+                    }
+                            
+                
+                    //Rack FA1BFEC6E1E22133740F019445868403
+                    rackFA1BFEC6E1E22133740F019445868403_inlet
+                    {
+                        level (0 0);
+                        patchInfo
+                        {
+                            type patch;
+                            inGroups (rackFA1BFEC6E1E22133740F019445868403);
+                        }
+                    }
+
+                    rackFA1BFEC6E1E22133740F019445868403_outlet
+                    {
+                        level (0 0);
+                        patchInfo
+                        {
+                            type patch;
+                            inGroups (rackFA1BFEC6E1E22133740F019445868403);
+                        }
+                    }
+
+                    rackFA1BFEC6E1E22133740F019445868403_fixedWall
+                    {
+                        level (0 0);
+                        patchInfo
+                        {
+                            type wall;
+                            inGroups (rackFA1BFEC6E1E22133740F019445868403);
+                        }
+                    }
+                            
+                
+                    //Rack 927D2E6888FD177A981C0A7DD98F9854
+                    rack927D2E6888FD177A981C0A7DD98F9854_inlet
+                    {
+                        level (0 0);
+                        patchInfo
+                        {
+                            type patch;
+                            inGroups (rack927D2E6888FD177A981C0A7DD98F9854);
+                        }
+                    }
+
+                    rack927D2E6888FD177A981C0A7DD98F9854_outlet
+                    {
+                        level (0 0);
+                        patchInfo
+                        {
+                            type patch;
+                            inGroups (rack927D2E6888FD177A981C0A7DD98F9854);
+                        }
+                    }
+
+                    rack927D2E6888FD177A981C0A7DD98F9854_fixedWall
+                    {
+                        level (0 0);
+                        patchInfo
+                        {
+                            type wall;
+                            inGroups (rack927D2E6888FD177A981C0A7DD98F9854);
+                        }
+                    }
+                            
+                
+                    //Rack C65181F2388B717A2DFA3CA4F31EBB92
+                    rackC65181F2388B717A2DFA3CA4F31EBB92_inlet
+                    {
+                        level (0 0);
+                        patchInfo
+                        {
+                            type patch;
+                            inGroups (rackC65181F2388B717A2DFA3CA4F31EBB92);
+                        }
+                    }
+
+                    rackC65181F2388B717A2DFA3CA4F31EBB92_outlet
+                    {
+                        level (0 0);
+                        patchInfo
+                        {
+                            type patch;
+                            inGroups (rackC65181F2388B717A2DFA3CA4F31EBB92);
+                        }
+                    }
+
+                    rackC65181F2388B717A2DFA3CA4F31EBB92_fixedWall
+                    {
+                        level (0 0);
+                        patchInfo
+                        {
+                            type wall;
+                            inGroups (rackC65181F2388B717A2DFA3CA4F31EBB92);
+                        }
+                    }
+                            
+                
+                    //Rack 4A95D65ACB30A998A736CBDCEE88E685
+                    rack4A95D65ACB30A998A736CBDCEE88E685_inlet
+                    {
+                        level (0 0);
+                        patchInfo
+                        {
+                            type patch;
+                            inGroups (rack4A95D65ACB30A998A736CBDCEE88E685);
+                        }
+                    }
+
+                    rack4A95D65ACB30A998A736CBDCEE88E685_outlet
+                    {
+                        level (0 0);
+                        patchInfo
+                        {
+                            type patch;
+                            inGroups (rack4A95D65ACB30A998A736CBDCEE88E685);
+                        }
+                    }
+
+                    rack4A95D65ACB30A998A736CBDCEE88E685_fixedWall
+                    {
+                        level (0 0);
+                        patchInfo
+                        {
+                            type wall;
+                            inGroups (rack4A95D65ACB30A998A736CBDCEE88E685);
+                        }
+                    }
+                            
+                
+                    //Rack 854D7BA836DCDC8D61AD830338297BA9
+                    rack854D7BA836DCDC8D61AD830338297BA9_inlet
+                    {
+                        level (0 0);
+                        patchInfo
+                        {
+                            type patch;
+                            inGroups (rack854D7BA836DCDC8D61AD830338297BA9);
+                        }
+                    }
+
+                    rack854D7BA836DCDC8D61AD830338297BA9_outlet
+                    {
+                        level (0 0);
+                        patchInfo
+                        {
+                            type patch;
+                            inGroups (rack854D7BA836DCDC8D61AD830338297BA9);
+                        }
+                    }
+
+                    rack854D7BA836DCDC8D61AD830338297BA9_fixedWall
+                    {
+                        level (0 0);
+                        patchInfo
+                        {
+                            type wall;
+                            inGroups (rack854D7BA836DCDC8D61AD830338297BA9);
+                        }
+                    }
+                            
+                
+                    //Rack 0E1B92A4DE590895AB323DD8D1E9F921
+                    rack0E1B92A4DE590895AB323DD8D1E9F921_inlet
+                    {
+                        level (0 0);
+                        patchInfo
+                        {
+                            type patch;
+                            inGroups (rack0E1B92A4DE590895AB323DD8D1E9F921);
+                        }
+                    }
+
+                    rack0E1B92A4DE590895AB323DD8D1E9F921_outlet
+                    {
+                        level (0 0);
+                        patchInfo
+                        {
+                            type patch;
+                            inGroups (rack0E1B92A4DE590895AB323DD8D1E9F921);
+                        }
+                    }
+
+                    rack0E1B92A4DE590895AB323DD8D1E9F921_fixedWall
+                    {
+                        level (0 0);
+                        patchInfo
+                        {
+                            type wall;
+                            inGroups (rack0E1B92A4DE590895AB323DD8D1E9F921);
+                        }
+                    }
+                            
+                
+                    //Rack EA7E369EEC67CD4825F99F786002F8BB
+                    rackEA7E369EEC67CD4825F99F786002F8BB_inlet
+                    {
+                        level (0 0);
+                        patchInfo
+                        {
+                            type patch;
+                            inGroups (rackEA7E369EEC67CD4825F99F786002F8BB);
+                        }
+                    }
+
+                    rackEA7E369EEC67CD4825F99F786002F8BB_outlet
+                    {
+                        level (0 0);
+                        patchInfo
+                        {
+                            type patch;
+                            inGroups (rackEA7E369EEC67CD4825F99F786002F8BB);
+                        }
+                    }
+
+                    rackEA7E369EEC67CD4825F99F786002F8BB_fixedWall
+                    {
+                        level (0 0);
+                        patchInfo
+                        {
+                            type wall;
+                            inGroups (rackEA7E369EEC67CD4825F99F786002F8BB);
+                        }
+                    }
+                            
+                
+                    //Rack E1B88BE09859F2B90B67530927011F46
+                    rackE1B88BE09859F2B90B67530927011F46_inlet
+                    {
+                        level (0 0);
+                        patchInfo
+                        {
+                            type patch;
+                            inGroups (rackE1B88BE09859F2B90B67530927011F46);
+                        }
+                    }
+
+                    rackE1B88BE09859F2B90B67530927011F46_outlet
+                    {
+                        level (0 0);
+                        patchInfo
+                        {
+                            type patch;
+                            inGroups (rackE1B88BE09859F2B90B67530927011F46);
+                        }
+                    }
+
+                    rackE1B88BE09859F2B90B67530927011F46_fixedWall
+                    {
+                        level (0 0);
+                        patchInfo
+                        {
+                            type wall;
+                            inGroups (rackE1B88BE09859F2B90B67530927011F46);
+                        }
+                    }
+                            
+                
+                    //Rack 6F2FB4401216FB0BE5B3E9FA249DE9D5
+                    rack6F2FB4401216FB0BE5B3E9FA249DE9D5_inlet
+                    {
+                        level (0 0);
+                        patchInfo
+                        {
+                            type patch;
+                            inGroups (rack6F2FB4401216FB0BE5B3E9FA249DE9D5);
+                        }
+                    }
+
+                    rack6F2FB4401216FB0BE5B3E9FA249DE9D5_outlet
+                    {
+                        level (0 0);
+                        patchInfo
+                        {
+                            type patch;
+                            inGroups (rack6F2FB4401216FB0BE5B3E9FA249DE9D5);
+                        }
+                    }
+
+                    rack6F2FB4401216FB0BE5B3E9FA249DE9D5_fixedWall
+                    {
+                        level (0 0);
+                        patchInfo
+                        {
+                            type wall;
+                            inGroups (rack6F2FB4401216FB0BE5B3E9FA249DE9D5);
+                        }
+                    }
+                            
+                
+                    //Rack CB8BB049ED5D9C7579939A35E238AE7C
+                    rackCB8BB049ED5D9C7579939A35E238AE7C_inlet
+                    {
+                        level (0 0);
+                        patchInfo
+                        {
+                            type patch;
+                            inGroups (rackCB8BB049ED5D9C7579939A35E238AE7C);
+                        }
+                    }
+
+                    rackCB8BB049ED5D9C7579939A35E238AE7C_outlet
+                    {
+                        level (0 0);
+                        patchInfo
+                        {
+                            type patch;
+                            inGroups (rackCB8BB049ED5D9C7579939A35E238AE7C);
+                        }
+                    }
+
+                    rackCB8BB049ED5D9C7579939A35E238AE7C_fixedWall
+                    {
+                        level (0 0);
+                        patchInfo
+                        {
+                            type wall;
+                            inGroups (rackCB8BB049ED5D9C7579939A35E238AE7C);
+                        }
+                    }
+                            
+                
+                    //Rack 7CE29452499711B0CDDF74AF35D57FA0
+                    rack7CE29452499711B0CDDF74AF35D57FA0_inlet
+                    {
+                        level (0 0);
+                        patchInfo
+                        {
+                            type patch;
+                            inGroups (rack7CE29452499711B0CDDF74AF35D57FA0);
+                        }
+                    }
+
+                    rack7CE29452499711B0CDDF74AF35D57FA0_outlet
+                    {
+                        level (0 0);
+                        patchInfo
+                        {
+                            type patch;
+                            inGroups (rack7CE29452499711B0CDDF74AF35D57FA0);
+                        }
+                    }
+
+                    rack7CE29452499711B0CDDF74AF35D57FA0_fixedWall
+                    {
+                        level (0 0);
+                        patchInfo
+                        {
+                            type wall;
+                            inGroups (rack7CE29452499711B0CDDF74AF35D57FA0);
+                        }
+                    }
+                            
+                
+                    //Rack CFEA7F02580F13637EC4158DF376E6A1
+                    rackCFEA7F02580F13637EC4158DF376E6A1_inlet
+                    {
+                        level (0 0);
+                        patchInfo
+                        {
+                            type patch;
+                            inGroups (rackCFEA7F02580F13637EC4158DF376E6A1);
+                        }
+                    }
+
+                    rackCFEA7F02580F13637EC4158DF376E6A1_outlet
+                    {
+                        level (0 0);
+                        patchInfo
+                        {
+                            type patch;
+                            inGroups (rackCFEA7F02580F13637EC4158DF376E6A1);
+                        }
+                    }
+
+                    rackCFEA7F02580F13637EC4158DF376E6A1_fixedWall
+                    {
+                        level (0 0);
+                        patchInfo
+                        {
+                            type wall;
+                            inGroups (rackCFEA7F02580F13637EC4158DF376E6A1);
+                        }
+                    }
+                            
+                
+                    //Rack EDC8F6013BD80A7E069B3B7DBF87465F
+                    rackEDC8F6013BD80A7E069B3B7DBF87465F_inlet
+                    {
+                        level (0 0);
+                        patchInfo
+                        {
+                            type patch;
+                            inGroups (rackEDC8F6013BD80A7E069B3B7DBF87465F);
+                        }
+                    }
+
+                    rackEDC8F6013BD80A7E069B3B7DBF87465F_outlet
+                    {
+                        level (0 0);
+                        patchInfo
+                        {
+                            type patch;
+                            inGroups (rackEDC8F6013BD80A7E069B3B7DBF87465F);
+                        }
+                    }
+
+                    rackEDC8F6013BD80A7E069B3B7DBF87465F_fixedWall
+                    {
+                        level (0 0);
+                        patchInfo
+                        {
+                            type wall;
+                            inGroups (rackEDC8F6013BD80A7E069B3B7DBF87465F);
+                        }
+                    }
+                            
+                
+                    //Rack 36DD04A52BFE5C6B041452059D458836
+                    rack36DD04A52BFE5C6B041452059D458836_inlet
+                    {
+                        level (0 0);
+                        patchInfo
+                        {
+                            type patch;
+                            inGroups (rack36DD04A52BFE5C6B041452059D458836);
+                        }
+                    }
+
+                    rack36DD04A52BFE5C6B041452059D458836_outlet
+                    {
+                        level (0 0);
+                        patchInfo
+                        {
+                            type patch;
+                            inGroups (rack36DD04A52BFE5C6B041452059D458836);
+                        }
+                    }
+
+                    rack36DD04A52BFE5C6B041452059D458836_fixedWall
+                    {
+                        level (0 0);
+                        patchInfo
+                        {
+                            type wall;
+                            inGroups (rack36DD04A52BFE5C6B041452059D458836);
+                        }
+                    }
+                            
+                
+                    //Rack D902EEF5E6F996BB25E50FDE8FD1F62B
+                    rackD902EEF5E6F996BB25E50FDE8FD1F62B_inlet
+                    {
+                        level (0 0);
+                        patchInfo
+                        {
+                            type patch;
+                            inGroups (rackD902EEF5E6F996BB25E50FDE8FD1F62B);
+                        }
+                    }
+
+                    rackD902EEF5E6F996BB25E50FDE8FD1F62B_outlet
+                    {
+                        level (0 0);
+                        patchInfo
+                        {
+                            type patch;
+                            inGroups (rackD902EEF5E6F996BB25E50FDE8FD1F62B);
+                        }
+                    }
+
+                    rackD902EEF5E6F996BB25E50FDE8FD1F62B_fixedWall
+                    {
+                        level (0 0);
+                        patchInfo
+                        {
+                            type wall;
+                            inGroups (rackD902EEF5E6F996BB25E50FDE8FD1F62B);
+                        }
+                    }
+                                                        //Acu F9CB05DA6465C302727AC2126F3ADC50
+                acuF9CB05DA6465C302727AC2126F3ADC50_inlet
+                {
+                    level (0 0);
+                    patchInfo
+                    {
+                                                    type patch;
+                                                inGroups (acuF9CB05DA6465C302727AC2126F3ADC50);
+                    }
+                }
+
+                acuF9CB05DA6465C302727AC2126F3ADC50_outlet
+                {
+                    level (0 0);
+                    patchInfo
+                    {
+                                                    type patch;
+                                                inGroups (acuF9CB05DA6465C302727AC2126F3ADC50);
+                    }
+                }
+
+                acuF9CB05DA6465C302727AC2126F3ADC50_fixedWall
+                {
+                    level (0 0);
+                    patchInfo
+                    {
+                        type wall;
+                        inGroups (acuF9CB05DA6465C302727AC2126F3ADC50);
+                    }
+                }
+                            //Acu 1385ECEC5AC66642155584A8F60EB282
+                acu1385ECEC5AC66642155584A8F60EB282_inlet
+                {
+                    level (0 0);
+                    patchInfo
+                    {
+                                                    type patch;
+                                                inGroups (acu1385ECEC5AC66642155584A8F60EB282);
+                    }
+                }
+
+                acu1385ECEC5AC66642155584A8F60EB282_outlet
+                {
+                    level (0 0);
+                    patchInfo
+                    {
+                                                    type patch;
+                                                inGroups (acu1385ECEC5AC66642155584A8F60EB282);
+                    }
+                }
+
+                acu1385ECEC5AC66642155584A8F60EB282_fixedWall
+                {
+                    level (0 0);
+                    patchInfo
+                    {
+                        type wall;
+                        inGroups (acu1385ECEC5AC66642155584A8F60EB282);
+                    }
+                }
+                            //Acu 58D3207FC902F3CCC0F4E3EA1FA1DBE2
+                acu58D3207FC902F3CCC0F4E3EA1FA1DBE2_inlet
+                {
+                    level (0 0);
+                    patchInfo
+                    {
+                                                    type patch;
+                                                inGroups (acu58D3207FC902F3CCC0F4E3EA1FA1DBE2);
+                    }
+                }
+
+                acu58D3207FC902F3CCC0F4E3EA1FA1DBE2_outlet
+                {
+                    level (0 0);
+                    patchInfo
+                    {
+                                                    type patch;
+                                                inGroups (acu58D3207FC902F3CCC0F4E3EA1FA1DBE2);
+                    }
+                }
+
+                acu58D3207FC902F3CCC0F4E3EA1FA1DBE2_fixedWall
+                {
+                    level (0 0);
+                    patchInfo
+                    {
+                        type wall;
+                        inGroups (acu58D3207FC902F3CCC0F4E3EA1FA1DBE2);
+                    }
+                }
+                        }
+        }
+
+        interior_walls
+        {
+            level (0 0);
+            regions
+            {
+                fixedWalls {
+                    level (0 0);
+                    type wall;
+                }
+            }
+        }
+
+	perforatedPlate
+        {
+            // Surface-wise min and max refinement level
+            level (1 1); // 2 2
+
+            // Optional specification of patch type (default is wall). No
+            // constraint types (cyclic, symmetry) etc. are allowed.
+            faceZone	perforatedPlate;
+	}
+
+	/*coldAisle
+        {
+            // Surface-wise min and max refinement level
+            level (0 0);
+
+            // Optional specification of patch type (default is wall). No
+            // constraint types (cyclic, symmetry) etc. are allowed.
+            faceZone	coldAisle;
+	}
+
+	hotAisle
+        {
+            // Surface-wise min and max refinement level
+            level (0 0);
+
+            // Optional specification of patch type (default is wall). No
+            // constraint types (cyclic, symmetry) etc. are allowed.
+            faceZone	hotAisle;
+	}*/
+
+    }
+
+    // Resolve sharp angles
+    resolveFeatureAngle 30;
+
+
+    // Region-wise refinement
+    // ~~~~~~~~~~~~~~~~~~~~~~
+
+    // Specifies refinement level for cells in relation to a surface. One of
+    // three modes
+    // - distance. 'levels' specifies per distance to the surface the
+    //   wanted refinement level. The distances need to be specified in
+    //   descending order.
+    // - inside. 'levels' is only one entry and only the level is used. All
+    //   cells inside the surface get refined up to the level. The surface
+    //   needs to be closed for this to be possible.
+    // - outside. Same but cells outside.
+
+    refinementRegions
+    {
+	/*plateZone1
+	{
+		mode inside;
+		levels ((0 0));
+	}
+	plateZone2
+	{
+		mode inside;
+		levels ((0 0));
+	}*/	
+    }
+
+
+    // Mesh selection
+    // ~~~~~~~~~~~~~~
+
+    // After refinement patches get added for all refinementSurfaces and
+    // all cells intersecting the surfaces get put into these patches. The
+    // section reachable from the locationInMesh is kept.
+    // NOTE: This point should never be on a face, always inside a cell, even
+    // after refinement.
+    locationInMesh (24.22 10.42 0.22);
+
+
+    // Whether any faceZones (as specified in the refinementSurfaces)
+    // are only on the boundary of corresponding cellZones or also allow
+    // free-standing zone faces. Not used if there are no faceZones.
+    allowFreeStandingZoneFaces true;
+}
+
+
+
+// Settings for the snapping.
+snapControls
+{
+    nSmoothPatch 3;
+    tolerance 2;
+    nSolveIter 30;
+    nRelaxIter 5;
+    nFeatureSnapIter 10;
+    implicitFeatureSnap false;
+    explicitFeatureSnap true;
+    multiRegionFeatureSnap false;
+}
+
+
+
+// Settings for the layer addition.
+addLayersControls
+{
+    relativeSizes true;
+    layers
+    {
+    }
+    expansionRatio 1.0;
+    finalLayerThickness 0.3;
+    minThickness 0.1;
+    nGrow 0;
+    featureAngle 60;
+    slipFeatureAngle 30;
+    nRelaxIter 3;
+    nSmoothSurfaceNormals 1;
+    nSmoothNormals 3;
+    nSmoothThickness 10;
+    maxFaceThicknessRatio 0.5;
+    maxThicknessToMedialRatio 0.3;
+    minMedianAxisAngle 90;
+    nBufferCellsNoExtrude 0;
+    nLayerIter 50;
+}
+
+
+
+// Generic mesh quality settings. At any undoable phase these determine
+// where to undo.
+meshQualityControls
+{
+    //- Maximum non-orthogonality allowed. Set to 180 to disable.
+    maxNonOrtho 65;
+
+    //- Max skewness allowed. Set to <0 to disable.
+    maxBoundarySkewness 20;
+    maxInternalSkewness 4;
+
+    //- Max concaveness allowed. Is angle (in degrees) below which concavity
+    //  is allowed. 0 is straight face, <0 would be convex face.
+    //  Set to 180 to disable.
+    maxConcave 80;
+
+    //- Minimum pyramid volume. Is absolute volume of cell pyramid.
+    //  Set to a sensible fraction of the smallest cell volume expected.
+    //  Set to very negative number (e.g. -1E30) to disable.
+    minVol 1e-13;
+
+    //- Minimum quality of the tet formed by the face-centre
+    //  and variable base point minimum decomposition triangles and
+    //  the cell centre. This has to be a positive number for tracking
+    //  to work. Set to very negative number (e.g. -1E30) to
+    //  disable.
+    //     <0 = inside out tet,
+    //      0 = flat tet
+    //      1 = regular tet
+    minTetQuality 1e-30;
+
+    //- Minimum face area. Set to <0 to disable.
+    minArea -1;
+
+    //- Minimum face twist. Set to <-1 to disable. dot product of face normal
+    //- and face centre triangles normal
+    minTwist 0.02;
+
+    //- minimum normalised cell determinant
+    //- 1 = hex, <= 0 = folded or flattened illegal cell
+    minDeterminant 0.001;
+
+    //- minFaceWeight (0 -> 0.5)
+    minFaceWeight 0.02;
+
+    //- minVolRatio (0 -> 1)
+    minVolRatio 0.01;
+
+    //must be >0 for Fluent compatibility
+    minTriangleTwist -1;
+
+
+    // Advanced
+
+    //- Number of error distribution iterations
+    nSmoothScale 4;
+    //- amount to scale back displacement at error points
+    errorReduction 0.75;
+}
+
+
+// Advanced
+
+// Flags for optional output
+// 0 : only write final meshes
+// 1 : write intermediate meshes
+// 2 : write volScalarField with cellLevel for postprocessing
+// 4 : write current intersections as .obj files
+debug 0;
+
+
+// Merge tolerance. Is fraction of overall bounding box of initial mesh.
+// Note: the write tolerance needs to be higher than this.
+mergeTolerance 1e-6;
+
+
+// ************************************************************************* //

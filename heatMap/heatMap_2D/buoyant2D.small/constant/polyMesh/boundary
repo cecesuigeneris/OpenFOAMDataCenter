@@ -1,0 +1,83 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.3.1                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       polyBoundaryMesh;
+    location    "constant/polyMesh";
+    object      boundary;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+7
+(
+    floor
+    {
+        type            empty;
+        inGroups        1(empty);
+        nFaces          7968;
+        startFace       15664;
+    }
+    ceiling
+    {
+        type            empty;
+        inGroups        1(empty);
+        nFaces          7968;
+        startFace       23632;
+    }
+    fixedWalls
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          376;
+        startFace       31600;
+    }
+    rack2796428BA49E0232CAC645AEBC8DA5C1_fixedWall
+    {
+        type            wall;
+        inGroups        
+2
+(
+rack2796428BA49E0232CAC645AEBC8DA5C1
+wall
+)
+;
+        nFaces          32;
+        startFace       31976;
+    }
+    rack2796428BA49E0232CAC645AEBC8DA5C1_inlet
+    {
+        type            patch;
+        inGroups        1(rack2796428BA49E0232CAC645AEBC8DA5C1);
+        nFaces          12;
+        startFace       32008;
+    }
+    rack2796428BA49E0232CAC645AEBC8DA5C1_outlet
+    {
+        type            patch;
+        inGroups        1(rack2796428BA49E0232CAC645AEBC8DA5C1);
+        nFaces          12;
+        startFace       32020;
+    }
+    acu380F56D59CF2B3DF6EFF9D0E6E8D39CB_fixedWall
+    {
+        type            wall;
+        inGroups        
+2
+(
+acu380F56D59CF2B3DF6EFF9D0E6E8D39CB
+wall
+)
+;
+        nFaces          112;
+        startFace       32032;
+    }
+)
+
+// ************************************************************************* //

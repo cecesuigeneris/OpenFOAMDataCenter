@@ -1,0 +1,67 @@
+#!/bin/sh
+
+cd ${0%/*} || exit 1    # run from this directory
+
+# Source tutorial run functions
+. $WM_PROJECT_DIR/bin/tools/RunFunctions
+
+# refineMesh call function established 
+refineMeshByCellSet()
+{
+   while [ $# -ge 1 ]
+   do
+      if [ ! -e log.refineMesh.$1 ]
+      then
+          echo "creating cell set for primary zone - $1"
+          cp system/topoSetDict.n system/topoSetDict    
+          topoSet > log.topoSet.$1 2>&1
+
+          echo "refining primary zone - $1" 
+          refineMesh -dict system/refineMeshDict -overwrite > log.refineMesh.$1 2>&1
+      fi
+      shift
+   done
+}
+
+# run blockMesh + SHM
+runApplication blockMesh -dict system/blockMeshDict
+runApplication surfaceFeatureExtract
+runApplication snappyHexMesh -overwrite
+
+
+cp -r 0.org 0 
+
+
+# Refine porous region twice; 
+refineMeshByCellSet 1 2  
+
+# set porous zone for fvOptions and at a desired thickness
+cp system/topoSetDict.setporous system/topoSetDict
+runApplication topoSet
+mv log.topoSet log.topoSet.setporous 
+
+
+# cut room boundaries
+cp system/topoSetDict.roomboundary system/topoSetDict
+runApplication topoSet
+mv log.topoSet log.topoSet.roomboundary
+runApplication subsetMesh -overwrite inside -patch fixedWalls 
+mv log.subsetMesh log.subsetMesh.roomboundary
+
+# cut floor slabs (unwanted cells) <<<<<<<<< leads to rack bottom surface being cut
+cp system/topoSetDict.cutfloorslab system/topoSetDict
+runApplication topoSet
+mv log.topoSet log.topoSet.cutfloorslab
+runApplication subsetMesh -overwrite c0 -patch fixedWalls 
+
+# create bafflefaces underneath the floorvents and obstacle in front of ACU A
+#cp system/topoSetDict.walls system/topoSetDict
+#runApplication topoSet
+#mv log.topoSet log.topoSet.walls
+runApplication createBaffles -overwrite
+
+# run parallel
+runApplication decomposePar
+runApplication mpirun -np 7 buoyantBoussinesqSimpleFoam -parallel
+runApplication reconstructPar
+

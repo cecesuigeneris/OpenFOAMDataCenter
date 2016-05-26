@@ -1,0 +1,24 @@
+set tics font "Times-Roman, 30" 
+set xlabel font "Times-Roman, 30"
+set ylabel font "Times-Roman, 30"
+set border linewidth 3
+set key font "Times-Roman, 30"
+set key spacing 1
+do for [i=1:7] {
+    set linetype i lw 6
+}
+
+set logscale y
+set title "Residuals"
+set ylabel 'Residual'
+set xlabel 'Iteration'
+plot "< cat log.buoyantBoussinesqSimpleFoam | grep 'Solving for Ux' | cut -d' ' -f9 | tr -d ','" title 'Ux' with lines,\
+     "< cat log.buoyantBoussinesqSimpleFoam | grep 'Solving for Uy' | cut -d' ' -f9 | tr -d ','" title 'Uy' with lines,\
+     "< cat log.buoyantBoussinesqSimpleFoam | grep 'Solving for Uz' | cut -d' ' -f9 | tr -d ','" title 'Uz' with lines,\
+   "< cat log.buoyantBoussinesqSimpleFoam | grep 'sum local' | cut -d' ' -f9 | tr -d ','" title 'continuity' with lines,\
+   "< cat log.buoyantBoussinesqSimpleFoam | grep 'Solving for T' | cut -d' ' -f9 | tr -d ','" title 'T' with lines,\
+       "< cat log.buoyantBoussinesqSimpleFoam | grep 'Solving for k' | cut -d' ' -f9 | tr -d ','" title 'k' with lines,\
+     "< cat log.buoyantBoussinesqSimpleFoam | grep 'Solving for p_rgh' | cut -d' ' -f9 | tr -d ','" title 'p_rgh' with lines
+pause 1
+reread 
+

@@ -1,0 +1,7 @@
+# vtk DataFile Version 2.0
+sampleSurface
+ASCII
+DATASET POLYDATA
+POINTS 0 float
+
+POLYGONS 0 0

@@ -1,0 +1,124 @@
+solid perforatedPlate
+
+    facet normal 1 0 0
+        outer loop
+            vertex 28.9 13.2 0.8
+            vertex 29.5 13.2 0.8
+            vertex 28.9 13.8 0.8
+        endloop
+    endfacet
+    facet normal 1 0 0
+        outer loop
+            vertex 29.5 13.2 0.8
+            vertex 28.9 13.8 0.8
+            vertex 29.5 13.8 0.8
+        endloop
+    endfacet
+
+    facet normal 1 0 0
+        outer loop
+            vertex 29.5 13.8 0.8
+            vertex 30.1 13.8 0.8
+            vertex 29.5 14.4 0.8
+        endloop
+    endfacet
+    facet normal 1 0 0
+        outer loop
+            vertex 30.1 13.8 0.8
+            vertex 29.5 14.4 0.8
+            vertex 30.1 14.4 0.8
+        endloop
+    endfacet
+
+    facet normal 1 0 0
+        outer loop
+            vertex 28.9 14.4 0.8
+            vertex 29.5 14.4 0.8
+            vertex 28.9 15 0.8
+        endloop
+    endfacet
+        facet normal 1 0 0
+        outer loop
+            vertex 29.5 14.4 0.8
+            vertex 28.9 15 0.8
+            vertex 29.5 15 0.8
+        endloop
+    endfacet
+
+    facet normal 1 0 0
+        outer loop
+            vertex 29.5 15 0.8
+            vertex 30.1 15 0.8
+            vertex 29.5 15.6 0.8
+        endloop
+    endfacet
+
+    facet normal 1 0 0
+        outer loop
+            vertex 30.1 15 0.8
+            vertex 29.5 15.6 0.8
+            vertex 30.1 15.6 0.8
+        endloop
+    endfacet
+
+    facet normal 1 0 0
+        outer loop
+            vertex 33.7 13.2 0.8
+            vertex 34.3 13.2 0.8
+            vertex 33.7 13.8 0.8
+        endloop
+    endfacet
+    facet normal 1 0 0
+        outer loop
+            vertex 34.3 13.2 0.8
+            vertex 33.7 13.8 0.8
+            vertex 34.3 13.8 0.8
+        endloop
+    endfacet
+
+    facet normal 1 0 0
+        outer loop
+            vertex 34.3 13.8 0.8
+            vertex 34.9 13.8 0.8
+            vertex 34.3 14.4 0.8
+        endloop
+    endfacet
+    facet normal 1 0 0
+        outer loop
+            vertex 34.9 13.8 0.8
+            vertex 34.3 14.4 0.8
+            vertex 34.9 14.4 0.8
+        endloop
+    endfacet
+
+    facet normal 1 0 0
+        outer loop
+            vertex 33.7 14.4 0.8
+            vertex 34.3 14.4 0.8
+            vertex 33.7 15 0.8
+        endloop
+    endfacet
+        facet normal 1 0 0
+        outer loop
+            vertex 34.3 14.4 0.8
+            vertex 33.7 15 0.8
+            vertex 34.3 15 0.8
+        endloop
+    endfacet
+
+    facet normal 1 0 0
+        outer loop
+            vertex 34.3 15 0.8
+            vertex 34.9 15 0.8
+            vertex 34.3 15.6 0.8
+        endloop
+    endfacet
+
+    facet normal 1 0 0
+        outer loop
+            vertex 34.9 15 0.8
+            vertex 34.3 15.6 0.8
+            vertex 34.9 15.6 0.8
+        endloop
+    endfacet
+endsolid perforatedPlate

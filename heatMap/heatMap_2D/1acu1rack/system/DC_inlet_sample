@@ -1,0 +1,199 @@
+// ---------------------------------------------------------------------//
+
+// Sample a field on a patch and pull it out each outputTime, find the data in postprocessing folder
+
+
+ rack_inlet_outlet_temp
+    {
+        type patchExpression;
+        accumulations (
+            weightedAverage
+        );
+        patches (
+        
+                            rack2796428BA49E0232CAC645AEBC8DA5C1_inlet  //add here all the rack inlet patch name (make sure it takes all the split section name if splitted)
+		rack2796428BA49E0232CAC645AEBC8DA5C1_outlet 
+                    
+        );
+        expression "T";
+        verbose true;
+	    outputControlMode   outputTime; //timeStep
+	    outputInterval  1;
+    }
+
+AHU_supply_return_temp
+    {
+        type patchExpression;
+        accumulations (
+            weightedAverage
+        );
+        patches (
+                                    acu380F56D59CF2B3DF6EFF9D0E6E8D39CB_inlet //add here all the name of the AHU return patch name
+		    acu380F56D59CF2B3DF6EFF9D0E6E8D39CB_outlet
+                	    );
+        expression "T";
+        verbose true;
+	    outputControlMode   outputTime; //timeStep
+	    outputInterval  1;
+    }
+
+
+AHU_massflow
+   {
+       type patchMassFlow;
+       functionObjectLibs
+         (
+           "libsimpleFunctionObjects.so"
+         );
+       verbose true;
+       patches
+         (
+                acu380F56D59CF2B3DF6EFF9D0E6E8D39CB_inlet
+		acu380F56D59CF2B3DF6EFF9D0E6E8D39CB_outlet           
+         );
+       outputControl timeStep;
+       outputInterval 1;
+   }
+
+rack_massflow
+   {
+       type patchMassFlow;
+       functionObjectLibs
+         (
+           "libsimpleFunctionObjects.so"
+         );
+       verbose true;
+       patches
+         (
+		rack2796428BA49E0232CAC645AEBC8DA5C1_inlet
+		rack2796428BA49E0232CAC645AEBC8DA5C1_outlet
+                            
+         );
+       outputControl timeStep;
+       outputInterval 1;
+   }
+
+
+
+// Capture the temperature on singular point. The goal here is to capture the rack inlet and outlet temperature. Use of 6 point per section (one section considered as a quarter of a rack) per patch (inlet & outlet)
+
+probes
+    {
+        type            probes;
+        functionObjectLibs ("libsampling.so");
+        enabled         true;
+        outputControlMode   outputTime;
+        outputInterval  1;
+
+        fields
+        (
+            T
+	    //p_rgh
+        );
+
+
+        probeLocations
+        (
+
+
+
+
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				
+//inlet bottom
+		 (33.15 12.21 0.97) 
+		 (33.3 12.21 0.97) 
+		 (33.45 12.21 0.97) 
+
+		 (33.15 12.21 1.13) 
+		 (33.3 12.21 1.13)
+		 (33.45 12.21 1.13) 
+
+//inlet mid 1
+		 (33.15 12.21 1.46) 
+		 (33.3 12.21 1.46) 
+		 (33.45 12.21 1.46) 
+
+		 (33.15 12.21 1.63) 
+		 (33.3 12.21 1.63) 
+		 (33.45 12.21 1.63)  
+
+//inlet mid 2
+		 (33.15 12.21 1.97)  
+		 (33.3 12.21 1.97) 
+		 (33.45 12.21 1.97) 
+
+		 (33.15 12.21 2.13) 
+		 (33.3 12.21 2.13) 
+		 (33.45 12.21 2.13) 
+ 
+//inlet top
+		 (33.15 12.21 2.47) 
+		 (33.3 12.21 2.47) 
+		 (33.45 12.21 2.47) 
+
+		 (33.15 12.21 2.63) 
+		 (33.3 12.21 2.63) 
+		 (33.45 12.21 2.63) 
+
+
+//outlet bottom
+		 (33.15 11.39 0.97) 
+		 (33.3 11.39 0.97) 
+		 (33.45 11.39 0.97) 
+
+		 (33.15 11.39 1.13) 
+		 (33.3 11.39 1.13) 
+		 (33.45 11.39 1.13) 
+
+//outlet mid 1
+		 (33.15 11.39 1.46) 
+		 (33.3 11.39 1.46) 
+		 (33.45 11.39 1.46) 
+
+		 (33.15 11.39 1.63) 
+		 (33.3 11.39 1.63) 
+		 (33.45 11.39 1.63)
+
+//outlet mid 2
+		 (33.15 11.39 1.97) 
+		 (33.3 11.39 1.97) 
+		 (33.45 11.39 1.97) 
+
+		 (33.15 11.39 2.13) 
+		 (33.3 11.39 2.13) 
+		 (33.45 11.39 2.13) 
+ 
+//outlet top
+		 (33.15 11.39 2.47) 
+		 (33.3 11.39 2.47) 
+		 (33.45 11.39 2.47) 
+
+		 (33.15 11.39 2.63) 
+		 (33.3 11.39 2.63) 
+		 (33.45 11.39 2.63) 	
+
+
+
+
+
+
+	);	   
+    }
+
+
+
+
+
+// -------------------------------------------------------------------------------------------- //

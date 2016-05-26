@@ -1,0 +1,229 @@
+//
+// Create a plane for sampling
+//
+// (For vent sampling move the plane down to the floor level)
+//
+
+/*flowAfterSet
+{
+    type swakExpression;
+    valueType faceSet;
+    setName porous_block_face;
+    expression "phi*flip()";
+    accumulations (
+        sum
+    );
+    	verbose true;
+	outputControlMode   timeStep;
+	outputInterval  1;
+}*/
+
+/*flowAfterZone
+{
+    type swakExpression;
+    valueType faceZone;
+    zoneName porous_block_zone;
+    expression "phi*flip()";
+    accumulations (
+        sum
+    );
+    	verbose true;
+	outputControlMode   timeStep;
+	outputInterval  1;
+}*/
+
+
+
+plane
+{
+        type createSampledSurface;
+        outputControl timeStep;
+        outputInterval 1;
+        surfaceName autoplane;
+        surface {
+            type plane;
+            basePoint       (1.1 0 0);
+            normalVector    (1 0 0);
+            interpolate true;
+        }
+        writeSurfaceOnConstruction true;
+        autoWriteSurface true;
+        surfaceFormat vtk;
+        outputControl outputTime;
+}
+
+plane_inlet
+{
+        type createSampledSurface;
+        outputControl timeStep;
+        outputInterval 1;
+        surfaceName autoplane_inlet;
+        surface {
+            type plane;
+            basePoint       (0 0 0);
+            normalVector    (1 0 0);
+            interpolate true;
+        }
+        writeSurfaceOnConstruction true;
+        autoWriteSurface true;
+        surfaceFormat vtk;
+        outputControl outputTime;
+}
+/*plane_0.6
+{
+        type createSampledSurface;
+        outputControl timeStep;
+        outputInterval 1;
+        surfaceName autoplane_0.6;
+        surface {
+            type plane;
+            basePoint       (0 0 0.59);
+            normalVector    (0 0 1);
+            interpolate true;
+        }
+        writeSurfaceOnConstruction true;
+        autoWriteSurface true;
+        surfaceFormat vtk;
+        outputControl outputTime;
+}*/
+
+
+
+//
+// Interpolate over the desired area and sum phi
+//
+// (For vent sampling change the constraints to examine smaller square sections)
+//
+
+interpolatedPlanePlane_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName autoplane;
+        verbose true;
+
+        // Expression:
+        //
+        // Checks in the region of
+        //      1.8 < x < 3
+        //      0.6 < y < 3.58
+        //
+        // Sums phi for the area if the z component of U is positive (going up through the plane)
+        //
+
+        expression "(pos().y<0.6)&&(pos().y>0) && (pos().z<0.6) &&(pos().z>0) && (U.x>0)? U & Sf():0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+
+interpolatedPlanePlane_flowRateRatio{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName autoplane;
+        verbose true;
+        expression "(U & normal())/mag(U)";
+        accumulations (
+            min
+	    max
+	    average
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+
+interpolatedPlanePlane_positive2{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName autoplane_inlet;
+        verbose true;
+
+        // Expression:
+        //
+        // Checks in the region of
+        //      1.8 < x < 3
+        //      0.6 < y < 3.58
+        //
+        // Sums phi for the area if the z component of U is positive (going up through the plane)
+        //
+
+        expression "(pos().y<0.6)&&(pos().y>0) && (pos().z<0.6) &&(pos().z>0) && (U.x>0)? U & Sf():0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+
+interpolatedPlanePlane_flowRateRatio2{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName autoplane_inlet;
+        verbose true;
+        expression "(U & normal())/mag(U)";
+        accumulations (
+            min
+	    max
+	    average
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+
+
+interpolatedPlanePlane_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName autoplane;
+        verbose true;
+
+        // Expression:
+        //
+        // Checks in the region of
+        //      1.8 < x < 3
+        //      0.6 < y < 3.58
+        //
+        // Sums phi for the area if the z component of U is positive (going up through the plane)
+        //
+
+        expression "(pos().y<0.6)&&(pos().y>0) && (pos().z<0.6) &&(pos().z>0) && (U.x<0)?mag(U)*area():0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+
+
+//ahu supply should be giving 5 m3/s
+
+/*interpolatedPlanePlane_ahu{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName autoplane_0.6;
+        verbose true;
+
+        // Expression:
+        //
+        // Checks in the region of
+        //      1.8 < x < 3
+        //      0.6 < y < 3.58
+        //
+        // Sums phi for the area if the z component of U is positive (going up through the plane)
+        //
+
+        expression "(pos().x<49.6)&&(pos().x>47.6) && (pos().y<23.0) &&(pos().y>22.2) && (U.z<0)?mag(U)*area():0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}*/
+

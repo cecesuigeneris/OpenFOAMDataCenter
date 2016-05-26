@@ -1,0 +1,499 @@
+solid acu8EFB35119AA4591115D9D1BF6014FA4C_inlet
+    facet normal 0 0 1
+        outer loop
+            vertex  49.40  25.80  2.60 
+            vertex  50.20  28.20  2.60 
+            vertex  49.40  28.20  2.60 
+        endloop
+    endfacet
+facet normal 0 0 1
+        outer loop
+            vertex  49.40  25.80  2.60 
+            vertex  50.20  25.80  2.60 
+            vertex  50.20  28.20  2.60 
+        endloop
+    endfacet
+endsolid acu8EFB35119AA4591115D9D1BF6014FA4C_inlet
+
+
+solid acu8EFB35119AA4591115D9D1BF6014FA4C_outlet
+    facet normal 0 0 -1
+        outer loop
+            vertex  49.60  27.70  0.80 
+            vertex  49.70  27.70  0.80 
+            vertex  49.70  27.25  0.80 
+        endloop
+    endfacet
+facet normal 0 0 -1
+        outer loop
+            vertex  49.70  27.25  0.80 
+            vertex  49.60  27.25  0.80 
+            vertex  49.60  27.70  0.80 
+        endloop
+    endfacet
+endsolid acu8EFB35119AA4591115D9D1BF6014FA4C_outlet
+
+solid acu8EFB35119AA4591115D9D1BF6014FA4C_outlet
+    facet normal 0 0 -1
+        outer loop
+            vertex  49.60  26.90  0.80 
+            vertex  49.70  26.90  0.80 
+            vertex  49.70  26.45  0.80 
+        endloop
+    endfacet
+facet normal 0 0 -1
+        outer loop
+            vertex  49.70  26.45  0.80 
+            vertex  49.60  26.45  0.80 
+            vertex  49.60  26.90  0.80 
+        endloop
+    endfacet
+endsolid acu8EFB35119AA4591115D9D1BF6014FA4C_outlet
+
+solid acu8EFB35119AA4591115D9D1BF6014FA4C_fixedWall
+    facet normal 0 0 1
+        outer loop
+            vertex  49.40  28.20  0.80 
+            vertex  50.20  28.20  0.80 
+            vertex  50.20  27.70  0.80 
+        endloop
+    endfacet
+facet normal 0 0 1
+        outer loop
+            vertex  50.20  27.70  0.80 
+            vertex  49.40  27.70  0.80 
+            vertex  49.40  28.20  0.80 
+        endloop
+    endfacet
+endsolid acu8EFB35119AA4591115D9D1BF6014FA4C_fixedWall
+
+solid acu8EFB35119AA4591115D9D1BF6014FA4C_fixedWall
+    facet normal 0 0 1
+        outer loop
+            vertex  49.40  26.45  0.80 
+            vertex  50.20  26.45  0.80 
+            vertex  50.20  25.80  0.80 
+        endloop
+    endfacet
+facet normal 0 0 1
+        outer loop
+            vertex  50.20  25.80  0.80 
+            vertex  49.40  25.80  0.80 
+            vertex  49.40  26.45  0.80 
+        endloop
+    endfacet
+endsolid acu8EFB35119AA4591115D9D1BF6014FA4C_fixedWall
+
+
+solid acu8EFB35119AA4591115D9D1BF6014FA4C_fixedWall
+    facet normal 0 0 1
+        outer loop
+            vertex  49.40  27.25  0.80 
+            vertex  50.20  27.25  0.80 
+            vertex  50.20  26.90  0.80 
+        endloop
+    endfacet
+facet normal 0 0 1
+        outer loop
+            vertex  50.20  26.90  0.80 
+            vertex  49.40  26.90  0.80 
+            vertex  49.40  27.25  0.80 
+        endloop
+    endfacet
+endsolid acu8EFB35119AA4591115D9D1BF6014FA4C_fixedWall
+
+solid acu8EFB35119AA4591115D9D1BF6014FA4C_fixedWall
+    facet normal 0 0 1
+        outer loop
+            vertex  49.40  27.70  0.80 
+            vertex  49.60  27.70  0.80 
+            vertex  49.60  27.25  0.80 
+        endloop
+    endfacet
+facet normal 0 0 1
+        outer loop
+            vertex  49.60  27.25  0.80 
+            vertex  49.40  27.25  0.80 
+            vertex  49.40  27.70  0.80 
+        endloop
+    endfacet
+endsolid acu8EFB35119AA4591115D9D1BF6014FA4C_fixedWall
+
+solid acu8EFB35119AA4591115D9D1BF6014FA4C_fixedWall
+    facet normal 0 0 1
+        outer loop
+            vertex  49.40  26.90  0.80 
+            vertex  49.60  26.90  0.80 
+            vertex  49.60  26.45  0.80 
+        endloop
+    endfacet
+facet normal 0 0 1
+        outer loop
+            vertex  49.60  26.45  0.80 
+            vertex  49.40  26.45  0.80 
+            vertex  49.40  26.90  0.80 
+        endloop
+    endfacet
+endsolid acu8EFB35119AA4591115D9D1BF6014FA4C_fixedWall
+
+solid acu8EFB35119AA4591115D9D1BF6014FA4C_fixedWall
+    facet normal 0 0 1
+        outer loop
+            vertex  49.70  27.70  0.80 
+            vertex  50.20  27.70  0.80 
+            vertex  50.20  27.25  0.80 
+        endloop
+    endfacet
+facet normal 0 0 1
+        outer loop
+            vertex  50.20  27.25  0.80 
+            vertex  49.70  27.25  0.80 
+            vertex  49.70  27.70  0.80 
+        endloop
+    endfacet
+endsolid acu8EFB35119AA4591115D9D1BF6014FA4C_fixedWall
+
+solid acu8EFB35119AA4591115D9D1BF6014FA4C_fixedWall
+    facet normal 0 0 1
+        outer loop
+            vertex  49.70  26.90  0.80 
+            vertex  50.20  26.90  0.80 
+            vertex  50.20  26.45  0.80 
+        endloop
+    endfacet
+facet normal 0 0 1
+        outer loop
+            vertex  50.20  26.45  0.80 
+            vertex  49.70  26.45  0.80 
+            vertex  49.70  26.90  0.80 
+        endloop
+    endfacet
+endsolid acu8EFB35119AA4591115D9D1BF6014FA4C_fixedWall
+
+
+
+
+
+
+
+
+
+
+solid acu8EFB35119AA4591115D9D1BF6014FA4C_fixedWall
+    facet normal 0 0 1
+        outer loop
+            vertex  49.40  28.20  0.80 
+            vertex  50.20  28.20  2.60 
+            vertex  50.20  28.20  0.80 
+        endloop
+    endfacet
+facet normal 0 0 1
+        outer loop
+            vertex  49.40  28.20  0.80 
+            vertex  50.20  28.20  2.60 
+            vertex  49.40  28.20  2.60 
+        endloop
+    endfacet
+endsolid acu8EFB35119AA4591115D9D1BF6014FA4C_fixedWall
+
+
+solid acu8EFB35119AA4591115D9D1BF6014FA4C_fixedWall
+    facet normal 0 0 1
+        outer loop
+            vertex  49.40  25.80  0.80 
+            vertex  50.20  25.80  2.60 
+            vertex  49.40  25.80  2.60 
+        endloop
+    endfacet
+facet normal 0 0 1
+        outer loop
+            vertex  49.40  25.80  0.80 
+            vertex  50.20  25.80  0.80 
+            vertex  50.20  25.80  2.60 
+        endloop
+    endfacet
+endsolid acu8EFB35119AA4591115D9D1BF6014FA4C_fixedWall
+
+solid acu8EFB35119AA4591115D9D1BF6014FA4C_fixedWall
+    facet normal 0 0 1
+        outer loop
+            vertex  50.20  25.80  0.80 
+            vertex  50.20  28.20  2.60 
+            vertex  50.20  25.80  2.60 
+        endloop
+    endfacet
+facet normal 0 0 1
+        outer loop
+            vertex  50.20  25.80  0.80 
+            vertex  50.20  28.20  0.80 
+            vertex  50.20  28.20  2.60 
+        endloop
+    endfacet
+endsolid acu8EFB35119AA4591115D9D1BF6014FA4C_fixedWall
+
+solid acu8EFB35119AA4591115D9D1BF6014FA4C_fixedWall
+    facet normal 0 0 1
+        outer loop
+            vertex  49.40  25.80  0.80 
+            vertex  49.40  28.20  2.60 
+            vertex  49.40  28.20  0.80 
+        endloop
+    endfacet
+facet normal 0 0 1
+        outer loop
+            vertex  49.40  25.80  0.80 
+            vertex  49.40  25.80  2.60 
+            vertex  49.40  28.20  2.60 
+        endloop
+    endfacet
+endsolid acu8EFB35119AA4591115D9D1BF6014FA4C_fixedWall
+
+solid acu65E0157C3F4FD3DBFB846500AB325745_inlet
+    facet normal 0 0 1
+        outer loop
+            vertex  59.60  25.80  2.60 
+            vertex  60.40  28.20  2.60 
+            vertex  59.60  28.20  2.60 
+        endloop
+    endfacet
+facet normal 0 0 1
+        outer loop
+            vertex  59.60  25.80  2.60 
+            vertex  60.40  25.80  2.60 
+            vertex  60.40  28.20  2.60 
+        endloop
+    endfacet
+endsolid acu65E0157C3F4FD3DBFB846500AB325745_inlet
+
+
+solid acu65E0157C3F4FD3DBFB846500AB325745_outlet
+    facet normal 0 0 -1
+        outer loop
+            vertex  60.10  27.70  0.80 
+            vertex  60.20  27.70  0.80 
+            vertex  60.20  27.25  0.80 
+        endloop
+    endfacet
+facet normal 0 0 -1
+        outer loop
+            vertex  60.20  27.25  0.80 
+            vertex  60.10  27.25  0.80 
+            vertex  60.10  27.70  0.80 
+        endloop
+    endfacet
+endsolid acu65E0157C3F4FD3DBFB846500AB325745_outlet
+
+solid acu65E0157C3F4FD3DBFB846500AB325745_outlet
+    facet normal 0 0 -1
+        outer loop
+            vertex  60.10  26.90  0.80 
+            vertex  60.20  26.90  0.80 
+            vertex  60.20  26.45  0.80 
+        endloop
+    endfacet
+facet normal 0 0 -1
+        outer loop
+            vertex  60.20  26.45  0.80 
+            vertex  60.10  26.45  0.80 
+            vertex  60.10  26.90  0.80 
+        endloop
+    endfacet
+endsolid acu65E0157C3F4FD3DBFB846500AB325745_outlet
+
+solid acu65E0157C3F4FD3DBFB846500AB325745_fixedWall
+    facet normal 0 0 1
+        outer loop
+            vertex  59.60  28.20  0.80 
+            vertex  60.40  28.20  0.80 
+            vertex  60.40  27.70  0.80 
+        endloop
+    endfacet
+facet normal 0 0 1
+        outer loop
+            vertex  60.40  27.70  0.80 
+            vertex  59.60  27.70  0.80 
+            vertex  59.60  28.20  0.80 
+        endloop
+    endfacet
+endsolid acu65E0157C3F4FD3DBFB846500AB325745_fixedWall
+
+solid acu65E0157C3F4FD3DBFB846500AB325745_fixedWall
+    facet normal 0 0 1
+        outer loop
+            vertex  59.60  26.45  0.80 
+            vertex  60.40  26.45  0.80 
+            vertex  60.40  25.80  0.80 
+        endloop
+    endfacet
+facet normal 0 0 1
+        outer loop
+            vertex  60.40  25.80  0.80 
+            vertex  59.60  25.80  0.80 
+            vertex  59.60  26.45  0.80 
+        endloop
+    endfacet
+endsolid acu65E0157C3F4FD3DBFB846500AB325745_fixedWall
+
+
+solid acu65E0157C3F4FD3DBFB846500AB325745_fixedWall
+    facet normal 0 0 1
+        outer loop
+            vertex  59.60  27.25  0.80 
+            vertex  60.40  27.25  0.80 
+            vertex  60.40  26.90  0.80 
+        endloop
+    endfacet
+facet normal 0 0 1
+        outer loop
+            vertex  60.40  26.90  0.80 
+            vertex  59.60  26.90  0.80 
+            vertex  59.60  27.25  0.80 
+        endloop
+    endfacet
+endsolid acu65E0157C3F4FD3DBFB846500AB325745_fixedWall
+
+solid acu65E0157C3F4FD3DBFB846500AB325745_fixedWall
+    facet normal 0 0 1
+        outer loop
+            vertex  59.60  27.70  0.80 
+            vertex  60.10  27.70  0.80 
+            vertex  60.10  27.25  0.80 
+        endloop
+    endfacet
+facet normal 0 0 1
+        outer loop
+            vertex  60.10  27.25  0.80 
+            vertex  59.60  27.25  0.80 
+            vertex  59.60  27.70  0.80 
+        endloop
+    endfacet
+endsolid acu65E0157C3F4FD3DBFB846500AB325745_fixedWall
+
+solid acu65E0157C3F4FD3DBFB846500AB325745_fixedWall
+    facet normal 0 0 1
+        outer loop
+            vertex  59.60  26.90  0.80 
+            vertex  60.10  26.90  0.80 
+            vertex  60.10  26.45  0.80 
+        endloop
+    endfacet
+facet normal 0 0 1
+        outer loop
+            vertex  60.10  26.45  0.80 
+            vertex  59.60  26.45  0.80 
+            vertex  59.60  26.90  0.80 
+        endloop
+    endfacet
+endsolid acu65E0157C3F4FD3DBFB846500AB325745_fixedWall
+
+solid acu65E0157C3F4FD3DBFB846500AB325745_fixedWall
+    facet normal 0 0 1
+        outer loop
+            vertex  60.20  27.70  0.80 
+            vertex  60.40  27.70  0.80 
+            vertex  60.40  27.25  0.80 
+        endloop
+    endfacet
+facet normal 0 0 1
+        outer loop
+            vertex  60.40  27.25  0.80 
+            vertex  60.20  27.25  0.80 
+            vertex  60.20  27.70  0.80 
+        endloop
+    endfacet
+endsolid acu65E0157C3F4FD3DBFB846500AB325745_fixedWall
+
+solid acu65E0157C3F4FD3DBFB846500AB325745_fixedWall
+    facet normal 0 0 1
+        outer loop
+            vertex  60.20  26.90  0.80 
+            vertex  60.40  26.90  0.80 
+            vertex  60.40  26.45  0.80 
+        endloop
+    endfacet
+facet normal 0 0 1
+        outer loop
+            vertex  60.40  26.45  0.80 
+            vertex  60.20  26.45  0.80 
+            vertex  60.20  26.90  0.80 
+        endloop
+    endfacet
+endsolid acu65E0157C3F4FD3DBFB846500AB325745_fixedWall
+
+
+
+
+
+
+
+
+
+
+solid acu65E0157C3F4FD3DBFB846500AB325745_fixedWall
+    facet normal 0 0 1
+        outer loop
+            vertex  59.60  28.20  0.80 
+            vertex  60.40  28.20  2.60 
+            vertex  60.40  28.20  0.80 
+        endloop
+    endfacet
+facet normal 0 0 1
+        outer loop
+            vertex  59.60  28.20  0.80 
+            vertex  60.40  28.20  2.60 
+            vertex  59.60  28.20  2.60 
+        endloop
+    endfacet
+endsolid acu65E0157C3F4FD3DBFB846500AB325745_fixedWall
+
+
+solid acu65E0157C3F4FD3DBFB846500AB325745_fixedWall
+    facet normal 0 0 1
+        outer loop
+            vertex  59.60  25.80  0.80 
+            vertex  60.40  25.80  2.60 
+            vertex  59.60  25.80  2.60 
+        endloop
+    endfacet
+facet normal 0 0 1
+        outer loop
+            vertex  59.60  25.80  0.80 
+            vertex  60.40  25.80  0.80 
+            vertex  60.40  25.80  2.60 
+        endloop
+    endfacet
+endsolid acu65E0157C3F4FD3DBFB846500AB325745_fixedWall
+
+solid acu65E0157C3F4FD3DBFB846500AB325745_fixedWall
+    facet normal 0 0 1
+        outer loop
+            vertex  60.40  25.80  0.80 
+            vertex  60.40  28.20  2.60 
+            vertex  60.40  25.80  2.60 
+        endloop
+    endfacet
+facet normal 0 0 1
+        outer loop
+            vertex  60.40  25.80  0.80 
+            vertex  60.40  28.20  0.80 
+            vertex  60.40  28.20  2.60 
+        endloop
+    endfacet
+endsolid acu65E0157C3F4FD3DBFB846500AB325745_fixedWall
+
+solid acu65E0157C3F4FD3DBFB846500AB325745_fixedWall
+    facet normal 0 0 1
+        outer loop
+            vertex  59.60  25.80  0.80 
+            vertex  59.60  28.20  2.60 
+            vertex  59.60  28.20  0.80 
+        endloop
+    endfacet
+facet normal 0 0 1
+        outer loop
+            vertex  59.60  25.80  0.80 
+            vertex  59.60  25.80  2.60 
+            vertex  59.60  28.20  2.60 
+        endloop
+    endfacet
+endsolid acu65E0157C3F4FD3DBFB846500AB325745_fixedWall

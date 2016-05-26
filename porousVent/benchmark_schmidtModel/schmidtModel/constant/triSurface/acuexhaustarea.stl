@@ -1,0 +1,63 @@
+solid acuexhaustarea
+
+    facet normal 1 0 0
+        outer loop
+            vertex  49.90  27.70  0.80 
+            vertex  50.00  27.70  0.80 
+            vertex  50.00  27.25  0.80 
+        endloop
+    endfacet
+    facet normal 1 0 0
+        outer loop
+            vertex  50.00  27.25  0.80 
+            vertex  49.90  27.25  0.80 
+            vertex  49.90  27.70  0.80 
+        endloop
+    endfacet
+
+    facet normal 1 0 0
+        outer loop
+            vertex  49.90  26.90  0.80
+            vertex  50.00  26.90  0.80 
+            vertex  50.00  26.45  0.80
+        endloop
+    endfacet
+    facet normal 1 0 0
+        outer loop
+            vertex  50.00  26.45  0.80 
+            vertex  49.90  26.45  0.80 
+            vertex  49.90  26.90  0.80 
+        endloop
+    endfacet
+
+    facet normal 1 0 0
+        outer loop
+            vertex  59.80  27.70  0.80 
+            vertex  59.90  27.70  0.80 
+            vertex  59.90  27.25  0.80 
+        endloop
+    endfacet
+    facet normal 1 0 0
+        outer loop
+            vertex  59.90  27.25  0.80 
+            vertex  59.80  27.25  0.80 
+            vertex  59.80  27.70  0.80 
+        endloop
+    endfacet
+
+    facet normal 1 0 0
+        outer loop
+            vertex  59.80  26.90  0.80 
+            vertex  59.90  26.90  0.80 
+            vertex  59.90  26.45  0.80 
+        endloop
+    endfacet
+    facet normal 1 0 0
+        outer loop
+            vertex  59.90  26.45  0.80 
+            vertex  59.80  26.45  0.80 
+            vertex  59.80  26.90  0.80 
+        endloop
+    endfacet
+
+endsolid acuexhaustarea

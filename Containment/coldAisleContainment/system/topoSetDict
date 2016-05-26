@@ -1,0 +1,233 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.2.1                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      topoSetDict.walls;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+
+actions
+(
+
+//row based
+    {
+      name    baffleFaces;
+      type    faceSet;
+      action  new;
+      source  boxToFace;
+      sourceInfo
+      {
+          box (28.79 13.2 0.6)(28.81 15.6 0.8);
+      }
+    }
+
+    {
+      name    baffleFaces;
+      type    faceSet;
+      action  add;
+      source  boxToFace;
+      sourceInfo
+      {
+          box (29.39 13.2 0.6)(29.41 15.6 0.8);
+      }
+    }
+
+    {
+      name	baffleFaces;
+      type    	faceSet;
+      action  	add;
+      source  	boxToFace;
+      sourceInfo
+      {
+          box (28.8 13.19 0.6)(29.4 13.21 0.8);
+      }
+    }
+
+    {
+      name	baffleFaces;
+      type    	faceSet;
+      action  	add;
+      source  	boxToFace;
+      sourceInfo
+      {
+          box (28.8 13.79 0.6)(29.4 13.81 0.8);
+      }
+    }
+
+    {
+      name	baffleFaces;
+      type    	faceSet;
+      action  	add;
+      source  	boxToFace;
+      sourceInfo
+      {
+          box (28.8 14.39 0.6)(29.4 14.41 0.8);
+      }
+    } 
+
+    {
+      name	baffleFaces;
+      type    	faceSet;
+      action  	add;
+      source  	boxToFace;
+      sourceInfo
+      {
+          box (28.8 14.99 0.6)(29.4 15.01 0.8);
+      }
+    }
+
+    {
+      name	baffleFaces;
+      type    	faceSet;
+      action  	add;
+      source  	boxToFace;
+      sourceInfo
+      {
+          box (28.8 15.59 0.6)(29.4 15.61 0.8);
+      }
+    }
+
+
+
+
+
+//individual range
+    {
+      name	baffleFaces;
+      type    	faceSet;
+      action  	add;
+      source  	boxToFace;
+      sourceInfo
+      {
+          box (33.6 13.19 0.6)(34.2 13.21 0.8);
+      }
+    }
+
+    {
+      name	baffleFaces;
+      type    	faceSet;
+      action  	add;
+      source  	boxToFace;
+      sourceInfo
+      {
+          box (33.6 13.79 0.6)(34.8 13.81 0.8);
+      }
+    }
+
+    {
+      name	baffleFaces;
+      type    	faceSet;
+      action  	add;
+      source  	boxToFace;
+      sourceInfo
+      {
+          box (33.6 14.39 0.6)(34.8 14.41 0.8);
+      }
+    }
+
+    {
+      name	baffleFaces;
+      type    	faceSet;
+      action  	add;
+      source  	boxToFace;
+      sourceInfo
+      {
+          box (33.6 14.99 0.6)(34.8 15.01 0.8);
+      }
+    }
+
+    {
+      name	baffleFaces;
+      type    	faceSet;
+      action  	add;
+      source  	boxToFace;
+      sourceInfo
+      {
+          box (34.2 15.59 0.6)(34.8 15.61 0.8);
+      }
+    }
+
+
+
+
+    {
+      name    baffleFaces;
+      type    faceSet;
+      action  add;
+      source  boxToFace;
+      sourceInfo
+      {
+          box (33.59 13.2 0.6)(33.61 13.8 0.8);
+      }
+    }
+
+    {
+      name    baffleFaces;
+      type    faceSet;
+      action  add;
+      source  boxToFace;
+      sourceInfo
+      {
+          box (33.59 14.4 0.6)(33.61 15 0.8);
+      }
+    }
+
+    {
+      name	baffleFaces;
+      type    	faceSet;
+      action  	add;
+      source  	boxToFace;
+      sourceInfo
+      {
+          box (34.19 13.2 0.6)(34.21 15.6 0.8);
+      }
+    }
+
+    {
+      name    baffleFaces;
+      type    faceSet;
+      action  add;
+      source  boxToFace;
+      sourceInfo
+      {
+          box (34.79 13.8 0.6)(34.81 14.4 0.8);
+      }
+    }
+
+    {
+      name    baffleFaces;
+      type    faceSet;
+      action  add;
+      source  boxToFace;
+      sourceInfo
+      {
+          box (34.79 15 0.6)(34.81 15.6 0.8);
+      }
+    }
+
+
+
+
+
+
+{
+    name baffleFaces;
+    type faceZoneSet;
+    action new;
+    source setToFaceZone;
+    sourceInfo
+    {
+        faceSet baffleFaces;
+    }
+}
+
+);

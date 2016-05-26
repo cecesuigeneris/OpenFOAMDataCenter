@@ -1,0 +1,29 @@
+#!/bin/sh
+cd ${0%/*} || exit 1    # run from this directory
+
+# Source tutorial run functions
+. $WM_PROJECT_DIR/bin/tools/RunFunctions
+
+application=`getApplication`
+
+
+mkdir 0
+runApplication blockMesh
+runApplication surfaceFeatureExtract
+runApplication snappyHexMesh -overwrite
+cp -r 0.buoyant/* 0/
+runApplication createPatch -overwrite
+runApplication createBaffles -overwrite
+#runApplication decomposePar
+#runApplication mpirun -np 7 $application -parallel
+#runApplication reconstructPar -latestTime
+runApplication buoyantBoussinesqSimpleFoam
+
+
+#runApplication topoSet
+#runApplication $application
+#runApplication decomposePar
+#runApplication mpirun -np 7 $application -parallel
+#runApplication reconstructPar -latestTime
+
+# ----------------------------------------------------------------- end-of-file

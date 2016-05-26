@@ -1,0 +1,199 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.3.1                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      topoSetDict.setporous;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+actions
+(
+    {
+      	name    floorvent2A1BA98D742BDB1FC147B2CA43F835C0; //floorvent2A1BA98D742BDB1FC147B2CA43F835C0
+      	type    cellSet;
+      	action  new;
+      	source  boxToCell;
+      	sourceInfo
+      	{
+          box (28.8 13.2 0.6)(29.40 13.8 0.7); // 0.1m thick porous zone
+      	}
+    }
+
+    {
+    	name floorvent2A1BA98D742BDB1FC147B2CA43F835C0;
+    	type cellZoneSet;
+   	action new;
+    	source setToCellZone;
+    	sourceInfo
+    	{
+        set floorvent2A1BA98D742BDB1FC147B2CA43F835C0;
+    	}
+    } 
+
+    {
+      	name    floorventB8FDC6307B84613EDE9F3D1266FBF2A7; //floorventB8FDC6307B84613EDE9F3D1266FBF2A7
+      	type    cellSet;
+      	action  new;
+      	source  boxToCell;
+      	sourceInfo
+      	{
+          box (29.40 13.8 0.6)(30.0 14.4 0.7); // 0.1m thick porous zone
+      	}
+    }
+
+    {
+    	name floorventB8FDC6307B84613EDE9F3D1266FBF2A7;
+    	type cellZoneSet;
+   	action new;
+    	source setToCellZone;
+    	sourceInfo
+    	{
+        set floorventB8FDC6307B84613EDE9F3D1266FBF2A7;
+    	}
+    } 
+
+    {
+      	name    floorvent7F94527B35F3B71B1E712CEE6AA4B6D4; //floorvent7F94527B35F3B71B1E712CEE6AA4B6D4
+      	type    cellSet;
+      	action  new;
+      	source  boxToCell;
+      	sourceInfo
+      	{
+          box (29.4 13.8 0.6)(30.0 14.4 0.7); // 0.1m thick porous zone
+      	}
+    }
+
+    {
+    	name floorvent7F94527B35F3B71B1E712CEE6AA4B6D4;
+    	type cellZoneSet;
+   	action new;
+    	source setToCellZone;
+    	sourceInfo
+    	{
+        set floorvent7F94527B35F3B71B1E712CEE6AA4B6D4;
+    	}
+    }
+
+
+    {
+      	name    floorventAAC985E7E23E4F7AC0AA5AE9FB1F7A54; //floorventAAC985E7E23E4F7AC0AA5AE9FB1F7A54
+      	type    cellSet;
+      	action  new;
+      	source  boxToCell;
+      	sourceInfo
+      	{
+          box (29.4 15.0 0.6)(30.0 15.60 0.7); // 0.1m thick porous zone
+      	}
+    }
+
+    {
+    	name floorventAAC985E7E23E4F7AC0AA5AE9FB1F7A54;
+    	type cellZoneSet;
+   	action new;
+    	source setToCellZone;
+    	sourceInfo
+    	{
+        set floorventAAC985E7E23E4F7AC0AA5AE9FB1F7A54;
+    	}
+    }
+
+    {
+      	name    floorventEA7630CBB9BBFDC6622C7CB948804950; //floorventEA7630CBB9BBFDC6622C7CB948804950
+      	type    cellSet;
+      	action  new;
+      	source  boxToCell;
+      	sourceInfo
+      	{
+          box (33.6 13.20 0.6)(34.2 13.8 0.7); // 0.1m thick porous zone
+      	}
+    }
+
+    {
+    	name floorventEA7630CBB9BBFDC6622C7CB948804950;
+    	type cellZoneSet;
+   	action new;
+    	source setToCellZone;
+    	sourceInfo
+    	{
+        set floorventEA7630CBB9BBFDC6622C7CB948804950;
+    	}
+    }
+
+    {
+      	name    floorvent3D414218072AA23BD952F9DD06BF64D0; //floorvent3D414218072AA23BD952F9DD06BF64D0
+      	type    cellSet;
+      	action  new;
+      	source  boxToCell;
+      	sourceInfo
+      	{
+          box (34.2 13.8 0.6)(34.8 14.4 0.7); // 0.1m thick porous zone
+      	}
+    }
+
+    {
+    	name floorvent3D414218072AA23BD952F9DD06BF64D0;
+    	type cellZoneSet;
+   	action new;
+    	source setToCellZone;
+    	sourceInfo
+    	{
+        set floorvent3D414218072AA23BD952F9DD06BF64D0;
+    	}
+    }
+
+    {
+      	name    floorventFDCCECD400EAA1B4B398E7CC9310D0A5; //floorventFDCCECD400EAA1B4B398E7CC9310D0A5
+      	type    cellSet;
+      	action  new;
+      	source  boxToCell;
+      	sourceInfo
+      	{
+          box (33.6 14.4 0.6)(34.2 15.0 0.7); // 0.1m thick porous zone
+      	}
+    }
+
+    {
+    	name floorventFDCCECD400EAA1B4B398E7CC9310D0A5;
+    	type cellZoneSet;
+   	action new;
+    	source setToCellZone;
+    	sourceInfo
+    	{
+        set floorventFDCCECD400EAA1B4B398E7CC9310D0A5;
+    	}
+    }
+
+    {
+      	name    floorventE53508F51655D8FD70DA555E8170559C; //floorventE53508F51655D8FD70DA555E8170559C
+      	type    cellSet;
+      	action  new;
+      	source  boxToCell;
+      	sourceInfo
+      	{
+          box (34.2 15.0 0.6)(34.8 15.60 0.7); // 0.1m thick porous zone
+      	}
+    }
+
+    {
+    	name floorventE53508F51655D8FD70DA555E8170559C;
+    	type cellZoneSet;
+   	action new;
+    	source setToCellZone;
+    	sourceInfo
+    	{
+        set floorventE53508F51655D8FD70DA555E8170559C;
+    	}
+    }
+ 
+);
+
+// ************************************************************************* //

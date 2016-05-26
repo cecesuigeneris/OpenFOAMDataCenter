@@ -1,0 +1,80 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.3.1                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       polyBoundaryMesh;
+    location    "constant/polyMesh";
+    object      boundary;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+6
+(
+    frontAndBack
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          1180;
+        startFace       19920;
+    }
+    topAndBottom
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          1180;
+        startFace       21100;
+    }
+    inlet
+    {
+        type            patch;
+        nFaces          100;
+        startFace       22280;
+    }
+    outlet
+    {
+        type            patch;
+        nFaces          100;
+        startFace       22380;
+    }
+    porous_half0
+    {
+        type            cyclic;
+        inGroups        
+2
+(
+cyclic
+cyclicFaces
+)
+;
+        nFaces          400;
+        startFace       22480;
+        matchTolerance  0.0001;
+        transform       unknown;
+        neighbourPatch  porous_half1;
+    }
+    porous_half1
+    {
+        type            cyclic;
+        inGroups        
+2
+(
+cyclic
+cyclicFaces
+)
+;
+        nFaces          400;
+        startFace       22880;
+        matchTolerance  0.0001;
+        transform       unknown;
+        neighbourPatch  porous_half0;
+    }
+)
+
+// ************************************************************************* //

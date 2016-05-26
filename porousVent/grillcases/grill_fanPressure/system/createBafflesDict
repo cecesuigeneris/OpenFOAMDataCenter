@@ -1,0 +1,180 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.3.1                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      createBafflesDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+// Whether to convert internal faces only (so leave boundary faces intact).
+// This is only relevant if your face selection type can pick up boundary
+// faces.
+internalFacesOnly true;
+
+// Baffles to create.
+baffles
+{
+cylicFaces
+{
+	//type        searchableSurface;
+        //surface     triSurfaceMesh;
+	//name        perforatedPlate.stl;
+	type	    faceZone;
+	zoneName    plate;
+        
+	patches
+        {
+            master
+            {
+                //- Master side patch
+
+                name            porous_half0;
+                type            patch;//cyclic
+                neighbourPatch  porous_half1;
+
+		//- Optional override of added patchfields. If not specified
+                //  any added patchfields are of type calculated.
+                patchFields
+                {
+                    p_rgh
+                    {
+                        /*type            porousBafflePressure; 
+                        patchType       cyclic;
+                        D               6.3e4; //6.3e4
+                        I               10; //40 diverged
+                        length          0.2; 
+                        jump            uniform 0;
+                        value           uniform 0;
+
+         		type            groovyBCJump;  
+			patchType	cyclic;
+        		variables       "phi{porous_half0}=phi;"; //mag(U){porous_half0}=sum(mag(U)*mag(Sf()))/sum(mag(Sf()))
+         		jumpExpression 	"10.86*(phi/1.2)*(phi/1.2)-0.1368*(phi/1.2)"; //31.155*phi/1.2-14.027
+         		value           uniform 0;*/
+
+			type 		fanPressure;
+			patchType 	totalPressure;
+			/*uniformValue	table
+			(
+				(0.21	0.4)//(velocity pressure_jump)
+				(0.22	0.55)
+				(0.39	1.5)
+				(0.44	2)
+				(0.65	4.6)
+				(0.66	4.7)
+				(0.87	8.2)
+				(1.31	19)
+				(1.74	32.7)
+				(2.18	51)
+				(2.63	74.7)
+				(2.74	81.35)
+			);*/
+			fileName "./constant/fanCurve"; // Fan curve file name
+			outOfBounds clamp; // (error|warn|clamp|repeat)
+			direction 	in; // Direction of flow through fan
+			p0 		uniform 0; // Environmental total pressure
+			value 		uniform 0; // Initial pressure
+			gamma 		1;
+                    }
+                U
+                {
+                    type            inletOutlet;
+                    inletValue      uniform (0 0 0);
+                    value           uniform (0 0 0);
+                }
+
+                T
+                {
+        	    type            zeroGradient;
+                }
+		p
+		{
+        	    type            zeroGradient;
+		}
+		alphat
+		{
+        	    type            zeroGradient;
+		}
+		epsilon
+		{
+        	    type            zeroGradient;
+		}
+		k
+		{
+        	    type            zeroGradient;
+		}
+		nut
+		{
+        	    type            zeroGradient;
+		}
+ 
+                }
+            }
+	    slave
+            {
+                //- Slave side patch
+
+                name            porous_half1;
+                type            patch;//cyclic
+                neighbourPatch  porous_half0;
+
+                patchFields
+                {
+                    p_rgh
+                    {
+			type 		fanPressure;
+			patchType 	totalPressure;
+			fileName "./constant/fanCurve"; // Fan curve file name
+			outOfBounds clamp; // (error|warn|clamp|repeat)*/
+			direction 	out; // Direction of flow through fan
+			p0 		uniform 0; // Environmental total pressure
+			value 		uniform 0; // Initial pressure
+			gamma 		1;
+                        //${...master.patchFields}
+		    }
+
+                U
+                {
+                    type            pressureInletOutletVelocity;
+                    value           uniform (0 0 0);
+                }
+                 T
+                {
+        	    type            zeroGradient;
+                }
+		p
+		{
+        	    type            zeroGradient;
+		}
+		alphat
+		{
+        	    type            zeroGradient;
+		}
+		epsilon
+		{
+        	    type            zeroGradient;
+		}
+		k
+		{
+        	    type            zeroGradient;
+		}
+		nut
+		{
+        	    type            zeroGradient;
+		}
+                }
+            }
+        }
+    }
+
+}
+
+// ************************************************************************* //

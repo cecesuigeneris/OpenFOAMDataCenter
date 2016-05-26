@@ -1,0 +1,101 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.2.1                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      topoSetDict.baffles;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+
+actions
+(
+     {
+      name    baffleFaces;
+      type    faceSet;
+      action  new;
+      source  boxToFace;
+      sourceInfo
+      {
+          box (49.40 25.8 0.79)(50.2 28.2 0.81);
+      }
+    }
+
+     {
+      name    baffleFaces;
+      type    faceSet;
+      action  add;
+      source  boxToFace;
+      sourceInfo
+      {
+          box (59.6 25.8 0.79)(60.4 28.2 0.81);
+      }
+    }
+
+        {
+      name    baffleFaces;
+      type    faceSet;
+      action  delete;
+      source  boxToFace;
+      sourceInfo
+      {
+          box (49.9 27.25 0.79)(50 27.7 0.81);
+      }
+    }
+
+        {
+      name    baffleFaces;
+      type    faceSet;
+      action  delete;
+      source  boxToFace;
+      sourceInfo
+      {
+          box (49.9 26.45 0.79)(50 26.9 0.81);
+      }
+    }
+
+        {
+      name    baffleFaces;
+      type    faceSet;
+      action  delete;
+      source  boxToFace;
+      sourceInfo
+      {
+          box (59.4 27.25 0.79)(59.9 27.7 0.81);
+      }
+    }
+
+        {
+      name    baffleFaces;
+      type    faceSet;
+      action  delete;
+      source  boxToFace;
+      sourceInfo
+      {
+          box (59.4 26.45 0.79)(59.9 26.9 0.81);
+      }
+    }
+  
+
+
+    
+{
+    name baffleFaces;
+    type faceZoneSet;
+    action new;
+    source setToFaceZone;
+    sourceInfo
+    {
+        faceSet baffleFaces;
+    }
+}
+    
+
+);

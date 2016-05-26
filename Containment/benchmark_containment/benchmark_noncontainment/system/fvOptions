@@ -1,0 +1,272 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.2.1                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      fvOptions;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+porosity_floorvent2A1BA98D742BDB1FC147B2CA43F835C0
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorvent2A1BA98D742BDB1FC147B2CA43F835C0;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff; //DarcyForchheimer
+        fixedCoeffCoeffs  //DarcyForchheimerCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0.3082 0.3082 0.3082); //linear term U -1.315
+            beta     beta [0 -1 0 0 0 0 0] (498.61 498.61 498.61); //squared term U 104.43
+            /*d   d [0 -2 0 0 0 0 0] (6.3e4 6.3e4 6.3e4); 
+            f   f [0 -1 0 0 0 0 0] (17.73 17.73 17.73); */
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225; // should be specified cuz we don't have rho in our simulation
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorventB8FDC6307B84613EDE9F3D1266FBF2A7
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorventB8FDC6307B84613EDE9F3D1266FBF2A7;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff; //DarcyForchheimer
+        fixedCoeffCoeffs  //DarcyForchheimerCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0.3082 0.3082 0.3082); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (498.61 498.61 498.61); //squared term U
+            /*d   d [0 -2 0 0 0 0 0] (6.3e4 6.3e4 6.3e4); 
+            f   f [0 -1 0 0 0 0 0] (17.73 17.73 17.73); */
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225; // should be specified cuz we don't have rho in our simulation
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorvent7F94527B35F3B71B1E712CEE6AA4B6D4
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorvent7F94527B35F3B71B1E712CEE6AA4B6D4;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff; //DarcyForchheimer
+        fixedCoeffCoeffs  //DarcyForchheimerCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0.3082 0.3082 0.3082); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (498.61 498.61 498.61); //squared term U
+            /*d   d [0 -2 0 0 0 0 0] (6.3e4 6.3e4 6.3e4); 
+            f   f [0 -1 0 0 0 0 0] (17.73 17.73 17.73); */
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225; // should be specified cuz we don't have rho in our simulation
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorventAAC985E7E23E4F7AC0AA5AE9FB1F7A54
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorventAAC985E7E23E4F7AC0AA5AE9FB1F7A54;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff; //DarcyForchheimer
+        fixedCoeffCoeffs  //DarcyForchheimerCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0.3082 0.3082 0.3082); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (498.61 498.61 498.61); //squared term U
+            /*d   d [0 -2 0 0 0 0 0] (6.3e4 6.3e4 6.3e4); 
+            f   f [0 -1 0 0 0 0 0] (17.73 17.73 17.73); */
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225; // should be specified cuz we don't have rho in our simulation
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorventEA7630CBB9BBFDC6622C7CB948804950
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorventEA7630CBB9BBFDC6622C7CB948804950;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff; //DarcyForchheimer
+        fixedCoeffCoeffs  //DarcyForchheimerCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0.3082 0.3082 0.3082); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (498.61 498.61 498.61); //squared term U
+            /*d   d [0 -2 0 0 0 0 0] (6.3e4 6.3e4 6.3e4); 
+            f   f [0 -1 0 0 0 0 0] (17.73 17.73 17.73); */
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225; // should be specified cuz we don't have rho in our simulation
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorvent3D414218072AA23BD952F9DD06BF64D0
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorvent3D414218072AA23BD952F9DD06BF64D0;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff; //DarcyForchheimer
+        fixedCoeffCoeffs  //DarcyForchheimerCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0.3082 0.3082 0.3082); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (498.61 498.61 498.61); //squared term U
+            /*d   d [0 -2 0 0 0 0 0] (6.3e4 6.3e4 6.3e4); 
+            f   f [0 -1 0 0 0 0 0] (17.73 17.73 17.73); */
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225; // should be specified cuz we don't have rho in our simulation
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorventFDCCECD400EAA1B4B398E7CC9310D0A5
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorventFDCCECD400EAA1B4B398E7CC9310D0A5;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff; //DarcyForchheimer
+        fixedCoeffCoeffs  //DarcyForchheimerCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0.3082 0.3082 0.3082); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (498.61 498.61 498.61); //squared term U
+            /*d   d [0 -2 0 0 0 0 0] (6.3e4 6.3e4 6.3e4); 
+            f   f [0 -1 0 0 0 0 0] (17.73 17.73 17.73); */
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225; // should be specified cuz we don't have rho in our simulation
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorventE53508F51655D8FD70DA555E8170559C
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorventE53508F51655D8FD70DA555E8170559C;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff; //DarcyForchheimer
+        fixedCoeffCoeffs  //DarcyForchheimerCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0.3082 0.3082 0.3082); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (498.61 498.61 498.61); //squared term U
+            /*d   d [0 -2 0 0 0 0 0] (6.3e4 6.3e4 6.3e4); 
+            f   f [0 -1 0 0 0 0 0] (17.73 17.73 17.73); */
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225; // should be specified cuz we don't have rho in our simulation
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}

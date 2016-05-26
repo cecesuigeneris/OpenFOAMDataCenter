@@ -1,0 +1,22 @@
+#!/bin/sh
+
+cd ${0%/*} || exit 1    # run from this directory
+
+# Source tutorial run functions
+. $WM_PROJECT_DIR/bin/tools/RunFunctions
+
+
+runApplication blockMesh -dict system/blockMeshDict
+runApplication surfaceFeatureExtract
+runApplication snappyHexMesh -overwrite
+runApplication topoSet
+runApplication subsetMesh -overwrite -patch fixedWalls inside
+cp -r 0.org 0
+runApplication createPatch -overwrite
+runApplication createBaffles -overwrite
+#runApplication buoyantBoussinesqSimpleFoam
+
+runApplication decomposePar
+runApplication mpirun -np 7 buoyantBoussinesqSimpleFoam -parallel
+runApplication reconstructPar
+

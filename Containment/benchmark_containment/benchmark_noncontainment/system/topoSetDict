@@ -1,0 +1,183 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.3.1                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      topoSetDict.cutfloorslab;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+actions
+(
+
+        {
+      name    c0;
+      type    cellSet;
+      action  new;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (24.2 10.4 0.6)(38.2 17.8 0.8); //whole floor slab of the room
+      }
+    }
+
+        {
+      name    c0;
+      type    cellSet;
+      action  delete;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (28.8 13.20 0.6)(29.40 13.8 0.8); // floorvents exact size 
+						  
+      }
+    }
+
+        {
+      name    c0;
+      type    cellSet;
+      action  delete;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (29.4 13.8 0.6)(30.0 14.4 0.8); // floorvents exact size 
+						  
+      }
+    }
+
+        {
+      name    c0;
+      type    cellSet;
+      action  delete;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (28.8 14.4 0.6)(29.4 15.0 0.8); // floorvents exact size 
+						  
+      }
+    }
+
+        {
+      name    c0;
+      type    cellSet;
+      action  delete;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (29.4 15.0 0.6)(30.0 15.6 0.8); // floorvents exact size 
+						  
+      }
+    }
+
+        {
+      name    c0;
+      type    cellSet;
+      action  delete;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (33.6 13.2 0.6)(34.2 13.8 0.8); // floorvents exact size 
+						  
+      }
+    }
+
+        {
+      name    c0;
+      type    cellSet;
+      action  delete;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (34.2 13.8 0.6)(34.8 14.4 0.8); // floorvents exact size 
+						  
+      }
+    }
+
+
+        {
+      name    c0;
+      type    cellSet;
+      action  delete;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (33.6 14.4 0.6)(34.2 15.0 0.8); // floorvents exact size 
+						  
+      }
+    }
+
+        {
+      name    c0;
+      type    cellSet;
+      action  delete;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (34.2 15.0 0.6)(34.8 15.6 0.8); // floorvents exact size 
+						  
+      }
+    }
+                                       
+
+       /* {
+      name    c0;
+      type    cellSet;
+      action  delete;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (33.00 11.40 0.6)(33.60 12.20 0.8); // rack holes
+      }
+    }*/
+
+
+        {
+      name    c0;
+      type    cellSet;
+      action  delete;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (25.0 13.4 0.6)(25.8 15.4 0.8); // acu holes
+      }
+    }
+
+        {
+      name    c0;
+      type    cellSet;
+      action  delete;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (33.2 11.20 0.6)(35.2 12.0 0.8); // acu holes
+      }
+    }
+
+        {
+      name    c0;
+      type    cellSet;
+      action  delete;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (28.4 11.2 0.6)(30.40 12.0 0.8); // acu holes
+      }
+    }
+
+        {
+      name    c0;
+      type    cellSet;
+      action  invert;
+    }
+
+);
+
+// ************************************************************************* //

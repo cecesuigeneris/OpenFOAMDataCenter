@@ -1,0 +1,93 @@
+solid floorvents
+
+    facet normal 1 0 0
+        outer loop
+            vertex  33  12.2 0.6 
+            vertex  33 12.8 0.6 
+            vertex  33.6 12.8 0.6 
+        endloop
+    endfacet
+    facet normal 1 0 0
+        outer loop
+            vertex  33.6 12.8 0.6 
+            vertex  33.6 12.2 0.6 
+            vertex  33 12.2 0.6 
+        endloop
+    endfacet
+
+    facet normal 1 0 0
+        outer loop
+            vertex  33 12.2 0.6 
+            vertex  33 12.2 0.8
+            vertex  33.6 12.2 0.8 
+        endloop
+    endfacet
+    facet normal 1 0 0
+        outer loop
+            vertex  33.6 12.2 0.8 
+            vertex  33.6 12.2 0.6 
+            vertex  33 12.2 0.6 
+        endloop
+    endfacet
+
+    facet normal 1 0 0
+        outer loop
+            vertex  33.6 12.2 0.6 
+            vertex  33.6 12.2 0.8 
+            vertex  33.6 12.8 0.8 
+        endloop
+    endfacet
+    facet normal 1 0 0
+        outer loop
+            vertex  33.6 12.8 0.8 
+            vertex  33.6 12.8 0.6 
+            vertex  33.6 12.2 0.6 
+        endloop
+    endfacet
+
+    facet normal 1 0 0
+        outer loop
+            vertex  33 12.2 0.6 
+            vertex  33 12.2 0.8 
+            vertex  33 12.8 0.8 
+        endloop
+    endfacet
+    facet normal 1 0 0
+        outer loop
+            vertex  33 12.8 0.8 
+            vertex  33 12.8 0.6 
+            vertex  33 12.2 0.6 
+        endloop
+    endfacet
+
+    facet normal 1 0 0
+        outer loop
+            vertex  33 12.8 0.6 
+            vertex  33 12.8 0.8 
+            vertex  33.6 12.8 0.8 
+        endloop
+    endfacet
+    facet normal 1 0 0
+        outer loop
+            vertex  33.6 12.8 0.8 
+            vertex  33.6 12.8 0.6 
+            vertex  33 12.8 0.6 
+        endloop
+    endfacet
+
+    facet normal 1 0 0
+        outer loop
+            vertex  33  12.2 0.8 
+            vertex  33 12.8 0.8 
+            vertex  33.6 12.8 0.8 
+        endloop
+    endfacet
+    facet normal 1 0 0
+        outer loop
+            vertex  33.6 12.8 0.8 
+            vertex  33.6 12.2 0.8 
+            vertex  33 12.2 0.8 
+        endloop
+    endfacet
+
+endsolid floorvents

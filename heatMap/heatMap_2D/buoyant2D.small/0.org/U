@@ -1,0 +1,87 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.3.1                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volVectorField;
+    location    "0";
+    object      U;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 1 -1 0 0 0 0];
+
+internalField   uniform (0 0 0);
+
+boundaryField
+{
+    floor
+    {
+        type            empty;
+    }
+    ceiling
+    {
+        type            empty;
+    }
+    fixedWalls
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);
+    }
+    rack2796428BA49E0232CAC645AEBC8DA5C1_fixedWall
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);
+    }
+    rack2796428BA49E0232CAC645AEBC8DA5C1_inlet
+    {
+        //type            flowRateInletVelocity;
+        //volumetricFlowRate -0.17;
+        //value           uniform (0 -0.141667 0);
+        //type            inletOutlet;
+        //inletValue      uniform (0 0 0);
+        //value           uniform (0 0 0);
+	type		zeroGradient;
+    }
+    rack2796428BA49E0232CAC645AEBC8DA5C1_outlet
+    {
+        type            flowRateInletVelocity;
+        volumetricFlowRate 0.17;
+        value           uniform (0 0.141667 0);
+       // type            outletInlet;
+       // outletValue      uniform (0 0 0);
+       // value           uniform (0 0 0);
+    }
+    acu380F56D59CF2B3DF6EFF9D0E6E8D39CB_fixedWall
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);
+     }
+    /*acu380F56D59CF2B3DF6EFF9D0E6E8D39CB_inlet
+    {
+        type            inletOutlet;
+        inletValue      uniform (0 0 0);
+        value           uniform (0 0 0);
+    }
+    acu380F56D59CF2B3DF6EFF9D0E6E8D39CB_outlet
+    {
+        type            flowRateInletVelocity;
+        volumetricFlowRate 1;
+        value           uniform (0 0 -0.625);
+    }
+    acu380F56D59CF2B3DF6EFF9D0E6E8D39CB_fixedWall
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);
+    }*/
+
+}
+
+
+// ************************************************************************* //

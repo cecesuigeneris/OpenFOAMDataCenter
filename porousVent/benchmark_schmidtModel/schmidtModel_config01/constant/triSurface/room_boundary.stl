@@ -1,0 +1,63 @@
+solid walls
+
+    facet normal 1 0 0
+        outer loop
+            vertex  42.61  29.41  0.00 
+            vertex  42.61  24.01  0.00 
+            vertex  42.61  24.01  3.80 
+        endloop
+    endfacet
+    facet normal 1 0 0
+        outer loop
+            vertex  42.61  29.41  0.00 
+            vertex  42.61  29.41  3.80 
+            vertex  42.61  24.01  3.80 
+        endloop
+    endfacet
+
+    facet normal 1 0 0
+        outer loop
+            vertex  42.61  24.01  0.00 
+            vertex  61.81  24.01  0.00 
+            vertex  61.81  24.01  3.80 
+        endloop
+    endfacet
+    facet normal 1 0 0
+        outer loop
+            vertex  42.61  24.01  0.00 
+            vertex  42.61  24.01  3.80 
+            vertex  61.81  24.01  3.80 
+        endloop
+    endfacet
+
+    facet normal 1 0 0
+        outer loop
+            vertex  61.81  24.01  0.00 
+            vertex  61.81  29.41  0.00 
+            vertex  61.81  29.41  3.80 
+        endloop
+    endfacet
+    facet normal 1 0 0
+        outer loop
+            vertex  61.81  24.01  0.00 
+            vertex  61.81  24.01  3.80 
+            vertex  61.81  29.41  3.80 
+        endloop
+    endfacet
+
+    facet normal 1 0 0
+        outer loop
+            vertex  61.81  29.41  0.00 
+            vertex  42.61  29.41  0.00 
+            vertex  42.61  29.41  3.80 
+        endloop
+    endfacet
+    facet normal 1 0 0
+        outer loop
+            vertex  61.81  29.41  0.00 
+            vertex  61.81  29.41  3.80 
+            vertex  42.61  29.41  3.80 
+        endloop
+    endfacet
+
+endsolid walls

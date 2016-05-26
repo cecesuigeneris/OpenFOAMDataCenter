@@ -1,0 +1,116 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.2.1                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      topoSetDict.baffles;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+
+actions
+(
+    {
+        name inside;
+        type cellSet;
+        action new;
+        source surfaceToCell;
+        sourceInfo
+        {
+            file "constant/triSurface/room_boundary.stl"; //room boundary using subsetmesh to cut
+            outsidePoints ((31.40 8.60 1.72));
+            includeCut false;
+            includeInside true;
+            includeOutside false;
+            nearDistance -1;
+            curvature -100;
+        }
+    }
+
+
+
+   /* {
+      name    baffleFaces;
+      type    faceSet;
+      action  new; // new first for top layer
+      source  boxToFace;
+      sourceInfo
+      {
+          box (31.40 8.60 0.79)(35.80 13.60 0.81); // floor slab surface
+      }
+    }
+
+
+    {
+      name    baffleFaces;
+      type    faceSet;
+      action  add;
+      source  boxToFace;
+      sourceInfo
+      {
+          box (31.40 8.60 0.59)(35.80 13.60 0.61); // floor slab faces
+      }
+    }
+
+        {
+      name    baffleFaces;
+      type    faceSet;
+      action  delete;
+      source  boxToFace;
+      sourceInfo
+      {
+          box (33.00 12.20 0.59)(33.60 12.80 0.61); //floorvent surface
+      }
+    }
+        {
+      name    baffleFaces;
+      type    faceSet;
+      action  delete;
+      source  boxToFace;
+      sourceInfo
+      {
+          box (33.00 12.20 0.79)(33.60 12.80 0.81); // floorvent surface
+      }
+    }
+
+
+        {
+      name    baffleFaces;
+      type    faceSet;
+      action  delete;
+      source  boxToFace;
+      sourceInfo
+      {
+          box (32.60 9.40 0.59)(34.60 10.20 0.61); // acu supply surface
+      }
+    }
+        {
+      name    baffleFaces;
+      type    faceSet;
+      action  delete;
+      source  boxToFace;
+      sourceInfo
+      {
+          box (32.60 9.40 0.79)(34.60 10.20 0.81); // acu supply surface
+      }
+    }
+
+{
+    name baffleFaces;
+    type faceZoneSet;
+    action new;
+    source setToFaceZone;
+    sourceInfo
+    {
+        faceSet baffleFaces;
+    }
+}*/
+
+);

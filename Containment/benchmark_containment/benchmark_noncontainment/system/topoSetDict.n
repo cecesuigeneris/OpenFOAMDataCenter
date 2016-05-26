@@ -1,0 +1,109 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.3.1                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      topoSetDict.n;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+actions
+(
+       {
+      name    floorvent; //floorvent2A1BA98D742BDB1FC147B2CA43F835C0
+      type    cellSet;
+      action  new;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (28.8 13.2 0.6)(29.4 13.8 0.8); // refinement region 0.6-0.8
+      }
+    }   
+
+       {
+      name    floorvent; //floorventB8FDC6307B84613EDE9F3D1266FBF2A7;
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (29.4 13.8 0.6)(30.0 14.4 0.8); 
+      }
+    } 
+
+       {
+      name    floorvent; //floorvent7F94527B35F3B71B1E712CEE6AA4B6D4
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (28.8 14.4 0.6)(29.4 15.0 0.8);
+      }
+    } 
+       {
+      name    floorvent; //floorventAAC985E7E23E4F7AC0AA5AE9FB1F7A54
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (29.4 15.0 0.6)(30.0 15.6 0.8); 
+      }
+    } 
+
+       {
+      name    floorvent; //floorventEA7630CBB9BBFDC6622C7CB948804950
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (33.6 13.2 0.6)(34.2 13.8 0.8); 
+      }
+    } 
+
+       {
+      name    floorvent; //floorvent3D414218072AA23BD952F9DD06BF64D0
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (34.2 13.8 0.6)(34.8 14.4 0.8); 
+      }
+    } 
+
+       {
+      name    floorvent; //floorventFDCCECD400EAA1B4B398E7CC9310D0A5
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (33.6 14.4 0.6)(34.2 15.0 0.8); 
+      }
+    } 
+
+       {
+      name    floorvent; //floorventE53508F51655D8FD70DA555E8170559C
+      type    cellSet;
+      action  add;
+      source  boxToCell;
+      sourceInfo
+      {
+          box (34.2 15.0 0.6)(34.8 15.6 0.8); 
+      }
+    } 
+
+);
+
+// ************************************************************************* //

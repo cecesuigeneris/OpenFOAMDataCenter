@@ -1,0 +1,35 @@
+# Wavefront OBJ file written 2015-08-27T07:27:09
+o room_boundary_edgeMesh
+
+# points : 8
+# lines  : 16
+
+# <points count="8">
+v 37.81 10.81 0
+v 37.81 17.41 0
+v 37.81 17.41 3.8
+v 37.81 10.81 3.8
+v 24.61 17.41 0
+v 24.61 17.41 3.8
+v 24.61 10.81 0
+v 24.61 10.81 3.8
+# </points>
+
+# <edges count="16">
+l 2 3
+l 5 6
+l 7 8
+l 3 1
+l 6 2
+l 8 5
+l 4 7
+l 1 4
+l 1 2
+l 4 3
+l 2 5
+l 3 6
+l 5 7
+l 6 8
+l 7 1
+l 8 4
+# </edges>

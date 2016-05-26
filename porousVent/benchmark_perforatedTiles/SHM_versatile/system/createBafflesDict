@@ -1,0 +1,689 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.2.1                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      createBafflesDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+internalFacesOnly true;
+
+baffles
+{
+    baffleFaces
+    {
+        //- Use predefined faceZone to select faces and orientation.
+        type        faceZone;
+        zoneName    baffleFaces;
+
+        patchPairs
+        {
+	    type	wall;
+	    name	internalBaffles;
+
+            patchFields
+            {
+                epsilon
+                {
+                    type            epsilonWallFunction;
+                    value           uniform 0.01;
+                }
+                k
+                {
+                    type            kqRWallFunction;
+                    value           uniform 0.1;
+                }
+                nut
+                {
+                    type            nutkWallFunction;
+                    value           uniform 0;
+                }
+                nuTilda
+                {
+                    type            zeroGradient;
+                }
+                p
+                {
+                    type            calculated;
+                    value           uniform 0;
+                }
+                p_rgh
+                {
+                    type            fixedFluxPressure;
+                    rho             rhok;
+                    gradient        uniform 0;
+                }
+                alphat
+                {
+                    type            alphatJayatillekeWallFunction;
+                    Prt             0.85;
+                    value           uniform 0;
+                }
+                U
+                {
+                    type            fixedValue;
+                    value           uniform (0 0 0);
+                }
+                T
+                {
+                    type            zeroGradient;
+                }
+                cellLevel
+                {
+                    type            zeroGradient;
+                }
+                pointLevel
+                {
+                    type            calculated;
+                }
+            }
+         }
+    }
+
+    containment_cold
+    {
+        //- Use predefined faceZone to select faces and orientation.
+        type        faceZone;
+        zoneName    coldAisle;
+
+        patchPairs
+        {
+	    type	wall;
+	    name	internalBaffles;
+
+            patchFields
+            {
+                epsilon
+                {
+                    type            epsilonWallFunction;
+                    value           uniform 0.01;
+                }
+                k
+                {
+                    type            kqRWallFunction;
+                    value           uniform 0.1;
+                }
+                nut
+                {
+                    type            nutkWallFunction;
+                    value           uniform 0;
+                }
+                nuTilda
+                {
+                    type            zeroGradient;
+                }
+                p
+                {
+                    type            calculated;
+                    value           uniform 0;
+                }
+                p_rgh
+                {
+                    type            fixedFluxPressure;
+                    rho             rhok;
+                    gradient        uniform 0;
+                }
+                alphat
+                {
+                    type            alphatJayatillekeWallFunction;
+                    Prt             0.85;
+                    value           uniform 0;
+                }
+                U
+                {
+                    type            fixedValue;
+                    value           uniform (0 0 0);
+                }
+                T
+                {
+                    type            zeroGradient;
+                }
+                cellLevel
+                {
+                    type            zeroGradient;
+                }
+                pointLevel
+                {
+                    type            calculated;
+                }
+            }
+         }
+    }
+
+    containment_hot
+    {
+        //- Use predefined faceZone to select faces and orientation.
+        type        faceZone;
+        zoneName    hotAisle;
+
+        patchPairs
+        {
+	    type	wall;
+	    name	internalBaffles;
+
+            patchFields
+            {
+                epsilon
+                {
+                    type            epsilonWallFunction;
+                    value           uniform 0.01;
+                }
+                k
+                {
+                    type            kqRWallFunction;
+                    value           uniform 0.1;
+                }
+                nut
+                {
+                    type            nutkWallFunction;
+                    value           uniform 0;
+                }
+                nuTilda
+                {
+                    type            zeroGradient;
+                }
+                p
+                {
+                    type            calculated;
+                    value           uniform 0;
+                }
+                p_rgh
+                {
+                    type            fixedFluxPressure;
+                    rho             rhok;
+                    gradient        uniform 0;
+                }
+                alphat
+                {
+                    type            alphatJayatillekeWallFunction;
+                    Prt             0.85;
+                    value           uniform 0;
+                }
+                U
+                {
+                    type            fixedValue;
+                    value           uniform (0 0 0);
+                }
+                T
+                {
+                    type            zeroGradient;
+                }
+                cellLevel
+                {
+                    type            zeroGradient;
+                }
+                pointLevel
+                {
+                    type            calculated;
+                }
+            }
+         }
+    }
+
+/*cylicFaces
+{
+	//type        searchableSurface;
+        //surface     triSurfaceMesh;
+	//name        perforatedPlate.stl;
+	type	    faceZone;
+	zoneName    perforatedPlate;
+        
+	patches
+        {
+            master
+            {
+                //- Master side patch
+
+                name            porous_half0;
+                type            cyclic;
+                neighbourPatch  porous_half1;
+
+		//- Optional override of added patchfields. If not specified
+                //  any added patchfields are of type calculated.
+                patchFields
+                {
+                    p_rgh
+                    {
+                        type            porousBafflePressure; 
+                        patchType       cyclic;
+                        D               6.3e4; //6.3e4
+                        I               10; //40 diverged
+                        length          0.2; 
+                        jump            uniform 0;
+                        value           uniform 0;
+         		/type            groovyBCJump;  
+			patchType	cyclic;
+        		variables       "mag(U){porous_half0}=sum(mag(U)*mag(Sf()))/sum(mag(Sf()));"; 
+         		jumpExpression 	"31.155*mag(U)-14.027";
+         		value           uniform 0;/
+                    }
+ 
+                }
+            }
+	    slave
+            {
+                //- Slave side patch
+
+                name            porous_half1;
+                type            cyclic;
+                neighbourPatch  porous_half0;
+
+                patchFields
+                {
+                    ${...master.patchFields}
+                }
+            }
+        }
+    }*/
+
+
+   /*topPorous01
+    {
+        //- Use predefined faceZone to select faces and orientation.
+        type      searchableSurface;
+        surface     searchablePlate;
+        origin      (28.9 13.2 0.8);
+        span        (0.6 0.6 0);
+
+        patches
+        {
+            master
+            {
+                //- Master side patch
+
+                name            porous_half0;
+                type            cyclic;
+                neighbourPatch  porous_half1;
+
+		//- Optional override of added patchfields. If not specified
+                //  any added patchfields are of type calculated.
+                patchFields
+                {
+                    p_rgh
+                    {
+                        type            porousBafflePressure; 
+                        patchType       cyclic;
+                        D               1000; //1000 
+                        I               40; //170 cannot run
+                        length          0.2; 
+                        jump            uniform 0;
+                        value           uniform 0;
+                    }
+                }
+            }
+	    slave
+            {
+                //- Slave side patch
+
+                name            porous_half1;
+                type            cyclic;
+                neighbourPatch  porous_half0;
+
+                patchFields
+                {
+                    ${...master.patchFields}
+                }
+            }
+        }
+    }
+
+
+    topPorous02
+    {
+        //- Use predefined faceZone to select faces and orientation.
+        type      searchableSurface;
+        surface     searchablePlate;
+        origin      (29.5 13.8 0.8);
+        span        (0.6 0.6 0);
+
+        patches
+        {
+            master
+            {
+                //- Master side patch
+
+                name            porous_half2;
+                type            cyclic;
+                neighbourPatch  porous_half3;
+
+		//- Optional override of added patchfields. If not specified
+                //  any added patchfields are of type calculated.
+                patchFields
+                {
+                    p_rgh
+                    {
+                        type            porousBafflePressure; 
+                        patchType       cyclic;
+                        D               1000; //1000 
+                        I               40; //170 cannot run
+                        length          0.2; 
+                        jump            uniform 0;
+                        value           uniform 0;
+                    }
+                }
+            }
+	    slave
+            {
+                //- Slave side patch
+
+                name            porous_half3;
+                type            cyclic;
+                neighbourPatch  porous_half2;
+
+                patchFields
+                {
+                    ${...master.patchFields}
+                }
+            }
+        }
+    }
+
+    topPorous03
+    {
+        //- Use predefined faceZone to select faces and orientation.
+        type      searchableSurface;
+        surface     searchablePlate;
+        origin      (28.9 14.4 0.8);
+        span        (0.6 0.6 0);
+
+        patches
+        {
+            master
+            {
+                //- Master side patch
+
+                name            porous_half4;
+                type            cyclic;
+                neighbourPatch  porous_half5;
+
+		//- Optional override of added patchfields. If not specified
+                //  any added patchfields are of type calculated.
+                patchFields
+                {
+                    p_rgh
+                    {
+                        type            porousBafflePressure; 
+                        patchType       cyclic;
+                        D               1000; //1000 
+                        I               40; //170 cannot run
+                        length          0.2; 
+                        jump            uniform 0;
+                        value           uniform 0;
+                    }
+                }
+            }
+	    slave
+            {
+                //- Slave side patch
+
+                name            porous_half5;
+                type            cyclic;
+                neighbourPatch  porous_half4;
+
+                patchFields
+                {
+                    ${...master.patchFields}
+                }
+            }
+        }
+    }
+
+    topPorous04
+    {
+        //- Use predefined faceZone to select faces and orientation.
+        type      searchableSurface;
+        surface     searchablePlate;
+        origin      (29.5 15 0.8);
+        span        (0.6 0.6 0);
+
+        patches
+        {
+            master
+            {
+                //- Master side patch
+
+                name            porous_half6;
+                type            cyclic;
+                neighbourPatch  porous_half7;
+
+		//- Optional override of added patchfields. If not specified
+                //  any added patchfields are of type calculated.
+                patchFields
+                {
+                    p_rgh
+                    {
+                        type            porousBafflePressure; 
+                        patchType       cyclic;
+                        D               1000; //1000 
+                        I               40; //170 cannot run
+                        length          0.2; 
+                        jump            uniform 0;
+                        value           uniform 0;
+                    }
+                }
+            }
+	    slave
+            {
+                //- Slave side patch
+
+                name            porous_half7;
+                type            cyclic;
+                neighbourPatch  porous_half6;
+
+                patchFields
+                {
+                    ${...master.patchFields}
+                }
+            }
+        }
+    }
+
+    topPorous05
+    {
+        //- Use predefined faceZone to select faces and orientation.
+        type      searchableSurface;
+        surface     searchablePlate;
+        origin      (33.7 13.2 0.8);
+        span        (0.6 0.6 0);
+
+        patches
+        {
+            master
+            {
+                //- Master side patch
+
+                name            porous_half8;
+                type            cyclic;
+                neighbourPatch  porous_half9;
+
+		//- Optional override of added patchfields. If not specified
+                //  any added patchfields are of type calculated.
+                patchFields
+                {
+                    p_rgh
+                    {
+                        type            porousBafflePressure; 
+                        patchType       cyclic;
+                        D               1000; //1000 
+                        I               40; //170 cannot run
+                        length          0.2; 
+                        jump            uniform 0;
+                        value           uniform 0;
+                    }
+                }
+            }
+	    slave
+            {
+                //- Slave side patch
+
+                name            porous_half9;
+                type            cyclic;
+                neighbourPatch  porous_half8;
+
+                patchFields
+                {
+                    ${...master.patchFields}
+                }
+            }
+        }
+    }
+
+    topPorous06
+    {
+        //- Use predefined faceZone to select faces and orientation.
+        type      searchableSurface;
+        surface     searchablePlate;
+        origin      (34.3 13.8 0.8);
+        span        (0.6 0.6 0);
+
+        patches
+        {
+            master
+            {
+                //- Master side patch
+
+                name            porous_half10;
+                type            cyclic;
+                neighbourPatch  porous_half11;
+
+		//- Optional override of added patchfields. If not specified
+                //  any added patchfields are of type calculated.
+                patchFields
+                {
+                    p_rgh
+                    {
+                        type            porousBafflePressure; 
+                        patchType       cyclic;
+                        D               1000; //1000 
+                        I               40; //170 cannot run
+                        length          0.2; 
+                        jump            uniform 0;
+                        value           uniform 0;
+                    }
+                }
+            }
+	    slave
+            {
+                //- Slave side patch
+
+                name            porous_half11;
+                type            cyclic;
+                neighbourPatch  porous_half10;
+
+                patchFields
+                {
+                    ${...master.patchFields}
+                }
+            }
+        }
+    }
+
+    topPorous07
+    {
+        //- Use predefined faceZone to select faces and orientation.
+        type      searchableSurface;
+        surface     searchablePlate;
+        origin      (33.7 14.4 0.8);
+        span        (0.6 0.6 0);
+
+        patches
+        {
+            master
+            {
+                //- Master side patch
+
+                name            porous_half12;
+                type            cyclic;
+                neighbourPatch  porous_half13;
+
+		//- Optional override of added patchfields. If not specified
+                //  any added patchfields are of type calculated.
+                patchFields
+                {
+                    p_rgh
+                    {
+                        type            porousBafflePressure; 
+                        patchType       cyclic;
+                        D               1000; //1000 
+                        I               40; //170 cannot run
+                        length          0.2; 
+                        jump            uniform 0;
+                        value           uniform 0;
+                    }
+                }
+            }
+	    slave
+            {
+                //- Slave side patch
+
+                name            porous_half13;
+                type            cyclic;
+                neighbourPatch  porous_half12;
+
+                patchFields
+                {
+                    ${...master.patchFields}
+                }
+            }
+        }
+    }
+
+    topPorous08
+    {
+        //- Use predefined faceZone to select faces and orientation.
+        type      searchableSurface;
+        surface     searchablePlate;
+        origin      (34.3 15 0.8);
+        span        (0.6 0.6 0);
+
+        patches
+        {
+            master
+            {
+                //- Master side patch
+
+                name            porous_half14;
+                type            cyclic;
+                neighbourPatch  porous_half15;
+
+		//- Optional override of added patchfields. If not specified
+                //  any added patchfields are of type calculated.
+                patchFields
+                {
+                    p_rgh
+                    {
+                        type            porousBafflePressure; 
+                        patchType       cyclic;
+                        D               1000; //1000 
+                        I               40; //170 cannot run
+                        length          0.2; 
+                        jump            uniform 0;
+                        value           uniform 0;
+                    }
+                }
+            }
+	    slave
+            {
+                //- Slave side patch
+
+                name            porous_half15;
+                type            cyclic;
+                neighbourPatch  porous_half14;
+
+                patchFields
+                {
+                    ${...master.patchFields}
+                }
+            }
+        }
+    }*/
+
+}

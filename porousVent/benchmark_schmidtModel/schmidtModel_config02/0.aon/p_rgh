@@ -1,0 +1,83 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.1.x                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    location    "0";
+    object      p_rgh;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 2 -2 0 0 0 0];
+
+internalField   uniform 0;
+
+boundaryField
+{
+    floor
+    {
+        type            fixedFluxPressure;
+        rho             rhok;
+        gradient        uniform 0;
+    }
+    ceiling
+    {
+        type            fixedFluxPressure;
+        rho             rhok;
+        gradient        uniform 0;
+    }
+    fixedWalls
+    {
+        type            fixedFluxPressure;
+        rho             rhok;
+        gradient        uniform 0;
+    }
+    acu8EFB35119AA4591115D9D1BF6014FA4C_fixedWall
+    {
+        type            fixedFluxPressure;
+        gradient        uniform 0;
+        gradient        uniform 0;
+    }
+    
+                    acu8EFB35119AA4591115D9D1BF6014FA4C_inlet
+              {
+                type            zeroGradient;
+              }
+            acu8EFB35119AA4591115D9D1BF6014FA4C_outlet
+              {
+                type            zeroGradient;
+              }
+                            acu65E0157C3F4FD3DBFB846500AB325745_fixedWall
+    {
+        type            fixedFluxPressure;
+        gradient        uniform 0;
+        gradient        uniform 0;
+    }
+    
+                   acu65E0157C3F4FD3DBFB846500AB325745_inlet
+              {
+        type            fixedFluxPressure;
+        gradient        uniform 0;
+        gradient        uniform 0;
+              }
+            acu65E0157C3F4FD3DBFB846500AB325745_outlet
+              {
+        type            fixedFluxPressure;
+        gradient        uniform 0;
+        gradient        uniform 0;
+              }
+                oldInternalFaces
+    {
+        type            empty;
+    }
+}
+
+
+// ************************************************************************* //

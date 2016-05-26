@@ -1,0 +1,1816 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.2.1                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      fvOptions;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+porosity_floorventF11148AE11166F735A1DC51F461CFE43
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorventF11148AE11166F735A1DC51F461CFE43;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff;
+        fixedCoeffCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0 0 0); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (580.1 580.1 580.1); //squared term U
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225;
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorventC73EAFF2FCCC980FB5FED0F9130F83F0
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorventC73EAFF2FCCC980FB5FED0F9130F83F0;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff;
+        fixedCoeffCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0 0 0); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (580.1 580.1 580.1); //squared term U
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225;
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorvent0CCDAD6BC97F7E47E3F1FA4B4CEFAD8E
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorvent0CCDAD6BC97F7E47E3F1FA4B4CEFAD8E;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff;
+        fixedCoeffCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0 0 0); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (580.1 580.1 580.1); //squared term U
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225;
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorvent4C476D91CF4A6BF03A27C47431D76A6E
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorvent4C476D91CF4A6BF03A27C47431D76A6E;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff;
+        fixedCoeffCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0 0 0); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (580.1 580.1 580.1); //squared term U
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225;
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorvent74D44F41F412E189A203AD562B868744
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorvent74D44F41F412E189A203AD562B868744;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff;
+        fixedCoeffCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0 0 0); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (580.1 580.1 580.1); //squared term U
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225;
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorvent5E38EFD97F291B9A1B28A2C8A9686778
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorvent5E38EFD97F291B9A1B28A2C8A9686778;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff;
+        fixedCoeffCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0 0 0); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (580.1 580.1 580.1); //squared term U
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225;
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorventB2FD53A540247E7B0C7F3B5E39D4E16D
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorventB2FD53A540247E7B0C7F3B5E39D4E16D;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff;
+        fixedCoeffCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0 0 0); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (580.1 580.1 580.1); //squared term U
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225;
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorventC6A3FC7C9BED134C3D8E4C538E9930BD
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorventC6A3FC7C9BED134C3D8E4C538E9930BD;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff;
+        fixedCoeffCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0 0 0); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (580.1 580.1 580.1); //squared term U
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225;
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorvent8D629A3CD4ADDAC4D2BAA41B1F93F050
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorvent8D629A3CD4ADDAC4D2BAA41B1F93F050;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff;
+        fixedCoeffCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0 0 0); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (580.1 580.1 580.1); //squared term U
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225;
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorventE44FB80E28D36F4DEC51CF6CE96BC70A
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorventE44FB80E28D36F4DEC51CF6CE96BC70A;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff;
+        fixedCoeffCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0 0 0); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (580.1 580.1 580.1); //squared term U
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225;
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorvent520A1BCA435EAE0950669FB533E4CFE8
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorvent520A1BCA435EAE0950669FB533E4CFE8;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff;
+        fixedCoeffCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0 0 0); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (580.1 580.1 580.1); //squared term U
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225;
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorvent220A5D0832CDFBAEC6BD5873AA177837
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorvent220A5D0832CDFBAEC6BD5873AA177837;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff;
+        fixedCoeffCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0 0 0); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (580.1 580.1 580.1); //squared term U
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225;
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorvent26BD73EC6210A2C4A332F8432BAFE37F
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorvent26BD73EC6210A2C4A332F8432BAFE37F;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff;
+        fixedCoeffCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0 0 0); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (580.1 580.1 580.1); //squared term U
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225;
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorvent7F8560547F2D0DD698F1A15CA79B92FE
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorvent7F8560547F2D0DD698F1A15CA79B92FE;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff;
+        fixedCoeffCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0 0 0); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (580.1 580.1 580.1); //squared term U
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225;
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorvent19012EC1E3CF89CEC930B889F837E466
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorvent19012EC1E3CF89CEC930B889F837E466;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff;
+        fixedCoeffCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0 0 0); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (580.1 580.1 580.1); //squared term U
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225;
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorvent4D1E8FC6004BC9C86404493BB4DE7F89
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorvent4D1E8FC6004BC9C86404493BB4DE7F89;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff;
+        fixedCoeffCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0 0 0); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (580.1 580.1 580.1); //squared term U
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225;
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorventAF7315E7C387F408413A260F86642170
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorventAF7315E7C387F408413A260F86642170;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff;
+        fixedCoeffCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0 0 0); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (580.1 580.1 580.1); //squared term U
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225;
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorvent6F8DAC07F3B291CF83FD0CD358FA9AF3
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorvent6F8DAC07F3B291CF83FD0CD358FA9AF3;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff;
+        fixedCoeffCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0 0 0); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (580.1 580.1 580.1); //squared term U
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225;
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorvent90D18559CA15B7B5A55EF4EE7FC234BE
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorvent90D18559CA15B7B5A55EF4EE7FC234BE;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff;
+        fixedCoeffCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0 0 0); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (580.1 580.1 580.1); //squared term U
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225;
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorvent3205FD82879EBFA2C8EBCBB269C2B566
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorvent3205FD82879EBFA2C8EBCBB269C2B566;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff;
+        fixedCoeffCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0 0 0); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (580.1 580.1 580.1); //squared term U
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225;
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorventA6482C27D081E993C8860DD6AD1FE120
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorventA6482C27D081E993C8860DD6AD1FE120;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff;
+        fixedCoeffCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0 0 0); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (580.1 580.1 580.1); //squared term U
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225;
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorvent6FF4E7482FBC2A69FC40EF2A85717E5A
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorvent6FF4E7482FBC2A69FC40EF2A85717E5A;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff;
+        fixedCoeffCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0 0 0); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (580.1 580.1 580.1); //squared term U
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225;
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorvent0C59D02C7E4D8C5B53D983DBA12B26C0
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorvent0C59D02C7E4D8C5B53D983DBA12B26C0;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff;
+        fixedCoeffCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0 0 0); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (580.1 580.1 580.1); //squared term U
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225;
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorventED56BE921007017042890D4317187FF6
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorventED56BE921007017042890D4317187FF6;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff;
+        fixedCoeffCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0 0 0); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (580.1 580.1 580.1); //squared term U
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225;
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorventC8BFB9C90198726DF9465F8E2798AD9A
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorventC8BFB9C90198726DF9465F8E2798AD9A;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff;
+        fixedCoeffCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0 0 0); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (580.1 580.1 580.1); //squared term U
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225;
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorvent6BC138BE73498EFAEB23C25FBF820B55
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorvent6BC138BE73498EFAEB23C25FBF820B55;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff;
+        fixedCoeffCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0 0 0); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (580.1 580.1 580.1); //squared term U
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225;
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorvent5168A3874467BB3FC1E3950DCEEDE0D7
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorvent5168A3874467BB3FC1E3950DCEEDE0D7;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff;
+        fixedCoeffCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0 0 0); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (580.1 580.1 580.1); //squared term U
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225;
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorventD46CDF15D3765E13D857D943E84E6149
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorventD46CDF15D3765E13D857D943E84E6149;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff;
+        fixedCoeffCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0 0 0); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (580.1 580.1 580.1); //squared term U
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225;
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorvent5A8C3E21D11732F9368492BE10A3E069
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorvent5A8C3E21D11732F9368492BE10A3E069;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff;
+        fixedCoeffCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0 0 0); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (580.1 580.1 580.1); //squared term U
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225;
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorvent5576185CB70BAF6D61315951A18B844C
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorvent5576185CB70BAF6D61315951A18B844C;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff;
+        fixedCoeffCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0 0 0); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (580.1 580.1 580.1); //squared term U
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225;
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorvent349027BE161AA61BC7AE8E76B1A30D3B
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorvent349027BE161AA61BC7AE8E76B1A30D3B;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff;
+        fixedCoeffCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0 0 0); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (580.1 580.1 580.1); //squared term U
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225;
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorventF298F1341F155B6218A9E7C2A824573A
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorventF298F1341F155B6218A9E7C2A824573A;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff;
+        fixedCoeffCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0 0 0); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (580.1 580.1 580.1); //squared term U
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225;
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorvent8339155AECC6E6F3EF8DBC1F9139303F
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorvent8339155AECC6E6F3EF8DBC1F9139303F;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff;
+        fixedCoeffCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0 0 0); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (580.1 580.1 580.1); //squared term U
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225;
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorvent44BEC3EA3D759C2C33D04E5781A35B97
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorvent44BEC3EA3D759C2C33D04E5781A35B97;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff;
+        fixedCoeffCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0 0 0); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (580.1 580.1 580.1); //squared term U
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225;
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorvent823E03C5A07B97E381B0036950CC8098
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorvent823E03C5A07B97E381B0036950CC8098;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff;
+        fixedCoeffCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0 0 0); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (580.1 580.1 580.1); //squared term U
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225;
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorvent20E47AC6EE2033860917400FA2F2419B
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorvent20E47AC6EE2033860917400FA2F2419B;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff;
+        fixedCoeffCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0 0 0); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (580.1 580.1 580.1); //squared term U
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225;
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorvent8E54223AB8149A02EB805B5E372E62E7
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorvent8E54223AB8149A02EB805B5E372E62E7;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff;
+        fixedCoeffCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0 0 0); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (580.1 580.1 580.1); //squared term U
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225;
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorventE94FE9BA8A1BF9E7B140EE4010439056
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorventE94FE9BA8A1BF9E7B140EE4010439056;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff;
+        fixedCoeffCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0 0 0); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (580.1 580.1 580.1); //squared term U
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225;
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorvent22066351DC2A315E26F60F499216CDA8
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorvent22066351DC2A315E26F60F499216CDA8;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff;
+        fixedCoeffCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0 0 0); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (580.1 580.1 580.1); //squared term U
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225;
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorventA67A291C7FD536D5F0B1E12391416DDE
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorventA67A291C7FD536D5F0B1E12391416DDE;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff;
+        fixedCoeffCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0 0 0); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (580.1 580.1 580.1); //squared term U
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225;
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorvent1CA57BAAA6EDA9DB0C06FD4F75402730
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorvent1CA57BAAA6EDA9DB0C06FD4F75402730;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff;
+        fixedCoeffCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0 0 0); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (580.1 580.1 580.1); //squared term U
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225;
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorvent693F89963F68D48A20BDF9AF2C33349B
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorvent693F89963F68D48A20BDF9AF2C33349B;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff;
+        fixedCoeffCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0 0 0); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (580.1 580.1 580.1); //squared term U
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225;
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorvent20067C165E43F4ED25C4159A6E90E7D1
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorvent20067C165E43F4ED25C4159A6E90E7D1;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff;
+        fixedCoeffCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0 0 0); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (580.1 580.1 580.1); //squared term U
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225;
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorvent62FAF2EA77C6DDE8EAA3A1167C01BABF
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorvent62FAF2EA77C6DDE8EAA3A1167C01BABF;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff;
+        fixedCoeffCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0 0 0); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (580.1 580.1 580.1); //squared term U
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225;
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorventEF329451229CAFD61B79145E7BF3BA04
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorventEF329451229CAFD61B79145E7BF3BA04;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff;
+        fixedCoeffCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0 0 0); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (580.1 580.1 580.1); //squared term U
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225;
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorventBACAB80043633929D828E0E9959541E6
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorventBACAB80043633929D828E0E9959541E6;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff;
+        fixedCoeffCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0 0 0); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (580.1 580.1 580.1); //squared term U
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225;
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorvent4315C6A2B810AD851FC9CE1BFA58DA83
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorvent4315C6A2B810AD851FC9CE1BFA58DA83;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff;
+        fixedCoeffCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0 0 0); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (580.1 580.1 580.1); //squared term U
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225;
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorventC91C19EA55E02D611D4EF800980FB4AC
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorventC91C19EA55E02D611D4EF800980FB4AC;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff;
+        fixedCoeffCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0 0 0); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (580.1 580.1 580.1); //squared term U
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225;
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorvent71B17D54F15FD34CD50FE093EBC7F74A
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorvent71B17D54F15FD34CD50FE093EBC7F74A;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff;
+        fixedCoeffCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0 0 0); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (580.1 580.1 580.1); //squared term U
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225;
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorvent46A027D1553C12BC8C3B68815402C19C
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorvent46A027D1553C12BC8C3B68815402C19C;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff;
+        fixedCoeffCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0 0 0); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (580.1 580.1 580.1); //squared term U
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225;
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorvent42D51C084DD32A608AA9D6465C397171
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorvent42D51C084DD32A608AA9D6465C397171;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff;
+        fixedCoeffCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0 0 0); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (580.1 580.1 580.1); //squared term U
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225;
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorvent6BDE4E00A1ADDBCB1FB413D06C194E31
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorvent6BDE4E00A1ADDBCB1FB413D06C194E31;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff;
+        fixedCoeffCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0 0 0); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (580.1 580.1 580.1); //squared term U
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225;
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorvent739589A28F68348D4A0A9AC1594C513B
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorvent739589A28F68348D4A0A9AC1594C513B;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff;
+        fixedCoeffCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0 0 0); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (580.1 580.1 580.1); //squared term U
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225;
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorvent805DB8A03810A9ABB8E68581D64C0162
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorvent805DB8A03810A9ABB8E68581D64C0162;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff;
+        fixedCoeffCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0 0 0); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (580.1 580.1 580.1); //squared term U
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225;
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorvent770168A3A8C70C4BF8A911FFB9FB90CD
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorvent770168A3A8C70C4BF8A911FFB9FB90CD;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff;
+        fixedCoeffCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0 0 0); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (580.1 580.1 580.1); //squared term U
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225;
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorventC4F9CDB8EB40CE185F083E235F2FD14A
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorventC4F9CDB8EB40CE185F083E235F2FD14A;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff;
+        fixedCoeffCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0 0 0); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (580.1 580.1 580.1); //squared term U
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225;
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorvent78880056CA1DC68D1630DF40739A0597
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorvent78880056CA1DC68D1630DF40739A0597;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff;
+        fixedCoeffCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0 0 0); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (580.1 580.1 580.1); //squared term U
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225;
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorvent315DE28DF42AA45FDDFE045C449BDDCD
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorvent315DE28DF42AA45FDDFE045C449BDDCD;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff;
+        fixedCoeffCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0 0 0); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (580.1 580.1 580.1); //squared term U
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225;
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorventA7F69500343515C4009504038B735E84
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorventA7F69500343515C4009504038B735E84;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff;
+        fixedCoeffCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0 0 0); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (580.1 580.1 580.1); //squared term U
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225;
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}
+porosity_floorventC4495491324E08C883C70BECCBA9BBE5
+{
+    type            explicitPorositySource;
+    active          yes;
+    selectionMode   cellZone;
+    cellZone        floorventC4495491324E08C883C70BECCBA9BBE5;
+
+    explicitPorositySourceCoeffs
+    {
+        type	    fixedCoeff;
+        fixedCoeffCoeffs
+        {
+	    alpha    alpha [0 0 -1 0 0 0 0] (0 0 0); //linear term U
+            beta     beta [0 -1 0 0 0 0 0] (580.1 580.1 580.1); //squared term U
+
+            coordinateSystem
+            {
+                type cartesian;
+                origin (0 0 0);
+		rho 1.225;
+                coordinateRotation
+                {
+                    type    axesRotation;
+                    e1      (1 0 0);
+                    e2      (0 1 0);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,74 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.1.x                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    location    "0";
+    object      p_rgh;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 2 -2 0 0 0 0];
+
+internalField   uniform 0;
+
+boundaryField
+{
+    floor
+    {
+        type            fixedFluxPressure;
+        rho             rhok;
+        gradient        uniform 0;
+    }
+    ceiling
+    {
+        type            fixedFluxPressure;
+        rho             rhok;
+        gradient        uniform 0;
+    }
+    fixedWalls
+    {
+        type            fixedFluxPressure;
+        rho             rhok;
+        gradient        uniform 0;
+    }
+
+    
+        rack2796428BA49E0232CAC645AEBC8DA5C1_fixedWall
+        {
+            type            fixedFluxPressure;
+            rho             rhok;
+            gradient        uniform 0;
+        }
+
+		        acu380F56D59CF2B3DF6EFF9D0E6E8D39CB_fixedWall
+    {
+        type            fixedFluxPressure;
+        gradient        uniform 0;
+        gradient        uniform 0;
+    }
+    
+                    acu380F56D59CF2B3DF6EFF9D0E6E8D39CB_inlet
+              {
+                type            fixedValue;
+                value           uniform 0;
+              }
+            acu380F56D59CF2B3DF6EFF9D0E6E8D39CB_outlet
+              {
+                type            zeroGradient;
+              }
+                            oldInternalFaces
+    {
+        type            empty;
+    }
+}
+
+
+// ************************************************************************* //

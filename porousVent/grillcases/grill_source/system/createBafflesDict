@@ -1,0 +1,82 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.2.1                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      createBafflesDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+internalFacesOnly true;
+
+baffles
+{
+    porousFaces
+    {
+        //- Use predefined faceZone to select faces and orientation.
+        type        cellZone;
+        zoneName    porous_block;
+
+        patchPairs
+        {
+	    type	patch;
+	    name	internalBaffles;
+
+            patchFields
+            {
+                epsilon
+                {
+                    type            zeroGradient;
+                }
+                k
+                {
+                    type            zeroGradient;
+                }
+                nut
+                {
+                    type            zeroGradient;
+                }
+                nuTilda
+                {
+                    type            zeroGradient;
+                }
+                p
+                {
+                    type            calculated;
+                    value           uniform 0;
+                }
+                p_rgh
+                {
+                    type            zeroGradient;
+                }
+                alphat
+                {
+                    type            zeroGradient;
+                }
+                U
+                {
+                    type            zeroGradient;
+                }
+                T
+                {
+                    type            zeroGradient;
+                }
+                cellLevel
+                {
+                    type            zeroGradient;
+                }
+                pointLevel
+                {
+                    type            calculated;
+                }
+            }
+         }
+    }
+}

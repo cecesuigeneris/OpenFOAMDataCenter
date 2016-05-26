@@ -1,0 +1,46 @@
+solid coldAisle
+    facet normal 1 0 0
+        outer loop
+            vertex 28.8 13.2 0.8
+            vertex 28.8 13.2 2.8
+            vertex 30.2 13.2 2.8
+        endloop
+    endfacet
+    facet normal 1 0 0
+        outer loop
+            vertex 28.8 13.2 0.8
+            vertex 30.2 13.2 2.8
+            vertex 30.2 13.2 0.8
+        endloop
+    endfacet
+
+    facet normal 1 0 0
+        outer loop
+            vertex 28.8 13.2 2.8
+            vertex 30.2 13.2 2.8
+            vertex 28.8 15.6 2.8
+        endloop
+    endfacet
+    facet normal 1 0 0
+        outer loop
+            vertex 28.8 15.6 2.8
+            vertex 30.2 15.6 2.8
+            vertex 30.2 13.2 2.8
+        endloop
+    endfacet
+
+    facet normal 1 0 0
+        outer loop
+            vertex 28.8 15.6 0.8
+            vertex 28.8 15.6 2.8
+            vertex 30.2 15.6 2.8
+        endloop
+    endfacet
+        facet normal 1 0 0
+        outer loop
+            vertex 28.8 15.6 0.8
+            vertex 30.2 15.6 2.8
+            vertex 30.2 15.6 0.8
+        endloop
+    endfacet
+endsolid coldAisle

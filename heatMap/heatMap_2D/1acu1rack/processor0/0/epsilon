@@ -1,0 +1,106 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.3.1                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    location    "0";
+    object      epsilon;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 2 -3 0 0 0 0];
+
+internalField   uniform 0.01;
+
+boundaryField
+{
+    floor
+    {
+        type            epsilonLowReWallFunction;
+        value           uniform 0.01;
+        Cmu             0.09;
+        kappa           0.41;
+        E               9.8;
+    }
+    ceiling
+    {
+        type            epsilonLowReWallFunction;
+        value           uniform 0.01;
+        Cmu             0.09;
+        kappa           0.41;
+        E               9.8;
+    }
+    fixedWalls
+    {
+        type            epsilonLowReWallFunction;
+        value           uniform 0.01;
+        Cmu             0.09;
+        kappa           0.41;
+        E               9.8;
+    }
+    rack2796428BA49E0232CAC645AEBC8DA5C1_fixedWall
+    {
+        type            epsilonLowReWallFunction;
+        value           nonuniform 0();
+        Cmu             0.09;
+        kappa           0.41;
+        E               9.8;
+    }
+    rack2796428BA49E0232CAC645AEBC8DA5C1_inlet
+    {
+        type            zeroGradient;
+    }
+    rack2796428BA49E0232CAC645AEBC8DA5C1_outlet
+    {
+        type            fixedValue;
+        value           nonuniform 0();
+    }
+    acu380F56D59CF2B3DF6EFF9D0E6E8D39CB_inlet
+    {
+        type            zeroGradient;
+    }
+    acu380F56D59CF2B3DF6EFF9D0E6E8D39CB_outlet
+    {
+        type            fixedValue;
+        value           nonuniform 0();
+    }
+    acu380F56D59CF2B3DF6EFF9D0E6E8D39CB_fixedWall
+    {
+        type            epsilonLowReWallFunction;
+        value           nonuniform 0();
+        Cmu             0.09;
+        kappa           0.41;
+        E               9.8;
+    }
+    baffleFaces_master
+    {
+        type            epsilonWallFunction;
+        value           nonuniform 0();
+        Cmu             0.09;
+        kappa           0.41;
+        E               9.8;
+    }
+    baffleFaces_slave
+    {
+        type            epsilonWallFunction;
+        value           nonuniform 0();
+        Cmu             0.09;
+        kappa           0.41;
+        E               9.8;
+    }
+    procBoundary0to1
+    {
+        type            processor;
+        value           uniform 0.01;
+    }
+}
+
+
+// ************************************************************************* //

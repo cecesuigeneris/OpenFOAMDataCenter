@@ -1,0 +1,90 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.3.1                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    location    "0";
+    object      k;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 2 -2 0 0 0 0];
+
+internalField   uniform 0.1;
+
+boundaryField
+{
+    floor
+    {
+        type            kqRWallFunction;
+        value           uniform 0.1;
+    }
+    ceiling
+    {
+        type            kqRWallFunction;
+        value           uniform 0.1;
+    }
+    fixedWalls
+    {
+        type            kqRWallFunction;
+        value           uniform 0.1;
+    }
+    rack2796428BA49E0232CAC645AEBC8DA5C1_fixedWall
+    {
+        type            kqRWallFunction;
+        value           nonuniform 0();
+    }
+    rack2796428BA49E0232CAC645AEBC8DA5C1_inlet
+    {
+        type            zeroGradient;
+    }
+    rack2796428BA49E0232CAC645AEBC8DA5C1_outlet
+    {
+        type            fixedValue;
+        value           nonuniform 0();
+    }
+    acu380F56D59CF2B3DF6EFF9D0E6E8D39CB_inlet
+    {
+        type            zeroGradient;
+    }
+    acu380F56D59CF2B3DF6EFF9D0E6E8D39CB_outlet
+    {
+        type            fixedValue;
+        value           uniform 0.00184;
+    }
+    acu380F56D59CF2B3DF6EFF9D0E6E8D39CB_fixedWall
+    {
+        type            kqRWallFunction;
+        value           uniform 0.1;
+    }
+    baffleFaces_master
+    {
+        type            kqRWallFunction;
+        value           nonuniform 0();
+    }
+    baffleFaces_slave
+    {
+        type            kqRWallFunction;
+        value           nonuniform 0();
+    }
+    procBoundary1to0
+    {
+        type            processor;
+        value           uniform 0.1;
+    }
+    procBoundary1to2
+    {
+        type            processor;
+        value           uniform 0.1;
+    }
+}
+
+
+// ************************************************************************* //

@@ -1,0 +1,145 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.3.1                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       polyBoundaryMesh;
+    location    "constant/polyMesh";
+    object      boundary;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+13
+(
+    floor
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          203;
+        startFace       18378;
+    }
+    ceiling
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          198;
+        startFace       18581;
+    }
+    fixedWalls
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          739;
+        startFace       18779;
+    }
+    rack2796428BA49E0232CAC645AEBC8DA5C1_fixedWall
+    {
+        type            wall;
+        inGroups        
+2
+(
+rack2796428BA49E0232CAC645AEBC8DA5C1
+wall
+)
+;
+        nFaces          0;
+        startFace       19518;
+    }
+    rack2796428BA49E0232CAC645AEBC8DA5C1_inlet
+    {
+        type            patch;
+        inGroups        1(rack2796428BA49E0232CAC645AEBC8DA5C1);
+        nFaces          0;
+        startFace       19518;
+    }
+    rack2796428BA49E0232CAC645AEBC8DA5C1_outlet
+    {
+        type            patch;
+        inGroups        1(rack2796428BA49E0232CAC645AEBC8DA5C1);
+        nFaces          0;
+        startFace       19518;
+    }
+    acu380F56D59CF2B3DF6EFF9D0E6E8D39CB_inlet
+    {
+        type            patch;
+        inGroups        1(acu380F56D59CF2B3DF6EFF9D0E6E8D39CB);
+        nFaces          16;
+        startFace       19518;
+    }
+    acu380F56D59CF2B3DF6EFF9D0E6E8D39CB_outlet
+    {
+        type            patch;
+        inGroups        1(acu380F56D59CF2B3DF6EFF9D0E6E8D39CB);
+        nFaces          18;
+        startFace       19534;
+    }
+    acu380F56D59CF2B3DF6EFF9D0E6E8D39CB_fixedWall
+    {
+        type            wall;
+        inGroups        
+2
+(
+acu380F56D59CF2B3DF6EFF9D0E6E8D39CB
+wall
+)
+;
+        nFaces          242;
+        startFace       19552;
+    }
+    baffleFaces_master
+    {
+        type            wall;
+        inGroups        
+2
+(
+wall
+baffleFaces
+)
+;
+        nFaces          0;
+        startFace       19794;
+    }
+    baffleFaces_slave
+    {
+        type            wall;
+        inGroups        
+2
+(
+wall
+baffleFaces
+)
+;
+        nFaces          0;
+        startFace       19794;
+    }
+    procBoundary1to0
+    {
+        type            processor;
+        inGroups        1(processor);
+        nFaces          1536;
+        startFace       19794;
+        matchTolerance  0.0001;
+        transform       unknown;
+        myProcNo        1;
+        neighbProcNo    0;
+    }
+    procBoundary1to2
+    {
+        type            processor;
+        inGroups        1(processor);
+        nFaces          1404;
+        startFace       21330;
+        matchTolerance  0.0001;
+        transform       unknown;
+        myProcNo        1;
+        neighbProcNo    2;
+    }
+)
+
+// ************************************************************************* //

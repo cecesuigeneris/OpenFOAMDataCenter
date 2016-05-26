@@ -1,0 +1,248 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.2.1                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      topoSetDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+actions
+(
+    {
+        name inside;
+        type cellSet;
+        action new;
+        source surfaceToCell;
+        sourceInfo
+        {
+            file "constant/triSurface/room_boundary.stl";
+            outsidePoints ((24.200000000000003 10.4 0));
+            includeCut false;
+            includeInside true;
+            includeOutside false;
+            nearDistance -1;
+            curvature -100;
+        }
+    }
+
+
+    {
+      name    baffleFaces;
+      type    faceSet;
+      action  new;
+      source  boxToFace;
+      sourceInfo
+      {
+          box (24.200000000000003 10.4 0.79)(38.2 17.8 0.81);
+      }
+    }
+
+        {
+      name    baffleFaces;
+      type    faceSet;
+      action  delete;
+      source  boxToFace;
+      sourceInfo
+      {
+          box (28.8 13.200000000000001 0.79)(29.400000000000002 13.8 0.81);
+      }
+    }
+
+
+        {
+      name    baffleFaces;
+      type    faceSet;
+      action  delete;
+      source  boxToFace;
+      sourceInfo
+      {
+          box (29.400000000000002 13.8 0.79)(30.0 14.4 0.81);
+      }
+    }
+
+
+        {
+      name    baffleFaces;
+      type    faceSet;
+      action  delete;
+      source  boxToFace;
+      sourceInfo
+      {
+          box (28.8 14.4 0.79)(29.400000000000002 15.0 0.81);
+      }
+    }
+
+
+        {
+      name    baffleFaces;
+      type    faceSet;
+      action  delete;
+      source  boxToFace;
+      sourceInfo
+      {
+          box (29.400000000000002 15.0 0.79)(30.0 15.600000000000001 0.81);
+      }
+    }
+
+        {
+      name    baffleFaces;
+      type    faceSet;
+      action  delete;
+      source  boxToFace;
+      sourceInfo
+      {
+          box (33.6 13.200000000000001 0.79)(34.2 13.8 0.81);
+      }
+    }
+
+        {
+      name    baffleFaces;
+      type    faceSet;
+      action  delete;
+      source  boxToFace;
+      sourceInfo
+      {
+          box (34.2 13.8 0.79)(34.800000000000004 14.4 0.81);
+      }
+    }
+
+
+     
+        {
+      name    baffleFaces;
+      type    faceSet;
+      action  delete;
+      source  boxToFace;
+      sourceInfo
+      {
+          box (33.6 14.4 0.79)(34.2 15.0 0.81);
+      }
+    }
+
+        {
+      name    baffleFaces;
+      type    faceSet;
+      action  delete;
+      source  boxToFace;
+      sourceInfo
+      {
+          box (34.2 15.0 0.79)(34.800000000000004 15.600000000000001 0.81);
+      }
+    }
+
+        {
+      name    baffleFaces;
+      type    faceSet;
+      action  delete;
+      source  boxToFace;
+      sourceInfo
+      {
+          box (28.400000000000002 11.200000000000001 0.79)(30.400000000000002 12.0 0.81);
+      }
+    }
+
+  
+        {
+      name    baffleFaces;
+      type    faceSet;
+      action  delete;
+      source  boxToFace;
+      sourceInfo
+      {
+          box (33.2 11.200000000000001 0.79)(35.2 12.0 0.81);
+      }
+    }
+
+        {
+      name    baffleFaces;
+      type    faceSet;
+      action  delete;
+      source  boxToFace;
+      sourceInfo
+      {
+          box (25.0 13.4 0.79)(25.8 15.4 0.81);
+      }
+    }
+
+       {
+      name    baffleFaces;
+      type    faceSet;
+      action  delete;
+      source  boxToFace;
+      sourceInfo
+      {
+          box (28.9 14.4 0.79)(29.5 15 0.81);
+      }
+    }
+       {
+      name    baffleFaces;
+      type    faceSet;
+      action  delete;
+      source  boxToFace;
+      sourceInfo
+      {
+          box (29.5 15 0.79)(31.1 15.6 0.81);
+      }
+    }
+       {
+      name    baffleFaces;
+      type    faceSet;
+      action  delete;
+      source  boxToFace;
+      sourceInfo
+      {
+          box (33.7 13.2 0.79)(34.3 13.8 0.81);
+      }
+    }
+       {
+      name    baffleFaces;
+      type    faceSet;
+      action  delete;
+      source  boxToFace;
+      sourceInfo
+      {
+          box (34.3 13.8 0.79)(34.9 14.4 0.81);
+      }
+    }
+       {
+      name    baffleFaces;
+      type    faceSet;
+      action  delete;
+      source  boxToFace;
+      sourceInfo
+      {
+          box (33.7 14.4 0.79)(34.3 15 0.81);
+      }
+    }
+     {
+      name    baffleFaces;
+      type    faceSet;
+      action  delete;
+      source  boxToFace;
+      sourceInfo
+      {
+          box (34.3 15 0.79)(34.9 15.6 0.81);
+      }
+    }
+
+
+{
+    name baffleFaces;
+    type faceZoneSet;
+    action new;
+    source setToFaceZone;
+    sourceInfo
+    {
+        faceSet baffleFaces;
+    }
+}
+
+);

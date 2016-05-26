@@ -1,0 +1,123 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.3.1                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       polyBoundaryMesh;
+    location    "constant/polyMesh";
+    object      boundary;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+11
+(
+    floor
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          3100;
+        startFace       180307;
+    }
+    ceiling
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          3100;
+        startFace       183407;
+    }
+    fixedWalls
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          10548;
+        startFace       186507;
+    }
+    acu8EFB35119AA4591115D9D1BF6014FA4C_inlet
+    {
+        type            patch;
+        inGroups        1(acu8EFB35119AA4591115D9D1BF6014FA4C);
+        nFaces          48;
+        startFace       197055;
+    }
+    acu8EFB35119AA4591115D9D1BF6014FA4C_outlet
+    {
+        type            patch;
+        inGroups        1(acu8EFB35119AA4591115D9D1BF6014FA4C);
+        nFaces          144;
+        startFace       197103;
+    }
+    acu8EFB35119AA4591115D9D1BF6014FA4C_fixedWall
+    {
+        type            wall;
+        inGroups        
+2
+(
+acu8EFB35119AA4591115D9D1BF6014FA4C
+wall
+)
+;
+        nFaces          1404;
+        startFace       197247;
+    }
+    acu65E0157C3F4FD3DBFB846500AB325745_inlet
+    {
+        type            patch;
+        inGroups        1(acu65E0157C3F4FD3DBFB846500AB325745);
+        nFaces          48;
+        startFace       198651;
+    }
+    acu65E0157C3F4FD3DBFB846500AB325745_outlet
+    {
+        type            patch;
+        inGroups        1(acu65E0157C3F4FD3DBFB846500AB325745);
+        nFaces          144;
+        startFace       198699;
+    }
+    acu65E0157C3F4FD3DBFB846500AB325745_fixedWall
+    {
+        type            wall;
+        inGroups        
+2
+(
+acu65E0157C3F4FD3DBFB846500AB325745
+wall
+)
+;
+        nFaces          1404;
+        startFace       198843;
+    }
+    obstacle_master
+    {
+        type            wall;
+        inGroups        
+2
+(
+wall
+obstacle
+)
+;
+        nFaces          31;
+        startFace       200247;
+    }
+    obstacle_slave
+    {
+        type            wall;
+        inGroups        
+2
+(
+wall
+obstacle
+)
+;
+        nFaces          31;
+        startFace       200278;
+    }
+)
+
+// ************************************************************************* //

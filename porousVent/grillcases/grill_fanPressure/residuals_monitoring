@@ -1,0 +1,18 @@
+set tics font "Times-Roman, 30" 
+set xlabel font "Times-Roman, 30"
+set ylabel font "Times-Roman, 30"
+set border linewidth 1.5
+set key font "Times-Roman, 30"
+set key spacing 1
+do for [i=1:7] {
+    set linetype i lw 3
+}
+
+set title "Monitoring return temperature"
+set ylabel 'Temperature (K)'
+set xlabel 'Iteration'
+plot "< cat log.mpirun | grep 'rack_inlet_temp on rack1FF222C5D7703BB000E510D2A67B2F7A_inlet' | cut -d'=' -f2" title 'Rack inlet Temp' with lines,\
+     "< cat log.mpirun | grep 'AHU_return_temp on acu18366FBAE49514C2363F8EC818DCFDD0_inlet' | cut -d'=' -f2" title 'AHU return Temp' with lines
+      
+pause 1
+reread 

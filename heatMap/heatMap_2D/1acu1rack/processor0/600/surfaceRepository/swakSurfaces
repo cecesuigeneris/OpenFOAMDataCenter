@@ -1,0 +1,31 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.3.1                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       SurfacesRepository;
+    location    "600/surfaceRepository";
+    object      swakSurfaces;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+
+8
+(
+floorvent_0.8 sampledPlane: floorvent_0.8 :  base:(31.4 8.6 0.8)  normal:(0 0 1)  triangulate:1  faces:404  points:249
+acureturn sampledPlane: acureturn :  base:(31.4 8.6 2.8)  normal:(0 0 1)  triangulate:1  faces:364  points:229
+rackoutlet sampledPlane: rackoutlet :  base:(31.4 11.39 0)  normal:(0 1 0)  triangulate:1  faces:340  points:218
+rackinlet sampledPlane: rackinlet :  base:(31.4 12.21 0)  normal:(0 1 0)  triangulate:1  faces:356  points:226
+floorvent_0.7 sampledPlane: floorvent_0.7 :  base:(31.4 8.6 0.7)  normal:(0 0 1)  triangulate:1  faces:0  points:0
+floorvent_0.9 sampledPlane: floorvent_0.9 :  base:(31.4 8.6 0.9)  normal:(0 0 1)  triangulate:1  faces:402  points:248
+floorvent_0.75 sampledPlane: floorvent_0.75 :  base:(31.4 8.6 0.75)  normal:(0 0 1)  triangulate:1  faces:0  points:0
+acuSupply sampledPlane: acuSupply :  base:(31.4 8.6 0.6)  normal:(0 0 1)  triangulate:1  faces:0  points:0
+)
+
+// ************************************************************************* //

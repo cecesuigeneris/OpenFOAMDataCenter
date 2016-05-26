@@ -1,0 +1,67 @@
+// ---------------------------------------------------------------------//
+
+// Sample a field on a patch and pull it out each outputTime, find the data in postprocessing folder
+// Capture rack's & AHU's inlet/outlet temperature
+
+rack_inlet_outlet_temp
+    {
+	type patchExpression;
+        accumulations (
+            weightedAverage
+        );
+        patches (
+	         );
+        expression "T";
+        verbose true;
+	outputControlMode   outputTime; //timeStep
+	outputInterval  1;
+    }
+
+AHU_supply_return_temp
+    {
+        type patchExpression;
+        accumulations (
+            weightedAverage
+        );
+        patches (
+                                    acu8EFB35119AA4591115D9D1BF6014FA4C_inlet //add here all the name of the AHU return patch name
+		    acu8EFB35119AA4591115D9D1BF6014FA4C_outlet
+                                    acu65E0157C3F4FD3DBFB846500AB325745_inlet //add here all the name of the AHU return patch name
+		    acu65E0157C3F4FD3DBFB846500AB325745_outlet
+                	    );
+        expression "T";
+        verbose true;
+	outputControlMode   outputTime; 
+	outputInterval  1;
+    }
+
+
+
+// Capture the temperature on singular point. The goal here is to capture the rack inlet and outlet temperature. Use of 6 point per section (one section considered as a quarter of a rack) per patch (inlet & outlet)
+
+probes
+    {
+        type            probes;
+        functionObjectLibs ("libsampling.so");
+        enabled         true;
+        outputControlMode   outputTime;
+        outputInterval  1;
+
+        fields
+        (
+            T
+	    //p_rgh
+        );
+
+
+        probeLocations
+        (
+
+	);	   
+    }
+
+
+
+
+
+// -------------------------------------------------------------------------------------------- //

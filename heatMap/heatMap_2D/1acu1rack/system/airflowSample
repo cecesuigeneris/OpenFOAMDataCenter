@@ -1,0 +1,462 @@
+//
+// Create a plane for sampling
+//
+// (For vent sampling move the plane down to the floor level)
+//
+
+/*flowAfterSet
+{
+    type swakExpression;
+    valueType faceSet;
+    setName porous_block_face;
+    expression "phi*flip()";
+    accumulations (
+        sum
+    );
+    	verbose true;
+	outputControlMode   timeStep;
+	outputInterval  1;
+}*/
+
+/*flowthruTriSurface
+    {
+        type swakExpression;
+        valueType surface;
+        surfaceName acu380F56D59CF2B3DF6EFF9D0E6E8D39CB_inlet;	
+	surface
+	{
+	    type 	sampledTriSurfaceMesh;
+	    surface     objects.stl;
+            source      cells;  // sample cells or boundaryFaces
+            interpolate false;	    
+	}	
+        expression "U & Sf()"; 
+        accumulations (
+            sum
+        );
+        verbose true;
+	outputControlMode   outputTime; //timeStep
+	outputInterval  1;
+    }*/
+
+
+weightedVolAverageflowThruZone
+{
+    type swakExpression;
+    valueType cellZone;
+    zoneName 
+	
+		floorvent564BBBA61D1156EE76433AB491E144D4;
+
+    expression "sum(mag(U)*vol())/sum(vol())"; //this yields to min/max/average volume weighted velocity for porous zone, phi*flip() -- will only work for faceZone because phi is calculated based on a face
+    accumulations (
+        average
+	max
+	min
+    );
+    	verbose true;
+	outputControlMode   outputTime; //timeStep
+	outputInterval  1;
+}
+
+
+
+plane_0.6
+{
+        type createSampledSurface;
+        //outputControl timeStep;
+        outputInterval 1;
+        surfaceName acuSupply; //ACU SUPPLY
+        surface {
+            type plane;
+            basePoint       (31.4 8.6 0.6); //0.6
+            normalVector    (0 0 1);
+            interpolate true;
+        }
+        writeSurfaceOnConstruction true;
+        autoWriteSurface true;
+        surfaceFormat vtk;
+        outputControl outputTime;
+}
+
+plane_0.8
+{
+        type createSampledSurface;
+        //outputControl timeStep;
+        outputInterval 1;
+        surfaceName floorvent_0.8;//VENT ABOVE
+        surface {
+            type plane;
+            basePoint       (31.4 8.6 0.8); //0.79
+            normalVector    (0 0 1);
+            interpolate true;
+        }
+        writeSurfaceOnConstruction true;
+        autoWriteSurface true;
+        surfaceFormat vtk;
+        outputControl outputTime;
+}
+
+plane_0.9
+{
+        type createSampledSurface;
+        //outputControl timeStep;
+        outputInterval 1;
+        surfaceName floorvent_0.9;//VENT ABOVE
+        surface {
+            type plane;
+            basePoint       (31.4 8.6 0.9); 
+            normalVector    (0 0 1);
+            interpolate true;
+        }
+        writeSurfaceOnConstruction true;
+        autoWriteSurface true;
+        surfaceFormat vtk;
+        outputControl outputTime;
+}
+
+plane_0.7
+{
+        type createSampledSurface;
+        //outputControl timeStep;
+        outputInterval 1;
+        surfaceName floorvent_0.7;//VENT ABOVE
+        surface {
+            type plane;
+            basePoint       (31.4 8.6 0.7); 
+            normalVector    (0 0 1);
+            interpolate true;
+        }
+        writeSurfaceOnConstruction true;
+        autoWriteSurface true;
+        surfaceFormat vtk;
+        outputControl outputTime;
+}
+
+plane_0.75
+{
+        type createSampledSurface;
+        //outputControl timeStep;
+        outputInterval 1;
+        surfaceName floorvent_0.75;//VENT ABOVE
+        surface {
+            type plane;
+            basePoint       (31.4 8.6 0.75); 
+            normalVector    (0 0 1);
+            interpolate true;
+        }
+        writeSurfaceOnConstruction true;
+        autoWriteSurface true;
+        surfaceFormat vtk;
+        outputControl outputTime;
+}
+
+plane_2.8
+{
+        type createSampledSurface;
+        //outputControl timeStep;
+        outputInterval 1;
+        surfaceName acureturn; //ACU RETURN
+        surface {
+            type plane;
+            basePoint       (31.4 8.6 2.8);//2.8
+            normalVector    (0 0 1);
+            interpolate true;
+        }
+        writeSurfaceOnConstruction true;
+        autoWriteSurface true;
+        surfaceFormat vtk;
+        outputControl outputTime;
+}
+
+plane_rackin
+{
+        type createSampledSurface;
+        //outputControl timeStep;
+        outputInterval 1;
+        surfaceName rackinlet; //rackinlet
+        surface {
+            type plane;
+            basePoint       (31.4 12.21 0); //12.21
+            normalVector    (0 1 0);
+            interpolate true;
+        }
+        writeSurfaceOnConstruction true;
+        autoWriteSurface true;
+        surfaceFormat vtk;
+        outputControl outputTime;
+}
+
+plane_rackout
+{
+        type createSampledSurface;
+        //outputControl timeStep;
+        outputInterval 1;
+        surfaceName rackoutlet; //rackinlet
+        surface {
+            type plane;
+            basePoint       (31.4 11.39 0); //11.39
+            normalVector    (0 1 0);
+            interpolate true;
+        }
+        writeSurfaceOnConstruction true;
+        autoWriteSurface true;
+        surfaceFormat vtk;
+        outputControl outputTime;
+}
+
+//
+// Interpolate over the desired area and sum phi
+//
+// previously was offsetting 0.2 for a larger sampling area
+//
+
+//ahu supply should be giving 1 m3/s
+acusupply_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName acuSupply;
+        verbose true;
+
+        expression "(pos().x<34.6)&&(pos().x>32.6) && (pos().y<10.2) &&(pos().y>9.4) && (U.z>0)? (U & normal())*area():0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+
+
+
+acusupply_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName acuSupply;
+        verbose true;
+
+        expression "(pos().x<34.6)&&(pos().x>32.6) && (pos().y<10.2) &&(pos().y>9.4) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+
+acureturn_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName acureturn;
+        verbose true;
+
+        expression "(pos().x<34.6)&&(pos().x>32.6) && (pos().y<10.2) &&(pos().y>9.4) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+
+acureturn_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName acureturn;
+        verbose true;
+
+        expression "(pos().x<34.6)&&(pos().x>32.6) && (pos().y<10.2) &&(pos().y>9.4) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+
+
+
+
+
+
+rackinlet_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName rackinlet;
+        verbose true;
+
+        expression "(pos().x<33.6)&&(pos().x>33) && (pos().z<2.8) &&(pos().z>0.8) && (U.y<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+
+rackinlet_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName rackinlet;
+        verbose true;
+
+        expression "(pos().x<33.6)&&(pos().x>33) && (pos().z<2.8) &&(pos().z>0.8) && (U.y>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+
+rackoutlet_negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName rackoutlet;
+        verbose true;
+
+        expression "(pos().x<33.6)&&(pos().x>33) && (pos().z<2.8) &&(pos().z>0.8) && (U.y<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+
+rackoutlet_positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName rackoutlet;
+        verbose true;
+
+        expression "(pos().x<33.6)&&(pos().x>33) && (pos().z<2.8) &&(pos().z>0.8) && (U.y>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+
+
+
+floorvent_0.9positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName floorvent_0.9;
+        verbose true;
+
+        expression "(pos().x<33.6)&&(pos().x>33) && (pos().y<12.8) &&(pos().y>12.2) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+
+floorvent_0.9negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName floorvent_0.9;
+        verbose true;
+
+        expression "(pos().x<33.6)&&(pos().x>33) && (pos().y<12.8) &&(pos().y>12.2) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+
+floorvent_0.8positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName floorvent_0.8;
+        verbose true;
+
+        expression "(pos().x<33.6)&&(pos().x>33) && (pos().y<12.8) &&(pos().y>12.2) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+
+floorvent_0.8negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName floorvent_0.8;
+        verbose true;
+
+        expression "(pos().x<33.6)&&(pos().x>33) && (pos().y<12.8) &&(pos().y>12.2) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+
+floorvent_0.75positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName floorvent_0.75;
+        verbose true;
+
+        expression "(pos().x<33.6)&&(pos().x>33) && (pos().y<12.8) &&(pos().y>12.2) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+
+floorvent_0.75negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName floorvent_0.75;
+        verbose true;
+
+        expression "(pos().x<33.6)&&(pos().x>33) && (pos().y<12.8) &&(pos().y>12.2) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+
+floorvent_0.7positive{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName floorvent_0.7;
+        verbose true;
+
+        expression "(pos().x<33.6)&&(pos().x>33) && (pos().y<12.8) &&(pos().y>12.2) && (U.z>0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}
+
+floorvent_0.7negative{
+
+        type swakExpression;
+        valueType surface;
+        surfaceName floorvent_0.7;
+        verbose true;
+
+        expression "(pos().x<33.6)&&(pos().x>33) && (pos().y<12.8) &&(pos().y>12.2) && (U.z<0)?(U & normal())*mag(Sf()):0";
+        accumulations (
+            sum
+        );
+        autowrite true;
+        outputControlMode outputTime;
+}

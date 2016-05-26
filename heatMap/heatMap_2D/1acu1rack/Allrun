@@ -1,0 +1,69 @@
+#!/bin/sh
+
+cd ${0%/*} || exit 1    # run from this directory
+
+# Source tutorial run functions
+. $WM_PROJECT_DIR/bin/tools/RunFunctions
+
+# refineMesh call function established 
+refineMeshByCellSet()
+{
+   while [ $# -ge 1 ]
+   do
+      if [ ! -e log.refineMesh.$1 ]
+      then
+          echo "creating cell set for primary zone - $1"
+          cp system/topoSetDict.n system/topoSetDict    
+          topoSet > log.topoSet.$1 2>&1
+
+          echo "refining primary zone - $1"
+          refineMesh -dict system/refineMeshDict -overwrite > log.refineMesh.$1 2>&1
+      fi
+      shift
+   done
+}
+
+# run blockMesh + SHM
+runApplication blockMesh -dict system/blockMeshDict
+# run toposet on baffles and subsetMesh for room boundaries
+cp system/topoSetDict.baffles system/topoSetDict
+runApplication topoSet
+mv log.topoSet log.topoSet.baffles
+
+runApplication subsetMesh -overwrite -patch fixedWalls inside
+mv log.subsetMesh log.subsetMesh.baffles
+
+# call toposet to cut useless floor slabs and subsetMesh to cut unwanted cells <<<<<<<<< leads to rack bottom surface being cut
+cp system/topoSetDict.cutfloorslab system/topoSetDict
+runApplication topoSet
+mv log.topoSet log.topoSet.cutfloorslab
+runApplication subsetMesh -overwrite c0 -patch fixedWalls 
+
+runApplication surfaceFeatureExtract
+runApplication snappyHexMesh -overwrite
+
+
+
+cp -r 0.org 0 
+
+
+
+# call refineMeshCellset function twice to refine floor vents/porous zone
+refineMeshByCellSet 1 
+
+# call toposet to set porous zone for fvOptions
+cp system/topoSetDict.setporous system/topoSetDict
+runApplication topoSet
+mv log.topoSet log.topoSet.setporous 
+
+
+
+
+# run createBaffles for setting up bafflesFaces
+runApplication createBaffles -overwrite
+
+# run parallel
+runApplication decomposePar
+runApplication mpirun -np 7 buoyantBoussinesqSimpleFoam -parallel
+runApplication reconstructPar
+

@@ -1,0 +1,28 @@
+solid platef
+    facet normal 1 0 0
+        outer loop
+            vertex 2 0 0
+            vertex 2 0.6 0
+            vertex 2 0.6 0.6
+        endloop
+    endfacet
+facet normal 1 0 0
+        outer loop
+            vertex 2 0.6 0.6
+            vertex 2 0 0.6
+            vertex 2 0 0
+        endloop
+    endfacet
+endsolid platef
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,31 @@
+#!/bin/sh
+
+cd ${0%/*} || exit 1    # run from this directory
+
+# Source tutorial run functions
+. $WM_PROJECT_DIR/bin/tools/RunFunctions
+
+
+runApplication blockMesh -dict system/blockMeshDict
+
+# run toposet on baffles and subsetMesh for room boundaries
+cp system/topoSetDict.baffles system/topoSetDict
+runApplication topoSet
+mv log.topoSet log.topoSet.baffles
+
+runApplication subsetMesh -overwrite -patch fixedWalls inside
+mv log.subsetMesh log.subsetMesh.baffles
+
+
+runApplication surfaceFeatureExtract
+runApplication snappyHexMesh -overwrite
+
+cp -r 0.org 0 
+
+runApplication scalarTransportFoam
+
+# run parallel
+#runApplication decomposePar
+#runApplication mpirun -np 7 scalarTransportFoam -parallel
+#runApplication reconstructPar
+

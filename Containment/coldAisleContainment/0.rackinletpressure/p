@@ -1,0 +1,379 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.1.x                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    location    "0";
+    object      p;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 2 -2 0 0 0 0];
+
+internalField   uniform 0;
+
+boundaryField
+{
+    floor
+    {
+        type            calculated;
+        value           uniform 0;
+    }
+    ceiling
+    {
+        type            calculated;
+        value           uniform 0;
+    }
+    fixedWalls
+    {
+        type            calculated;
+        value           uniform 0;
+    }
+
+    
+        rack1B4CBD4A994E6797F70F5EF1F5863DB2_fixedWall
+        {
+            type            calculated;
+            value           uniform 0;
+        }
+	
+        rack1B4CBD4A994E6797F70F5EF1F5863DB2_inlet
+        {
+            type            calculated;
+            value           uniform 0;
+        }
+        rack1B4CBD4A994E6797F70F5EF1F5863DB2_outlet
+        {
+            type            calculated;
+            value           uniform 0;
+        }
+    
+    
+        rackFA1BFEC6E1E22133740F019445868403_fixedWall
+        {
+            type            calculated;
+            value           uniform 0;
+        }
+	
+        rackFA1BFEC6E1E22133740F019445868403_inlet
+        {
+            type            calculated;
+            value           uniform 0;
+        }
+        rackFA1BFEC6E1E22133740F019445868403_outlet
+        {
+            type            calculated;
+            value           uniform 0;
+        }
+    
+    
+        rack927D2E6888FD177A981C0A7DD98F9854_fixedWall
+        {
+            type            calculated;
+            value           uniform 0;
+        }
+	
+        rack927D2E6888FD177A981C0A7DD98F9854_inlet
+        {
+            type            calculated;
+            value           uniform 0;
+        }
+        rack927D2E6888FD177A981C0A7DD98F9854_outlet
+        {
+            type            calculated;
+            value           uniform 0;
+        }
+    
+    
+        rackC65181F2388B717A2DFA3CA4F31EBB92_fixedWall
+        {
+            type            calculated;
+            value           uniform 0;
+        }
+	
+        rackC65181F2388B717A2DFA3CA4F31EBB92_inlet
+        {
+            type            calculated;
+            value           uniform 0;
+        }
+        rackC65181F2388B717A2DFA3CA4F31EBB92_outlet
+        {
+            type            calculated;
+            value           uniform 0;
+        }
+    
+    
+        rack4A95D65ACB30A998A736CBDCEE88E685_fixedWall
+        {
+            type            calculated;
+            value           uniform 0;
+        }
+	
+        rack4A95D65ACB30A998A736CBDCEE88E685_inlet
+        {
+            type            calculated;
+            value           uniform 0;
+        }
+        rack4A95D65ACB30A998A736CBDCEE88E685_outlet
+        {
+            type            calculated;
+            value           uniform 0;
+        }
+    
+    
+        rack854D7BA836DCDC8D61AD830338297BA9_fixedWall
+        {
+            type            calculated;
+            value           uniform 0;
+        }
+	
+        rack854D7BA836DCDC8D61AD830338297BA9_inlet
+        {
+            type            calculated;
+            value           uniform 0;
+        }
+        rack854D7BA836DCDC8D61AD830338297BA9_outlet
+        {
+            type            calculated;
+            value           uniform 0;
+        }
+    
+    
+        rack0E1B92A4DE590895AB323DD8D1E9F921_fixedWall
+        {
+            type            calculated;
+            value           uniform 0;
+        }
+	
+        rack0E1B92A4DE590895AB323DD8D1E9F921_inlet
+        {
+            type            calculated;
+            value           uniform 0;
+        }
+        rack0E1B92A4DE590895AB323DD8D1E9F921_outlet
+        {
+            type            calculated;
+            value           uniform 0;
+        }
+    
+    
+        rackEA7E369EEC67CD4825F99F786002F8BB_fixedWall
+        {
+            type            calculated;
+            value           uniform 0;
+        }
+	
+        rackEA7E369EEC67CD4825F99F786002F8BB_inlet
+        {
+            type            calculated;
+            value           uniform 0;
+        }
+        rackEA7E369EEC67CD4825F99F786002F8BB_outlet
+        {
+            type            calculated;
+            value           uniform 0;
+        }
+    
+    
+        rackE1B88BE09859F2B90B67530927011F46_fixedWall
+        {
+            type            calculated;
+            value           uniform 0;
+        }
+	
+        rackE1B88BE09859F2B90B67530927011F46_inlet
+        {
+            type            calculated;
+            value           uniform 0;
+        }
+        rackE1B88BE09859F2B90B67530927011F46_outlet
+        {
+            type            calculated;
+            value           uniform 0;
+        }
+    
+    
+        rack6F2FB4401216FB0BE5B3E9FA249DE9D5_fixedWall
+        {
+            type            calculated;
+            value           uniform 0;
+        }
+	
+        rack6F2FB4401216FB0BE5B3E9FA249DE9D5_inlet
+        {
+            type            calculated;
+            value           uniform 0;
+        }
+        rack6F2FB4401216FB0BE5B3E9FA249DE9D5_outlet
+        {
+            type            calculated;
+            value           uniform 0;
+        }
+    
+    
+        rackCB8BB049ED5D9C7579939A35E238AE7C_fixedWall
+        {
+            type            calculated;
+            value           uniform 0;
+        }
+	
+        rackCB8BB049ED5D9C7579939A35E238AE7C_inlet
+        {
+            type            calculated;
+            value           uniform 0;
+        }
+        rackCB8BB049ED5D9C7579939A35E238AE7C_outlet
+        {
+            type            calculated;
+            value           uniform 0;
+        }
+    
+    
+        rack7CE29452499711B0CDDF74AF35D57FA0_fixedWall
+        {
+            type            calculated;
+            value           uniform 0;
+        }
+	
+        rack7CE29452499711B0CDDF74AF35D57FA0_inlet
+        {
+            type            calculated;
+            value           uniform 0;
+        }
+        rack7CE29452499711B0CDDF74AF35D57FA0_outlet
+        {
+            type            calculated;
+            value           uniform 0;
+        }
+    
+    
+        rackCFEA7F02580F13637EC4158DF376E6A1_fixedWall
+        {
+            type            calculated;
+            value           uniform 0;
+        }
+	
+        rackCFEA7F02580F13637EC4158DF376E6A1_inlet
+        {
+            type            calculated;
+            value           uniform 0;
+        }
+        rackCFEA7F02580F13637EC4158DF376E6A1_outlet
+        {
+            type            calculated;
+            value           uniform 0;
+        }
+    
+    
+        rackEDC8F6013BD80A7E069B3B7DBF87465F_fixedWall
+        {
+            type            calculated;
+            value           uniform 0;
+        }
+	
+        rackEDC8F6013BD80A7E069B3B7DBF87465F_inlet
+        {
+            type            calculated;
+            value           uniform 0;
+        }
+        rackEDC8F6013BD80A7E069B3B7DBF87465F_outlet
+        {
+            type            calculated;
+            value           uniform 0;
+        }
+    
+    
+        rack36DD04A52BFE5C6B041452059D458836_fixedWall
+        {
+            type            calculated;
+            value           uniform 0;
+        }
+	
+        rack36DD04A52BFE5C6B041452059D458836_inlet
+        {
+            type            calculated;
+            value           uniform 0;
+        }
+        rack36DD04A52BFE5C6B041452059D458836_outlet
+        {
+            type            calculated;
+            value           uniform 0;
+        }
+    
+    
+        rackD902EEF5E6F996BB25E50FDE8FD1F62B_fixedWall
+        {
+            type            calculated;
+            value           uniform 0;
+        }
+	
+        rackD902EEF5E6F996BB25E50FDE8FD1F62B_inlet
+        {
+            type            calculated;
+            value           uniform 0;
+        }
+        rackD902EEF5E6F996BB25E50FDE8FD1F62B_outlet
+        {
+            type            calculated;
+            value           uniform 0;
+        }
+        acuF9CB05DA6465C302727AC2126F3ADC50_fixedWall
+    {
+        type            calculated;
+        value           uniform 0;
+    }
+    acuF9CB05DA6465C302727AC2126F3ADC50_inlet
+    {
+        type            calculated;
+        value           uniform 0;
+    }
+    acuF9CB05DA6465C302727AC2126F3ADC50_outlet
+    {
+        type            calculated;
+        value           uniform 0;
+    }
+    acu1385ECEC5AC66642155584A8F60EB282_fixedWall
+    {
+        type            calculated;
+        value           uniform 0;
+    }
+    acu1385ECEC5AC66642155584A8F60EB282_inlet
+    {
+        type            calculated;
+        value           uniform 0;
+    }
+    acu1385ECEC5AC66642155584A8F60EB282_outlet
+    {
+        type            calculated;
+        value           uniform 0;
+    }
+    acu58D3207FC902F3CCC0F4E3EA1FA1DBE2_fixedWall
+    {
+        type            calculated;
+        value           uniform 0;
+    }
+    acu58D3207FC902F3CCC0F4E3EA1FA1DBE2_inlet
+    {
+        type            calculated;
+        value           uniform 0;
+    }
+    acu58D3207FC902F3CCC0F4E3EA1FA1DBE2_outlet
+    {
+        type            calculated;
+        value           uniform 0;
+    }
+    oldInternalFaces
+    {
+        type            empty;
+    }
+}
+
+
+// ************************************************************************* //

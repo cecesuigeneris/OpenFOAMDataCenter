@@ -1,0 +1,608 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.3.1                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       polyBoundaryMesh;
+    location    "constant/polyMesh";
+    object      boundary;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+64
+(
+    floor
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          2080;
+        startFace       131326;
+    }
+    ceiling
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          2080;
+        startFace       133406;
+    }
+    fixedWalls
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          8636;
+        startFace       135486;
+    }
+    rack1B4CBD4A994E6797F70F5EF1F5863DB2_fixedWall
+    {
+        type            wall;
+        inGroups        
+2
+(
+rack1B4CBD4A994E6797F70F5EF1F5863DB2
+wall
+)
+;
+        nFaces          60;
+        startFace       144122;
+    }
+    rack1B4CBD4A994E6797F70F5EF1F5863DB2_inlet
+    {
+        type            patch;
+        inGroups        1(rack1B4CBD4A994E6797F70F5EF1F5863DB2);
+        nFaces          36;
+        startFace       144182;
+    }
+    rack1B4CBD4A994E6797F70F5EF1F5863DB2_outlet
+    {
+        type            patch;
+        inGroups        1(rack1B4CBD4A994E6797F70F5EF1F5863DB2);
+        nFaces          36;
+        startFace       144218;
+    }
+    rackFA1BFEC6E1E22133740F019445868403_fixedWall
+    {
+        type            wall;
+        inGroups        
+2
+(
+rackFA1BFEC6E1E22133740F019445868403
+wall
+)
+;
+        nFaces          12;
+        startFace       144254;
+    }
+    rackFA1BFEC6E1E22133740F019445868403_inlet
+    {
+        type            patch;
+        inGroups        1(rackFA1BFEC6E1E22133740F019445868403);
+        nFaces          36;
+        startFace       144266;
+    }
+    rackFA1BFEC6E1E22133740F019445868403_outlet
+    {
+        type            patch;
+        inGroups        1(rackFA1BFEC6E1E22133740F019445868403);
+        nFaces          36;
+        startFace       144302;
+    }
+    rack927D2E6888FD177A981C0A7DD98F9854_fixedWall
+    {
+        type            wall;
+        inGroups        
+2
+(
+rack927D2E6888FD177A981C0A7DD98F9854
+wall
+)
+;
+        nFaces          12;
+        startFace       144338;
+    }
+    rack927D2E6888FD177A981C0A7DD98F9854_inlet
+    {
+        type            patch;
+        inGroups        1(rack927D2E6888FD177A981C0A7DD98F9854);
+        nFaces          36;
+        startFace       144350;
+    }
+    rack927D2E6888FD177A981C0A7DD98F9854_outlet
+    {
+        type            patch;
+        inGroups        1(rack927D2E6888FD177A981C0A7DD98F9854);
+        nFaces          36;
+        startFace       144386;
+    }
+    rackC65181F2388B717A2DFA3CA4F31EBB92_fixedWall
+    {
+        type            wall;
+        inGroups        
+2
+(
+rackC65181F2388B717A2DFA3CA4F31EBB92
+wall
+)
+;
+        nFaces          60;
+        startFace       144422;
+    }
+    rackC65181F2388B717A2DFA3CA4F31EBB92_inlet
+    {
+        type            patch;
+        inGroups        1(rackC65181F2388B717A2DFA3CA4F31EBB92);
+        nFaces          36;
+        startFace       144482;
+    }
+    rackC65181F2388B717A2DFA3CA4F31EBB92_outlet
+    {
+        type            patch;
+        inGroups        1(rackC65181F2388B717A2DFA3CA4F31EBB92);
+        nFaces          36;
+        startFace       144518;
+    }
+    rack4A95D65ACB30A998A736CBDCEE88E685_fixedWall
+    {
+        type            wall;
+        inGroups        
+2
+(
+rack4A95D65ACB30A998A736CBDCEE88E685
+wall
+)
+;
+        nFaces          60;
+        startFace       144554;
+    }
+    rack4A95D65ACB30A998A736CBDCEE88E685_outlet
+    {
+        type            patch;
+        inGroups        1(rack4A95D65ACB30A998A736CBDCEE88E685);
+        nFaces          36;
+        startFace       144614;
+    }
+    rack4A95D65ACB30A998A736CBDCEE88E685_inlet
+    {
+        type            patch;
+        inGroups        1(rack4A95D65ACB30A998A736CBDCEE88E685);
+        nFaces          36;
+        startFace       144650;
+    }
+    rack854D7BA836DCDC8D61AD830338297BA9_fixedWall
+    {
+        type            wall;
+        inGroups        
+2
+(
+rack854D7BA836DCDC8D61AD830338297BA9
+wall
+)
+;
+        nFaces          12;
+        startFace       144686;
+    }
+    rack854D7BA836DCDC8D61AD830338297BA9_outlet
+    {
+        type            patch;
+        inGroups        1(rack854D7BA836DCDC8D61AD830338297BA9);
+        nFaces          36;
+        startFace       144698;
+    }
+    rack854D7BA836DCDC8D61AD830338297BA9_inlet
+    {
+        type            patch;
+        inGroups        1(rack854D7BA836DCDC8D61AD830338297BA9);
+        nFaces          36;
+        startFace       144734;
+    }
+    rack0E1B92A4DE590895AB323DD8D1E9F921_fixedWall
+    {
+        type            wall;
+        inGroups        
+2
+(
+rack0E1B92A4DE590895AB323DD8D1E9F921
+wall
+)
+;
+        nFaces          60;
+        startFace       144770;
+    }
+    rack0E1B92A4DE590895AB323DD8D1E9F921_outlet
+    {
+        type            patch;
+        inGroups        1(rack0E1B92A4DE590895AB323DD8D1E9F921);
+        nFaces          36;
+        startFace       144830;
+    }
+    rack0E1B92A4DE590895AB323DD8D1E9F921_inlet
+    {
+        type            patch;
+        inGroups        1(rack0E1B92A4DE590895AB323DD8D1E9F921);
+        nFaces          36;
+        startFace       144866;
+    }
+    rackEA7E369EEC67CD4825F99F786002F8BB_fixedWall
+    {
+        type            wall;
+        inGroups        
+2
+(
+rackEA7E369EEC67CD4825F99F786002F8BB
+wall
+)
+;
+        nFaces          12;
+        startFace       144902;
+    }
+    rackEA7E369EEC67CD4825F99F786002F8BB_outlet
+    {
+        type            patch;
+        inGroups        1(rackEA7E369EEC67CD4825F99F786002F8BB);
+        nFaces          36;
+        startFace       144914;
+    }
+    rackEA7E369EEC67CD4825F99F786002F8BB_inlet
+    {
+        type            patch;
+        inGroups        1(rackEA7E369EEC67CD4825F99F786002F8BB);
+        nFaces          36;
+        startFace       144950;
+    }
+    rackE1B88BE09859F2B90B67530927011F46_fixedWall
+    {
+        type            wall;
+        inGroups        
+2
+(
+rackE1B88BE09859F2B90B67530927011F46
+wall
+)
+;
+        nFaces          60;
+        startFace       144986;
+    }
+    rackE1B88BE09859F2B90B67530927011F46_inlet
+    {
+        type            patch;
+        inGroups        1(rackE1B88BE09859F2B90B67530927011F46);
+        nFaces          36;
+        startFace       145046;
+    }
+    rackE1B88BE09859F2B90B67530927011F46_outlet
+    {
+        type            patch;
+        inGroups        1(rackE1B88BE09859F2B90B67530927011F46);
+        nFaces          36;
+        startFace       145082;
+    }
+    rack6F2FB4401216FB0BE5B3E9FA249DE9D5_fixedWall
+    {
+        type            wall;
+        inGroups        
+2
+(
+rack6F2FB4401216FB0BE5B3E9FA249DE9D5
+wall
+)
+;
+        nFaces          12;
+        startFace       145118;
+    }
+    rack6F2FB4401216FB0BE5B3E9FA249DE9D5_inlet
+    {
+        type            patch;
+        inGroups        1(rack6F2FB4401216FB0BE5B3E9FA249DE9D5);
+        nFaces          36;
+        startFace       145130;
+    }
+    rack6F2FB4401216FB0BE5B3E9FA249DE9D5_outlet
+    {
+        type            patch;
+        inGroups        1(rack6F2FB4401216FB0BE5B3E9FA249DE9D5);
+        nFaces          36;
+        startFace       145166;
+    }
+    rackCB8BB049ED5D9C7579939A35E238AE7C_fixedWall
+    {
+        type            wall;
+        inGroups        
+2
+(
+rackCB8BB049ED5D9C7579939A35E238AE7C
+wall
+)
+;
+        nFaces          12;
+        startFace       145202;
+    }
+    rackCB8BB049ED5D9C7579939A35E238AE7C_inlet
+    {
+        type            patch;
+        inGroups        1(rackCB8BB049ED5D9C7579939A35E238AE7C);
+        nFaces          36;
+        startFace       145214;
+    }
+    rackCB8BB049ED5D9C7579939A35E238AE7C_outlet
+    {
+        type            patch;
+        inGroups        1(rackCB8BB049ED5D9C7579939A35E238AE7C);
+        nFaces          36;
+        startFace       145250;
+    }
+    rack7CE29452499711B0CDDF74AF35D57FA0_fixedWall
+    {
+        type            wall;
+        inGroups        
+2
+(
+rack7CE29452499711B0CDDF74AF35D57FA0
+wall
+)
+;
+        nFaces          60;
+        startFace       145286;
+    }
+    rack7CE29452499711B0CDDF74AF35D57FA0_inlet
+    {
+        type            patch;
+        inGroups        1(rack7CE29452499711B0CDDF74AF35D57FA0);
+        nFaces          36;
+        startFace       145346;
+    }
+    rack7CE29452499711B0CDDF74AF35D57FA0_outlet
+    {
+        type            patch;
+        inGroups        1(rack7CE29452499711B0CDDF74AF35D57FA0);
+        nFaces          36;
+        startFace       145382;
+    }
+    rackCFEA7F02580F13637EC4158DF376E6A1_fixedWall
+    {
+        type            wall;
+        inGroups        
+2
+(
+rackCFEA7F02580F13637EC4158DF376E6A1
+wall
+)
+;
+        nFaces          60;
+        startFace       145418;
+    }
+    rackCFEA7F02580F13637EC4158DF376E6A1_outlet
+    {
+        type            patch;
+        inGroups        1(rackCFEA7F02580F13637EC4158DF376E6A1);
+        nFaces          36;
+        startFace       145478;
+    }
+    rackCFEA7F02580F13637EC4158DF376E6A1_inlet
+    {
+        type            patch;
+        inGroups        1(rackCFEA7F02580F13637EC4158DF376E6A1);
+        nFaces          36;
+        startFace       145514;
+    }
+    rackEDC8F6013BD80A7E069B3B7DBF87465F_fixedWall
+    {
+        type            wall;
+        inGroups        
+2
+(
+rackEDC8F6013BD80A7E069B3B7DBF87465F
+wall
+)
+;
+        nFaces          12;
+        startFace       145550;
+    }
+    rackEDC8F6013BD80A7E069B3B7DBF87465F_outlet
+    {
+        type            patch;
+        inGroups        1(rackEDC8F6013BD80A7E069B3B7DBF87465F);
+        nFaces          36;
+        startFace       145562;
+    }
+    rackEDC8F6013BD80A7E069B3B7DBF87465F_inlet
+    {
+        type            patch;
+        inGroups        1(rackEDC8F6013BD80A7E069B3B7DBF87465F);
+        nFaces          36;
+        startFace       145598;
+    }
+    rack36DD04A52BFE5C6B041452059D458836_fixedWall
+    {
+        type            wall;
+        inGroups        
+2
+(
+rack36DD04A52BFE5C6B041452059D458836
+wall
+)
+;
+        nFaces          60;
+        startFace       145634;
+    }
+    rack36DD04A52BFE5C6B041452059D458836_outlet
+    {
+        type            patch;
+        inGroups        1(rack36DD04A52BFE5C6B041452059D458836);
+        nFaces          36;
+        startFace       145694;
+    }
+    rack36DD04A52BFE5C6B041452059D458836_inlet
+    {
+        type            patch;
+        inGroups        1(rack36DD04A52BFE5C6B041452059D458836);
+        nFaces          36;
+        startFace       145730;
+    }
+    rackD902EEF5E6F996BB25E50FDE8FD1F62B_fixedWall
+    {
+        type            wall;
+        inGroups        
+2
+(
+rackD902EEF5E6F996BB25E50FDE8FD1F62B
+wall
+)
+;
+        nFaces          12;
+        startFace       145766;
+    }
+    rackD902EEF5E6F996BB25E50FDE8FD1F62B_outlet
+    {
+        type            patch;
+        inGroups        1(rackD902EEF5E6F996BB25E50FDE8FD1F62B);
+        nFaces          36;
+        startFace       145778;
+    }
+    rackD902EEF5E6F996BB25E50FDE8FD1F62B_inlet
+    {
+        type            patch;
+        inGroups        1(rackD902EEF5E6F996BB25E50FDE8FD1F62B);
+        nFaces          36;
+        startFace       145814;
+    }
+    acuF9CB05DA6465C302727AC2126F3ADC50_inlet
+    {
+        type            patch;
+        inGroups        1(acuF9CB05DA6465C302727AC2126F3ADC50);
+        nFaces          40;
+        startFace       145850;
+    }
+    acuF9CB05DA6465C302727AC2126F3ADC50_outlet
+    {
+        type            patch;
+        inGroups        1(acuF9CB05DA6465C302727AC2126F3ADC50);
+        nFaces          40;
+        startFace       145890;
+    }
+    acuF9CB05DA6465C302727AC2126F3ADC50_fixedWall
+    {
+        type            wall;
+        inGroups        
+2
+(
+acuF9CB05DA6465C302727AC2126F3ADC50
+wall
+)
+;
+        nFaces          336;
+        startFace       145930;
+    }
+    acu1385ECEC5AC66642155584A8F60EB282_inlet
+    {
+        type            patch;
+        inGroups        1(acu1385ECEC5AC66642155584A8F60EB282);
+        nFaces          40;
+        startFace       146266;
+    }
+    acu1385ECEC5AC66642155584A8F60EB282_outlet
+    {
+        type            patch;
+        inGroups        1(acu1385ECEC5AC66642155584A8F60EB282);
+        nFaces          40;
+        startFace       146306;
+    }
+    acu1385ECEC5AC66642155584A8F60EB282_fixedWall
+    {
+        type            wall;
+        inGroups        
+2
+(
+acu1385ECEC5AC66642155584A8F60EB282
+wall
+)
+;
+        nFaces          336;
+        startFace       146346;
+    }
+    acu58D3207FC902F3CCC0F4E3EA1FA1DBE2_inlet
+    {
+        type            patch;
+        inGroups        1(acu58D3207FC902F3CCC0F4E3EA1FA1DBE2);
+        nFaces          40;
+        startFace       146682;
+    }
+    acu58D3207FC902F3CCC0F4E3EA1FA1DBE2_outlet
+    {
+        type            patch;
+        inGroups        1(acu58D3207FC902F3CCC0F4E3EA1FA1DBE2);
+        nFaces          40;
+        startFace       146722;
+    }
+    acu58D3207FC902F3CCC0F4E3EA1FA1DBE2_fixedWall
+    {
+        type            wall;
+        inGroups        
+2
+(
+acu58D3207FC902F3CCC0F4E3EA1FA1DBE2
+wall
+)
+;
+        nFaces          336;
+        startFace       146762;
+    }
+    baffleFaces_master
+    {
+        type            wall;
+        inGroups        
+2
+(
+wall
+baffleFaces
+)
+;
+        nFaces          36;
+        startFace       147098;
+    }
+    baffleFaces_slave
+    {
+        type            wall;
+        inGroups        
+2
+(
+wall
+baffleFaces
+)
+;
+        nFaces          36;
+        startFace       147134;
+    }
+    containment_cold_master
+    {
+        type            wall;
+        inGroups        
+2
+(
+wall
+containment_cold
+)
+;
+        nFaces          504;
+        startFace       147170;
+    }
+    containment_cold_slave
+    {
+        type            wall;
+        inGroups        
+2
+(
+wall
+containment_cold
+)
+;
+        nFaces          504;
+        startFace       147674;
+    }
+)
+
+// ************************************************************************* //

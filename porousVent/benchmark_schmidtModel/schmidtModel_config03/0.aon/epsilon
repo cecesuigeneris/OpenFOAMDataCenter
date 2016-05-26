@@ -1,0 +1,76 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.1.x                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    location    "0";
+    object      epsilon;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 2 -3 0 0 0 0];
+
+internalField   uniform 0.01;
+
+boundaryField
+{
+    floor
+    {
+        type            epsilonLowReWallFunction;
+        value           uniform 0;
+    }
+    ceiling
+    {
+        type            epsilonLowReWallFunction;
+        value           uniform 0;
+    }
+    fixedWalls
+    {
+        type            epsilonLowReWallFunction;
+        value           uniform 0;
+    }
+
+    acu8EFB35119AA4591115D9D1BF6014FA4C_fixedWall
+    {
+        type            epsilonLowReWallFunction;
+        value           uniform 0;
+    }
+               acu8EFB35119AA4591115D9D1BF6014FA4C_inlet
+           {
+               type            zeroGradient;
+           }
+           acu8EFB35119AA4591115D9D1BF6014FA4C_outlet
+           {
+               type            fixedValue;
+               value           uniform 1.89e-5;
+           }
+        acu65E0157C3F4FD3DBFB846500AB325745_fixedWall
+    {
+        type            epsilonLowReWallFunction;
+        value           uniform 0;
+    }
+               acu65E0157C3F4FD3DBFB846500AB325745_inlet
+           {
+        type            epsilonLowReWallFunction;
+        value           uniform 0;
+           }
+           acu65E0157C3F4FD3DBFB846500AB325745_outlet
+           {
+        type            epsilonLowReWallFunction;
+        value           uniform 0;
+           }
+        oldInternalFaces
+    {
+        type            empty;
+    }
+}
+
+
+// ************************************************************************* //
